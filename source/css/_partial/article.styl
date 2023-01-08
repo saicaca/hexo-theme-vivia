@@ -2,7 +2,7 @@
   margin: block-margin 0
 
 .article-inner
-  @extend $block
+  @extend $card
   overflow: hidden
 
 .article-meta
@@ -11,6 +11,12 @@
 .article-date
   @extend $block-caption
   float: left
+
+.meta-text
+  color: color-N50
+  line-height: 1em
+  font-weight: medium
+  text-decoration: none
 
 .article-category
   float: left
@@ -26,23 +32,39 @@
   margin: 0 12px 1em
 
 .article-header
-  padding: article-padding article-padding 0
+  padding: article-top-padding article-side-padding 0
+  h1
+    margin-bottom: 6px
+  .meta-text
+    margin-bottom: 6px
+  
 
 .article-title
   text-decoration: none
   font-size: 2em
   font-weight: bold
-  color: color-default
+  color: color-N90
   line-height: line-height-title
   transition: color 0.2s
+  position: relative
   a&:hover
-    color: color-link
+    color: color-L75
+  &:before
+    content: ''
+    width: 4px
+    height: 20px
+    border-radius: 2px
+    position: absolute
+    background: color-L75
+    left: -16px
+    top: 10px
+
 
 .article-entry
   @extend $base-style
   clearfix()
-  color: color-default
-  padding: 0 article-padding
+  color: color-N75
+  padding: 0 article-side-padding
   p, table
     line-height: line-height
     margin: line-height 0
@@ -52,10 +74,10 @@
     line-height: line-height-title
     margin: line-height-title 0
   a
-    color: color-link
+    color: color-L75
     text-decoration: none
     &:hover
-      text-decoration: underline
+      color: white
   ul, ol, dl
     margin-top: line-height
     margin-bottom: line-height
@@ -122,39 +144,47 @@
 
 .article-more-link a
   display: inline-block
-  line-height: 1em
-  padding: 6px 15px
-  border-radius: 15px
-  background: color-background
-  color: color-grey
-  text-shadow: 0 1px #fff
+  float: right
+  line-height: 1.6em
+  color: color-L75
   text-decoration: none
+  font-size: 16px
+  font-weight: 500
   &:hover
-    background: color-link
     color: #fff
     text-decoration: none
-    text-shadow: 0 1px darken(color-link, 20%)
+  &:after
+    content: "\f054"
+    font-family: font-icon
+    padding-left: 8px
+
 
 .article-footer
   clearfix()
   font-size: 0.85em
   line-height: line-height
-  border-top: 1px solid color-border
-  padding-top: line-height
-  margin: 0 article-padding article-padding
-  a
-    color: color-grey
-    text-decoration: none
-    &:hover
-      color: color-default
+  // border-top: 1px solid color-border
+  margin: 0 article-side-padding article-bottom-padding
+
+.article-tag-list
+  margin-top: 12px
 
 .article-tag-list-item
+  @extend $button
   float: left
   margin-right: 10px
+  align-items: center;
+  display: flex;
+
+.article-tag-list-item a
+  color: color-N75
+  font-size: 14px
+  font-weight: 500
 
 .article-tag-list-link
   &:before
-    content: "#"
+    // content: "#"
+    content: ""
 
 .article-comment-link
   float: right
@@ -165,12 +195,17 @@
 
 .article-share-link
   cursor: pointer
-  float: right
-  margin-left: 20px
+  float: left
+  font-size: 16px
+  font-weight: 500
   &:before
     content: "\f064"
     font-family: font-icon
-    padding-right: 6px
+    padding-right: 8px
+  &:hover
+    color: #fff
+    text-decoration: none
+
 
 #article-nav
   clearfix()

@@ -12,6 +12,10 @@ input, button
     border: 0
     padding: 0
 
+a
+  color: color-L75
+  text-decoration: none
+
 @font-face
   font-family: FontAwesome
   font-style: normal
@@ -27,9 +31,21 @@ html, body, #container
   height: 100%
 
 body
-  background: color-background
   font: font-size font-sans
   -webkit-text-size-adjust: 100%
+  background: url('../images/tile.png') color-L16
+  background-size: 240px
+  background-blend-mode: overlay    // TODO temporarily
+  &:before
+    // TODO rotate the background
+    content: ''
+    position: absolute
+    top: -50%
+    left: -50%
+    z-index: -1
+    height: 100%
+    width: 100%
+    // rotate: 30deg
 
 .outer
   clearfix()
@@ -63,7 +79,7 @@ body
   left: 0
   transition: 0.2s ease-out
   z-index: 1
-  background: color-background
+  // background: color-background
   .mobile-nav-on &
     left: mobile-nav-width
 

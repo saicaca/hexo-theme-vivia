@@ -18,9 +18,16 @@ color-facebook = #3b5998
 color-pinterest = #cb2027
 color-linkedin = #0077B5
 
+// Colors
+json("./config.json")
+
+color-N90 = alpha(white, 0.9)
+color-N75 = alpha(white, 0.75)
+color-N50 = alpha(white, 0.5) 
+
 // Fonts
-font-sans = -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+font-sans = "Roboto", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif
 font-serif = Georgia, "Times New Roman", serif
@@ -28,7 +35,7 @@ font-mono = "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace
 font-icon = FontAwesome
 font-icon-path = "fonts/fontawesome-webfont"
 font-icon-version = "4.7.0"
-font-size = 14px
+font-size = 16px
 line-height = 1.6em
 line-height-title = 1.1em
 
@@ -41,8 +48,11 @@ banner-url = hexo-config("banner")
 sidebar = hexo-config("sidebar")
 
 // Layout
-block-margin = 50px
+block-margin = 16px
 article-padding = 20px
+article-top-padding = 32px
+article-side-padding = 40px
+article-bottom-padding = 24px
 mobile-nav-width = 280px
 main-column = 9
 sidebar-column = 3
@@ -52,10 +62,14 @@ if sidebar and sidebar isnt bottom
 else
   _sidebar-column = 0
 
+// Styles
+card-radius = 16px
+
 // Grids
 column-width = 80px
-gutter-width = 20px
+gutter-width = 16px
 columns = main-column + _sidebar-column
+full-width = (column-width + gutter-width) * columns
 
 // Media queries
 mq-mobile = "screen and (max-width: 479px)"

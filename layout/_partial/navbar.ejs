@@ -1,0 +1,16 @@
+<navbar id="navbar">
+  <nav id="main-nav">
+    <% for (var i in theme.menu){ %>
+      <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+    <% } %>
+  </nav>
+  <nav id="sub-nav">
+    <% if (theme.rss){ %>
+      <a id="nav-rss-link" class="nav-icon" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>"></a>
+    <% } %>
+    <a id="nav-search-btn" class="nav-icon" title="<%= __('search') %>"></a>
+  </nav>
+  <div id="search-form-wrap">
+    <%- search_form({button: '&#xF002;', text: __('search')}) %>
+  </div>
+</navbar>

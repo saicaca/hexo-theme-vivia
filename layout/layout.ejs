@@ -7,10 +7,10 @@
       <!-- <%- partial('_partial/header', null, {cache: !config.relative_link}) %> -->
       <%- partial('_partial/navbar', null, {cache: !config.relative_link}) %>
       <div class="outer">
-        <section id="main"><%- body %></section>
         <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
           <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
         <% } %>
+        <section id="main"><%- body %></section>
       </div>
       <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
     </div>

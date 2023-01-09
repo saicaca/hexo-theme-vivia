@@ -66,4 +66,4 @@ valine:
   guest_info: nick,mail,link #valine comment header info
 
 # Appearence
-hue: 280
+hue: 240

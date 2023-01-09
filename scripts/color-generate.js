@@ -12,6 +12,7 @@ function getColorNode(l, c, h) {
 
 hexo.extend.filter.register('stylus:renderer', function(style) {
     let hue = config.hue;
+    style.define('--main-bg-color', getColorNode(0.16, 0.015, hue))
     style.define('color-L16', getColorNode(0.16, 0.015, hue))
     style.define('color-L20', getColorNode(0.20, 0.020, hue))
     style.define('color-L25', getColorNode(0.25, 0.020, hue))

@@ -10,7 +10,7 @@
   color: color-N90
   font-size: 20px
   font-weight: bold
-  margin-bottom: 8px 
+  margin-bottom: 12px
 
 .widget
   @extend $card
@@ -20,12 +20,14 @@
   a
     color: var(--color-L75)
     text-decoration: none
-    &:hover
-      text-decoration: underline
+    font-size: 16px
   ul, ol, dl
     ul, ol, dl
       margin-left: 15px
       list-style: disc
+  .article-tag-list
+    a
+      color: color-N75
 
 .info-card
   @extend .widget

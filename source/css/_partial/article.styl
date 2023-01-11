@@ -175,23 +175,33 @@
 
 .article-tag-list
   margin-top: 12px
+  display: flex
+  flex-wrap: wrap
+  row-gap: 10px
+  column-gap: 10px
 
 .article-tag-list-item
   @extend $text-btn
   float: left
-  margin-right: 10px
   align-items: center;
   display: flex;
 
 .article-tag-list-item a
   color: color-N75
   font-size: 14px
-  font-weight: 500
+  font-weight: 500  
 
 .article-tag-list-link
+  display: flex
+  align-items: center
   &:before
-    // content: "#"
     content: ""
+    display: block
+    height: 4px
+    width: 4px
+    border-radius: 50%
+    background: var(--color-L25)
+    margin-right: 8px
 
 .article-comment-link
   float: right

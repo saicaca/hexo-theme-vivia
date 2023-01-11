@@ -2,7 +2,10 @@
   <div class="widget-wrap">
     <div class="widget">
       <h3 class="widget-title"><%= __('tags') %></h3>
-      <%- list_tags({show_count: theme.show_count}) %>
+      <%- list_tags({
+        show_count: theme.show_count,
+        class: 'article-tag'
+      }) %>
     </div>
   </div>
 <% } %>

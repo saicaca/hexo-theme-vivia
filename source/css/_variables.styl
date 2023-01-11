@@ -3,6 +3,7 @@
   --color-L20: color-L20
   --color-L25: color-L25
   --color-L40: color-L40
+  --color-L50: color-L50
   --color-L75: color-L75
 
 // Config
@@ -31,6 +32,7 @@ color-linkedin = #0077B5
 color-N90 = alpha(white, 0.9)
 color-N75 = alpha(white, 0.75)
 color-N50 = alpha(white, 0.5) 
+color-N10 = alpha(white, 0.1)
 
 // Fonts
 font-sans = "Roboto", -apple-system, BlinkMacSystemFont,
@@ -38,7 +40,7 @@ font-sans = "Roboto", -apple-system, BlinkMacSystemFont,
     "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif
 font-serif = Georgia, "Times New Roman", serif
-font-mono = "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace
+font-mono = "JetBrains Mono", "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace
 font-icon = FontAwesome
 font-icon-path = "fonts/fontawesome-webfont"
 font-icon-version = "4.7.0"
@@ -71,10 +73,14 @@ else
 
 // Styles
 card-radius = 16px
+inner-radius = 8px
+
+// Transitions
+trans-style = 0.15s ease-out
 
 // Grids
 column-width = 80px
-gutter-width = 16px
+gutter-width = 12px
 columns = main-column + _sidebar-column
 full-width = (column-width + gutter-width) * columns
 

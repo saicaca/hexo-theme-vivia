@@ -48,33 +48,51 @@
 #page-nav
   clearfix()
   margin: block-margin auto
-  background: #fff
-  box-shadow: 1px 2px 3px #ddd
-  border: 1px solid color-border
-  border-radius: 3px
   text-align: center
   color: color-grey
   overflow: hidden
-  a, span
-    padding: 10px 20px
-    line-height: 1
-    height: 2ex
+  display: flex
+  justify-content: center
+  gap: 12px
+  #num-bar
+    border-radius: inner-radius
+    background: var(--color-L25)
+    display: flex
+    .current
+      background: var(--color-L75)
+      color: var(--color-L25)
+  .page-nav-btn
+    width: 40px
+    height: 40px
+    background: var(--color-L25)
+    border-radius: inner-radius
+    font-family: font-icon
+    font-weight: 900
+    font-size: 24px
+    display: flex
+    justify-content: center
+    align-items: center
+    color: var(--color-L75)
+    &.disabled
+      color: color-N10
+      pointer-events: none
   a
-    color: color-grey
+    color: color-N75
     text-decoration: none
+    transition: background trans-style
     &:hover
-      background: color-grey
-      color: #fff
-  .prev
-    float: left
-  .next
-    float: right
+      &:not(.disabled)
+        background: var(--color-L40)
   .page-number
-    display: inline-block
+    width: 40px
+    height: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: inner-radius
+    font-weight: 500
+    padding: 0
     @media mq-mobile
       display: none
-  .current
-    color: color-default
-    font-weight: bold
   .space
-    color: color-border
+    color: color-border   // TODO to be tested

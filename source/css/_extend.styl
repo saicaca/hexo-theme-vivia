@@ -23,11 +23,20 @@ $button
   background: var(--color-L40)
   border-radius: 8px
   color: color-N75
+  transition: background trans-style
+  cursor: pointer
+  border: none
+  &:hover
+    background: var(--color-L50)
+
+$text-btn
+  @extend $button
   height: 32px
   padding: 0 12px
+  font-size: 14px
 
 $tag-list-item
-  @extend $button
+  @extend $text-btn
 
 $base-style
   h1

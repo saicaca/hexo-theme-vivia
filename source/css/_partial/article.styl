@@ -4,6 +4,12 @@
 .article-inner
   @extend $card
   overflow: hidden
+  .article-gallery
+    margin-bottom: -(card-radius)
+
+.article-main
+  @extend $card
+  position: relative
 
 .article-meta
   clearfix()
@@ -83,6 +89,7 @@
     margin-bottom: line-height
   img, video
     max-width: 100%
+    border-radius: inner-radius
     height: auto
     display: block
     margin: auto
@@ -170,7 +177,7 @@
   margin-top: 12px
 
 .article-tag-list-item
-  @extend $button
+  @extend $text-btn
   float: left
   margin-right: 10px
   align-items: center;

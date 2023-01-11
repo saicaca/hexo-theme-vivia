@@ -25,11 +25,14 @@
 <% } %>
 <% if (page.total > 1){ %>
   <nav id="page-nav">
-    <% var prev_text = "&laquo; " + __('prev');var next_text = __('next') + " &raquo;"%>
-    <%- paginator({
-      prev_text: prev_text,
-      next_text: next_text,
-      escape: false
-    }) %>
+    <a id="prev-btn" class="page-nav-btn <% if (page.current == 1) { %>disabled<% } %>" href="<%- page.prev_link %>"></a>
+    <div id="num-bar">
+      <%- paginator({
+        escape: false,
+        prev_next: false
+      }) %>  
+    </div>
+    <a id="next-btn" class="page-nav-btn <% if (page.current == page.total) { %>disabled<% } %>" href="<%- page.next_link %>"></a>
+
   </nav>
 <% } %>

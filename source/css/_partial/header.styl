@@ -65,43 +65,77 @@ $logo-text
 navbar
   @extend $card
   width: full-width
-  height: 80px
-  display: block
+  height: 72px
+  display: flex
+  justify-content: space-between
+  align-items: center
   position: relative
   margin: 0 auto
   border-radius: 0 0 card-radius card-radius
 
+#title-nav
+  margin-left: 16px
+  a
+    height: 52px
+    border-radius: inner-radius
+    align-items: center
+    padding: 0 20px
+    display: flex
+    font-size: 16px
+    font-weight: bold
+    transition: background trans-style
+    &:hover
+      background: var(--color-L20)
+    #vix-logo
+      display: flex
+      flex-wrap: wrap
+      gap: 4px
+      width: 20px
+      height: 20px
+      transform: rotate(45deg)
+      margin-right: 20px
+      .dot
+        height: 8px
+        width: 8px
+        border-radius: 50%
+        background: var(--color-L75)
+
 #main-nav
   float: left
-  margin-left: -15px
+  display: flex
+  gap: 8px
 
 $nav-link
   float: left
-  color: #fff
-  opacity: 0.6
+  color: color-N75
   text-decoration: none
-  text-shadow: 0 1px rgba(0, 0, 0, 0.2)
-  transition: opacity 0.2s
   display: block
-  padding: 20px 15px
+  border-radius: inner-radius
+  transition: background trans-style, color trans-style
   &:hover
-    opacity: 1
+    background: var(--color-L20)
+    color: var(--color-L75)
 
 .nav-icon
   @extend $nav-link
   font-family: font-icon
   text-align: center
   font-size: font-size
-  width: font-size
-  height: font-size
-  padding: 20px 15px
+  width: 44px
+  height: 44px
+  display: flex
   position: relative
   cursor: pointer
+  justify-content: center
+  align-items: center
 
 .main-nav-link
   @extend $nav-link
-  font-weight: 300
-  letter-spacing: 1px
+  font-weight: 500
+  height: 44px
+  padding: 0px 16px
+  display: flex
+  align-items: center
   @media mq-mobile
     display: none
 
@@ -113,8 +147,9 @@ $nav-link
     display: block
 
 #sub-nav
-  float: right
-  margin-right: -15px
+  margin-right: 16px
+  display: flex
+  gap: 4px
 
 #nav-rss-link
   &:before

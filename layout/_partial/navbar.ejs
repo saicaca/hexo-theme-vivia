@@ -1,4 +1,15 @@
 <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div id="vix-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div><%- config.title %> </div>
+    </a>
+  </nav>
   <nav id="main-nav">
     <% for (var i in theme.menu){ %>
       <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>

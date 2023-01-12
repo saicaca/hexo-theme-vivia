@@ -64,3 +64,52 @@
       height: 40px
       font-family: font-icon
       font-size: 24px
+
+.color-picker
+  position: fixed
+  bottom: 12px
+  right: 12px
+  width: 240px
+  z-index 10
+  border: var(--color-L50) solid 3px
+  p
+    font-size: 16px
+    font-weight: 500
+    color: color-N75
+  input
+    margin-bottom: 12px
+
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 6px;
+  background: var(--color-L40);
+  border-radius: 3px;
+}
+
+/* Input Thumb */
+::-webkit-slider-thumb
+  -webkit-appearance: none;
+  height: 20px;
+  width: 6px;
+  border-radius: 3px;
+  background: var(--color-L75);
+  box-shadow: none;
+  transition: background trans-style;
+
+::-moz-range-thumb
+  -webkit-appearance: none;
+  height: 20px;
+  width: 6px;
+  border-radius: 3px;
+  background: var(--color-L75);
+  box-shadow: none;
+  transition: background trans-style;
+
+&::-ms-thumb
+  -webkit-appearance: none;
+  height: 20px;
+  width: 6px;
+  border-radius: 3px;
+  background: var(--color-L75);
+  box-shadow: none;
+  transition: background trans-style;

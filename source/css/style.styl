@@ -53,6 +53,9 @@ body
   margin: 0 auto
   padding: 0 gutter-width
 
+#main
+  position: relative
+
 .inner
   column(columns)
 
@@ -101,6 +104,7 @@ if sidebar is left
 @import "_partial/footer"
 @import "_partial/highlight"
 @import "_partial/mobile"
+@import "_partial/back-to-top"
 
 if sidebar
   @import "_partial/sidebar"

@@ -25,12 +25,7 @@ else
   color: color-grey
   font-size: 0.85em
 
-.tagcloud
-  a
-    margin-right: 5px
-    display: inline-block
-
-.category-link
+$widget-nav-link
   height: 40px
   display: flex
   align-items: center
@@ -44,17 +39,24 @@ else
   &:hover
     background: var(--color-L20)
     color: var(--color-L75) !important
+
+$widget-nav-count
+  height: 28px
+  width: 32px
+  color: var(--color-L25)
+  background: var(--color-L75)
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: inner-radius
+  font-size: 14px
+  font-weight: 500 
+
+
+.category-link
+  @extend $widget-nav-link
   .category-count
-    height: 28px
-    width: 40px
-    color: var(--color-L25)
-    background: var(--color-L75)
-    display: flex
-    align-items: center
-    justify-content: center
-    border-radius: inner-radius
-    font-size: 14px
-    font-weight: 500 
+    @extend $widget-nav-count
 
 .children
   margin-left: 12px
@@ -62,3 +64,8 @@ else
 .category-box
   display: flex
   flex-direction: column
+
+.archive-link
+  @extend $widget-nav-link
+  .archive-count
+    @extend $widget-nav-count

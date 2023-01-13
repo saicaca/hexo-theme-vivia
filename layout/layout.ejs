@@ -11,7 +11,10 @@
         <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
           <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
         <% } %>
-        <section id="main"><%- body %></section>
+        <section id="main">
+          <%- body %>
+          <%- partial('_partial/back-to-top') %>
+        </section>
       </div>
       <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
     </div>

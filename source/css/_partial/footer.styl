@@ -1,14 +1,19 @@
 #footer
-  background: color-footer-background
-  padding: 50px 0
-  border-top: 1px solid color-border
-  color: color-grey
+  background: var(--color-L25)
+  font-size: 16px
+  font-weight: 500
+  display: flex
+  color: color-N50
+  margin: 0 auto
+  width: full-width
+  margin-top: 24px
+  border-radius: card-radius card-radius 0 0
   a
-    color: color-link
+    color: var(--color-L75)
     text-decoration: none
+    transition: color trans-style
     &:hover
-      text-decoration: underline
-
-#footer-info
-  line-height: line-height
-  font-size: 0.85em
+      color: white
+      
+  #footer-info
+    padding: 24px

@@ -156,7 +156,7 @@
   color: var(--color-L75)
   text-decoration: none
   font-size: 16px
-  font-weight: 500
+  font-weight: medium
   &:hover
     color: #fff
     text-decoration: none
@@ -189,7 +189,7 @@
 .article-tag-list-item a
   color: color-N75
   font-size: 14px
-  font-weight: 500  
+  font-weight: medium  
 
 .article-tag-list-link
   display: flex
@@ -214,7 +214,7 @@
   cursor: pointer
   float: left
   font-size: 16px
-  font-weight: 500
+  font-weight: medium
   &:before
     content: "\f064"
     font-family: font-icon
@@ -232,34 +232,34 @@
     &:before
       absolute-center(8px)
       content: ""
-      border-radius: 50%
-      background: color-border
-      box-shadow: 0 1px 2px #fff
+      // border-radius: 50%
+      // background: color-border
+      // box-shadow: 0 1px 2px #fff
 
 .article-nav-link-wrap
   text-decoration: none
-  text-shadow: 0 1px #fff
-  color: color-grey
   box-sizing: border-box
   margin-top: block-margin
   text-align: center
   display: block
+  padding: 12px
+  border-radius: inner-radius
   &:hover
-    color: color-default
+    color: var(--color-L75)
+    background: var(--color-L20)
   @media mq-normal
-    width: 50%
     margin-top: 0
 
 #article-nav-newer
   @media mq-normal
     float: left
-    text-align: right
+    text-align: left
     padding-right: 20px
 
 #article-nav-older
   @media mq-normal
     float: right
-    text-align: left
+    text-align: right
     padding-left: 20px
 
 .article-nav-caption

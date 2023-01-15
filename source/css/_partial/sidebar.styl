@@ -33,10 +33,14 @@ $widget-nav-link
   color: color-N75 !important
   font-weight: medium
   border-radius: inner-radius
-  padding-left: 12px
+  padding-left: 0
   padding-right: 8px
-  transition: background trans-style, color trans-style
+  padding-left: 8px
+
+  transition: background trans-style, color trans-style, padding trans-style
   &:hover
+    padding-left: 12px
+
     background: var(--color-L20)
     color: var(--color-L75) !important
 
@@ -50,7 +54,7 @@ $widget-nav-count
   justify-content: center
   border-radius: inner-radius
   font-size: 14px
-  font-weight: medium 
+  font-weight: bold 
 
 
 .category-link

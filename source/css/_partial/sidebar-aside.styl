@@ -1,4 +1,7 @@
 #sidebar
+  .sticky
+    position: sticky
+    top: 0
   @media mq-normal
     column(sidebar-column)
 
@@ -33,6 +36,8 @@
   @extend .widget
   padding: 0 0 20px
   text-align: center
+  .info
+    padding: 0 16px
   .avatar
     width: 100%
     border-radius: card-radius
@@ -41,7 +46,9 @@
     font-size: 20px
     font-weight: bold
     color: color-N90
-    line-height: 40px
+    line-height: 28px
+    margin-bottom: 4px
+    margin-top: 4px
   .dot
     width: 20px
     height: 4px
@@ -49,15 +56,17 @@
     border-radius: 2px
     margin-left: auto
     margin-right: auto
-    margin-bottom: 8px
+    margin-bottom: 12px
   .subtitle
     font-size: 16px
-    line-height: 40px
+    line-height: 24px
     color: color-N50
+    margin-bottom: 8px
   .link-list
     display: flex
     justify-content: center
     gap: 12px
+    flex-wrap: wrap
     .link-btn
       @extend $button
       width: 40px

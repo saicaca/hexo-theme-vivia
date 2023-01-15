@@ -1,7 +1,9 @@
 <aside id="sidebar"<% if (theme.sidebar === 'bottom'){ %> class="outer"<% } %>>
   <%- partial('_widget/info-card') %> 
-  <% theme.widgets.forEach(function(widget){ %>
-    <%- partial('_widget/' + widget) %>
-  <% }) %>
+  <div class="sticky">
+    <% theme.widgets.forEach(function(widget){ %>
+      <%- partial('_widget/' + widget) %>
+    <% }) %>
+  </div>
   <%- partial('_widget/color') %>
 </aside>

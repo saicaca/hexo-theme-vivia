@@ -46,25 +46,9 @@
   
 
 .article-title
-  text-decoration: none
-  font-size: 32px
-  font-weight: bold
-  color: color-N90
-  line-height: 40px
-  transition: color 0.2s
-  position: relative
+  @extend $main-title
   a&:hover
     color: var(--color-L75)
-  &:before
-    content: ''
-    width: 4px
-    height: 20px
-    border-radius: 2px
-    position: absolute
-    background: var(--color-L75)
-    left: -16px
-    top: 9px
-
 
 .article-entry
   @extend $base-style

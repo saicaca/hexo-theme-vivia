@@ -96,6 +96,110 @@
   .space
     color: color-border   // TODO to be tested
 
+width-date = 10%
+width-line = 10%
+width-tags = 15%
+width-title = 100 - width-date - width-line - width-tags
+
 .archive-main-card
   @extend $card
-  margin-top: block-margin
+  padding-top: 32px
+  padding-bottom: 32px
+  
+  .archive-title
+    @extend $main-title
+    margin-left: 40px
+    margin-bottom: 16px
+  
+  .year-line
+    font-size: 24px
+    color: color-N75
+    font-weight: bold
+    display: flex
+    margin: 0 44px
+    height: 60px
+    align-items: center
+    margin-top: 8px
+    .year-num
+      width: width-date
+      text-align: right
+    .dot-wrapper
+      width: width-line
+      display: flex
+      align-items: center
+      justify-content: center
+      .dot
+        width: 12px
+        height: 12px
+        background: var(--color-L25)
+        border-radius: 50%
+        outline: 3px solid var(--color-L75)
+        outline-offset: -2px
+        z-index: 1
+      
+
+  .archive-article-link
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    height: 40px
+    transition: background trans-style
+    margin: 0 24px
+    padding: 0 20px
+    border-radius: inner-radius
+    &:hover
+      background: var(--color-L20)
+      .title-inner
+        color: var(--color-L75)
+        padding-left: 4px
+      .dot
+        height: 20px
+        background: var(--color-L75)
+        outline-color: var(--color-L20)
+    .date
+      font-size: 14px
+      color: color-N50
+      width: width-date
+      text-align: right
+    .line
+      width: 10%
+      height: 100%
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      &:before
+        content: ''
+        width: width-line
+        height: 100%
+        border-left: 2px dashed color-N10
+        position: absolute
+        left: calc(50% - 1px)
+        top: -50%
+        pointer-events: none
+    .dot
+      width: 4px
+      height: 4px
+      border-radius: 2px
+      background: var(--color-L50)
+      outline: 8px solid var(--color-L25)
+      transition: background trans-style, height trans-style, outline-color trans-style
+      z-index: 10
+    .title
+      width: width-title
+    .title-inner
+      font-size: 16px
+      font-weight: medium
+      color: color-N75
+      white-space: nowrap
+      text-overflow: ellipsis
+      overflow: hidden
+      transition: padding-left trans-style, color trans-style
+    .tags
+      color: color-N30
+      font-size: 14px
+      width: width-tags
+      text-align: right
+      white-space: nowrap
+      text-overflow: ellipsis
+      overflow: hidden

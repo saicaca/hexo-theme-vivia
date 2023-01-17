@@ -38,6 +38,25 @@ $text-btn
 $tag-list-item
   @extend $text-btn
 
+$main-title
+  text-decoration: none
+  font-size: 32px
+  font-weight: bold
+  color: color-N90
+  line-height: 40px
+  transition: color 0.2s
+  position: relative
+  &:before
+    content: ''
+    width: 4px
+    height: 20px
+    border-radius: 2px
+    position: absolute
+    background: var(--color-L75)
+    left: -16px
+    top: 9px
+
+
 $base-style
   h1
     font-size: 2em

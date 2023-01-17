@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
 <%- partial('_partial/head') %>
-<script src="./js/color.global.min.js"></script>
+<script src="/js/color.global.min.js"></script>
 <body>
-  <div id="container">
-    <div id="wrap">
-      <!-- <%- partial('_partial/header', null, {cache: !config.relative_link}) %> -->
+  <div id="main-grid">
+    <div id="nav">
       <%- partial('_partial/navbar', null, {cache: !config.relative_link}) %>
-      <div class="outer">
-        <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
-          <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
-        <% } %>
-        <section id="main">
-          <%- body %>
-          <%- partial('_partial/back-to-top') %>
-        </section>
-      </div>
+    </div>
+    <div id="left-bar">
+      <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
+        <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+      <% } %>
+    </div>
+    <div id="content-body">
+      <%- body %>
+    </div>
+    <div id="footer-wrapper">
       <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
     </div>
-    <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
-    <%- partial('_partial/after-footer') %>
+    <%- partial('_partial/back-to-top') %>
   </div>
 </body>
 </html>

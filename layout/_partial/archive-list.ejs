@@ -1,0 +1,17 @@
+<div class="archive-main-card">
+    <div>Archive</div>
+    <% let currYear = -1; %>
+    <% page.posts.each(function(post, i) { %>
+      <% let year = post.date.year(); %>
+      <% if (year != currYear) { %>
+        <div><%- year %> </div>
+        <% currYear = year; %> 
+      <% } %>
+      <a>
+        <div class="date"><%- post.date.format("YYYY[-]MM[-]DD") %></div>
+        <div>
+          <%- post.title %> 
+        </div>
+      </a>
+    <% }) %>
+  </div>

@@ -1,67 +1,3 @@
-#header
-  height: banner-height
-  position: relative
-  border-bottom: 1px solid color-border
-  &:before, &:after
-    content: ""
-    position: absolute
-    left: 0
-    right: 0
-    height: 40px
-  &:before
-    top: 0
-    background: linear-gradient(rgba(0, 0, 0, 0.2), transparent)
-  &:after
-    bottom: 0
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.2))
-
-#header-outer
-  height: 100%
-  position: relative
-
-#header-inner
-  position: relative
-  overflow: hidden
-
-#banner
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-  background: url(banner-url) center #000
-  background-size: cover
-  z-index: -1
-
-#header-title
-  text-align: center
-  height: logo-size
-  position: absolute
-  top: 50%
-  left: 0
-  margin-top: logo-size * -0.5
-
-$logo-text
-  text-decoration: none
-  color: #fff
-  font-weight: 300
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3)
-
-#logo
-  @extend $logo-text
-  font-size: logo-size
-  line-height: logo-size
-  letter-spacing: 2px
-
-#subtitle
-  @extend $logo-text
-  font-size: subtitle-size
-  line-height: subtitle-size
-  letter-spacing: 1px
-
-#subtitle-wrap
-  margin-top: subtitle-size
-
 navbar
   @extend $card
   height: 72px
@@ -155,7 +91,7 @@ $nav-link
     content: "\f09e"
 
 #nav-search-btn
-  &:before
+  &:before 
     content: "\f002"
 
 #search-form-wrap

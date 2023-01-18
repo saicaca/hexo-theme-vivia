@@ -24,11 +24,15 @@
       <footer class="article-footer">
         <% if(post.excerpt && index && theme.excerpt_link) { %> 
           <p class="article-more-link">
-            <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+            <a href="<%- url_for(post.path) %>#more">
+              <%= theme.excerpt_link %><i class="fa-solid fa-angle-right"></i>
+            </a>
           </p>
         <% } %> 
   
-        <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" data-title="<%= post.title %>" class="article-share-link"><%= __('share') %></a>
+        <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" data-title="<%= post.title %>" class="article-share-link">
+          <i class="fa-solid fa-share"></i><%= __('share') %>
+        </a>
         <% if (post.comments && config.disqus_shortname){ %>
           <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
         <% } %>

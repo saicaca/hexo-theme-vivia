@@ -67,3 +67,15 @@ valine:
 # Appearence
 hue: 240
 avatar: /assets/avatar.png
+
+# Personal info
+links:
+  - name: Twitter
+    icon: fa-brands fa-twitter
+    url: https://twitter.com
+  - name: Steam
+    icon: fa-brands fa-steam
+    url: https://store.steampowered.com
+  - name: GitHub
+    icon: fa-brands fa-github
+    url: https://github.com

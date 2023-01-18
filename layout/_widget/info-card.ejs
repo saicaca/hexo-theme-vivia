@@ -6,9 +6,9 @@
       <div class="dot"></div>
       <div class="subtitle"><%- config.subtitle %> </div>
       <div class="link-list">
-        <button class="link-btn"></button>
-        <button class="link-btn"></button>
-        <button class="link-btn"></button>
+        <% for(let item of theme.links) { %>
+          <a class="link-btn" href="<%- item.url %>" title="<%- item.name %>"><i class="<%- item.icon %>"></i></a>
+        <% } %> 
       </div>  
     </div>
   </div>

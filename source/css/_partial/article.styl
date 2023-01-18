@@ -134,7 +134,9 @@
       margin-top: 0
 
 .article-more-link a
-  display: inline-block
+  display: flex
+  align-items: center;
+  gap: 8px;
   float: right
   line-height: 1.6em
   color: var(--color-L75)
@@ -144,10 +146,6 @@
   &:hover
     color: #fff
     text-decoration: none
-  &:after
-    content: "\f054"
-    font-family: font-icon
-    padding-left: 8px
 
 
 .article-footer
@@ -199,10 +197,9 @@
   float: left
   font-size: 16px
   font-weight: medium
-  &:before
-    content: "\f064"
-    font-family: font-icon
-    padding-right: 8px
+  display: flex
+  align-items: center
+  gap: 8px
   &:hover
     color: #fff
     text-decoration: none

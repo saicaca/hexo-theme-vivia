@@ -133,18 +133,24 @@
       height: 100%
       margin-top: 0
 
-.article-more-link a
+.article-more-link
   display: flex
   align-items: center;
+  justify-content: flex-end
   gap: 8px;
   float: right
-  line-height: 1.6em
+  line-height: 40px
   color: var(--color-L75)
   text-decoration: none
   font-size: 16px
   font-weight: medium
+  padding-left: 24px
+  padding-right: article-side-padding
+  border-radius: inner-radius 0 0 inner-radius
+  transition: background trans-style, padding-right trans-style
   &:hover
-    color: #fff
+    padding-right: article-side-padding - 4px
+    background: var(--color-L20)
     text-decoration: none
 
 
@@ -153,7 +159,7 @@
   font-size: 0.85em
   line-height: line-height
   // border-top: 1px solid color-border
-  margin: 0 article-side-padding article-bottom-padding
+  margin: 0 0 article-bottom-padding (article-side-padding - 16px)
 
 .article-tag-list
   margin-top: 12px
@@ -200,8 +206,12 @@
   display: flex
   align-items: center
   gap: 8px
+  padding: 0 16px
+  height: 40px
+  transition: background trans-style
+  border-radius: inner-radius
   &:hover
-    color: #fff
+    background: var(--color-L20)
     text-decoration: none
 
 

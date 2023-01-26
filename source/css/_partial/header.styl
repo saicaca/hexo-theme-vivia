@@ -20,7 +20,7 @@ navbar
     font-weight: bold
     transition: background trans-style
     &:hover
-      background: var(--color-L20)
+      background: var(--btn-text-hover)
     #vix-logo
       display: flex
       flex-wrap: wrap
@@ -33,7 +33,7 @@ navbar
         height: 8px
         width: 8px
         border-radius: 50%
-        background: var(--color-L75)
+        background: var(--btn-text-content)
 
 #main-nav
   float: left
@@ -48,8 +48,8 @@ $nav-link
   border-radius: inner-radius
   transition: background trans-style, color trans-style
   &:hover
-    background: var(--color-L20)
-    color: var(--color-L75)
+    background: var(--btn-text-hover)
+    color: var(--btn-text-light-text)
 
 .nav-icon
   @extend $nav-link

@@ -48,7 +48,7 @@
 .article-title
   @extend $main-title
   a&:hover
-    color: var(--color-L75)
+    color: var(--title-hover)
 
 .article-entry
   @extend $base-style
@@ -64,7 +64,7 @@
     line-height: line-height-title
     margin: line-height-title 0
   a
-    color: var(--color-L75)
+    color: var(--link)
     text-decoration: none
     &:hover
       color: white
@@ -140,7 +140,7 @@
   gap: 8px;
   float: right
   line-height: 40px
-  color: var(--color-L75)
+  color: var(--btn-text-content)
   text-decoration: none
   font-size: 16px
   font-weight: medium
@@ -150,7 +150,7 @@
   transition: background trans-style, padding-right trans-style
   &:hover
     padding-right: article-side-padding - 4px
-    background: var(--color-L20)
+    background: var(--btn-text-hover)
     text-decoration: none
 
 
@@ -188,7 +188,7 @@
     height: 4px
     width: 4px
     border-radius: 50%
-    background: var(--color-L25)
+    background: var(--tag-dot)
     margin-right: 8px
 
 .article-comment-link
@@ -211,7 +211,7 @@
   transition: background trans-style
   border-radius: inner-radius
   &:hover
-    background: var(--color-L20)
+    background: var(--btn-text-hover)
     text-decoration: none
 
 
@@ -236,8 +236,8 @@
   padding: 12px
   border-radius: inner-radius
   &:hover
-    color: var(--color-L75)
-    background: var(--color-L20)
+    color: var(--link)
+    background: var(--card-background)
   @media mq-normal
     margin-top: 0
 

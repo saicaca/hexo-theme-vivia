@@ -13,7 +13,7 @@ input, button
     padding: 0
 
 a
-  color: var(--color-L75)
+  color: var(--link)
   text-decoration: none
 
 @font-face
@@ -39,10 +39,10 @@ a
   font-weight: bold
   src: url(fonts/Roboto-Bold.ttf) format("truetype")
 
-  @font-face
+@font-face
   font-family: Roboto
   font-style: normal
-  font-weight: regular
+  font-weight: medium
   src: url(fonts/Roboto-Medium.ttf) format("truetype")
 
 @font-face
@@ -57,7 +57,7 @@ html, body, #container
 body
   font: font-size font-sans
   -webkit-text-size-adjust: 100%
-  background: url('../images/tile.png') var(--color-L16)
+  background: url('../images/tile.png') var(--page-background)
   background-size: 240px
   background-blend-mode: overlay    // TODO temporarily
   &:before

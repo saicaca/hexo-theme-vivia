@@ -55,15 +55,15 @@
   gap: 12px
   #num-bar
     border-radius: inner-radius
-    background: var(--color-L25)
+    background: var(--card-btn-bg)
     display: flex
     .current
-      background: var(--color-L75)
-      color: var(--color-L25)
+      background: var(--pagenav-curr-bg)
+      color: var(--pagenav-curr-text)
   .page-nav-btn
     width: 40px
     height: 40px
-    background: var(--color-L25)
+    background: var(--card-btn-bg)
     border-radius: inner-radius
     font-family: font-icon
     font-weight: 900
@@ -71,7 +71,7 @@
     display: flex
     justify-content: center
     align-items: center
-    color: var(--color-L75)
+    color: var(--card-btn-icon)
     &.disabled
       color: color-N10
       pointer-events: none
@@ -81,7 +81,7 @@
     transition: background trans-style
     &:hover
       &:not(.disabled)
-        background: var(--color-L40)
+        background: var(--card-btn-hover)
   .page-number
     width: 40px
     height: 40px
@@ -131,9 +131,9 @@ width-title = 100% - width-date - width-line - width-tags
       .dot
         width: 12px
         height: 12px
-        background: var(--color-L25)
+        background: var(--card-background)
         border-radius: 50%
-        outline: 3px solid var(--color-L75)
+        outline: 3px solid var(--light-dot)
         outline-offset: -2px
         z-index: 1
       
@@ -148,14 +148,14 @@ width-title = 100% - width-date - width-line - width-tags
     padding: 0 20px
     border-radius: inner-radius
     &:hover
-      background: var(--color-L20)
+      background: var(--btn-text-hover)
       .title-inner
-        color: var(--color-L75)
+        color: var(--btn-text-light-text)
         padding-left: 4px
       .dot
         height: 20px
-        background: var(--color-L75)
-        outline-color: var(--color-L20)
+        background: var(--light-dot)
+        outline-color: var(--card-background)
     .date
       font-size: 14px
       color: color-N50
@@ -181,8 +181,8 @@ width-title = 100% - width-date - width-line - width-tags
       width: 4px
       height: 4px
       border-radius: 2px
-      background: var(--color-L50)
-      outline: 8px solid var(--color-L25)
+      background: var(--timeline-dim-dot)
+      outline: 8px solid var(--card-background)
       transition: background trans-style, height trans-style, outline-color trans-style
       z-index: 10
     .title

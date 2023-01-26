@@ -1,12 +1,12 @@
 {
-  "name": "hexo-theme-landscape",
-  "version": "0.0.3",
-  "description": "Hexo Theme Landscape",
-  "repository": "hexojs/hexo-theme-landscape",
+  "name": "hexo-theme-vix",
+  "version": "0.0.1",
+  "description": "Hexo Theme Vix",
+  "repository": "saicaca/hexo-theme-vix",
   "keywords": [
     "hexo",
     "theme",
-    "landscape"
+    "vix"
   ],
   "license": "MIT",
   "dependencies": {

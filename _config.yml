@@ -67,9 +67,9 @@ valine:
 
 # Appearence
 hue: 240
-avatar: /assets/avatar.png
 
 # Personal info
+avatar: /assets/avatar.png
 links:
   - name: Twitter
     icon: fa-brands fa-twitter

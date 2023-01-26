@@ -16,6 +16,9 @@
     <% } %>
   </nav>
   <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <i class="fa-solid fa-circle-half-stroke"></i>
+    </a>
     <% if (theme.rss){ %>
       <a id="nav-rss-link" class="nav-icon" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>">
         <i class="fa-solid fa-rss"></i>

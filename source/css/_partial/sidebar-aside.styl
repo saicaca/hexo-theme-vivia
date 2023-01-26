@@ -12,7 +12,7 @@
 
 .widget-title
   // @extend $block-caption
-  color: color-N90
+  color: var(--widget-title)
   font-size: 20px
   font-weight: bold
   margin-bottom: 12px
@@ -32,7 +32,10 @@
       list-style: disc
   .article-tag-list
     a
-      color: color-N75
+      color: var(--btn-content)
+      &:hover
+        color: var(--btn-content-hover)
+
 
 .info-card
   @extend .widget
@@ -47,7 +50,7 @@
   .username
     font-size: 20px
     font-weight: bold
-    color: color-N90
+    color: var(--info-name)
     line-height: 28px
     margin-bottom: 4px
     margin-top: 4px
@@ -62,7 +65,7 @@
   .subtitle
     font-size: 16px
     line-height: 24px
-    color: color-N50
+    color: var(--info-sub)
     margin-bottom: 8px
   .link-list
     display: flex

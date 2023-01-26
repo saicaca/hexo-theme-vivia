@@ -113,7 +113,7 @@ width-title = 100% - width-date - width-line - width-tags
   
   .year-line
     font-size: 24px
-    color: color-N75
+    color: var(--archive-year)
     font-weight: bold
     display: flex
     margin: 0 44px
@@ -155,10 +155,10 @@ width-title = 100% - width-date - width-line - width-tags
       .dot
         height: 20px
         background: var(--light-dot)
-        outline-color: var(--card-background)
+        outline-color: var(--btn-text-hover)
     .date
       font-size: 14px
-      color: color-N50
+      color: var(--archive-date)
       width: width-date
       text-align: right
     .line
@@ -172,7 +172,7 @@ width-title = 100% - width-date - width-line - width-tags
         content: ''
         width: width-line
         height: 100%
-        border-left: 2px dashed color-N10
+        border-left: 2px dashed var(--archive-dashline)
         position: absolute
         left: calc(50% - 1px)
         top: -50%
@@ -190,13 +190,13 @@ width-title = 100% - width-date - width-line - width-tags
     .title-inner
       font-size: 16px
       font-weight: bold
-      color: color-N75
+      color: var(--archive-title)
       white-space: nowrap
       text-overflow: ellipsis
       overflow: hidden
       transition: padding-left trans-style, color trans-style
     .tags
-      color: color-N30
+      color: var(--archive-tags)
       font-size: 14px
       width: width-tags
       text-align: right

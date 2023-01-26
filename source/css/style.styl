@@ -13,7 +13,6 @@ input, button
     padding: 0
 
 a
-  color: var(--link)
   text-decoration: none
 
 @font-face
@@ -57,9 +56,11 @@ html, body, #container
 body
   font: font-size font-sans
   -webkit-text-size-adjust: 100%
-  background: url('../images/tile.png') var(--page-background)
+  // background: url('../images/tile.png') var(--page-background)
+  background: var(--page-background)
   background-size: 240px
   background-blend-mode: overlay    // TODO temporarily
+  transition: background trans-style
   &:before
     // TODO rotate the background
     content: ''

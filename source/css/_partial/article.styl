@@ -8,7 +8,7 @@
     margin-bottom: -(card-radius)
 
 .article-main
-  @extend $card
+  border-radius: card-radius
   position: relative
 
 .article-meta
@@ -19,7 +19,7 @@
   float: left
 
 .meta-text
-  color: color-N50
+  color: var(--article-meta)
   line-height: 1em
   font-weight: medium
   text-decoration: none
@@ -53,7 +53,7 @@
 .article-entry
   @extend $base-style
   clearfix()
-  color: color-N75
+  color: var(--article-text)
   padding: 0 article-side-padding
   p, table
     line-height: line-height
@@ -168,18 +168,11 @@
   row-gap: 10px
   column-gap: 10px
 
-.article-tag-list-item
+.article-tag-list-link
   @extend $text-btn
-  float: left
-  align-items: center;
-  display: flex;
-
-.article-tag-list-item a
-  color: color-N75
+  color: var(--btn-content)
   font-size: 14px
   font-weight: medium  
-
-.article-tag-list-link
   display: flex
   align-items: center
   &:before
@@ -190,6 +183,10 @@
     border-radius: 50%
     background: var(--tag-dot)
     margin-right: 8px
+  &:hover
+    color: var(--btn-content-hover)
+    &:before
+      background: var(--btn-content-hover)
 
 .article-comment-link
   float: right
@@ -199,6 +196,7 @@
     padding-right: 8px
 
 .article-share-link
+  color: var(--btn-text-content)
   cursor: pointer
   float: left
   font-size: 16px

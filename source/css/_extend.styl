@@ -17,20 +17,23 @@ $block
 
 $card
   background: var(--card-background)
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05))
   border-radius: card-radius
+  transition: background trans-style
 
 $button
-  background: var(--button-background)
+  background: var(--btn-bg)
   border-radius: 8px
-  color: color-N75
-  transition: background trans-style
+  color: var(--btn-content)
+  transition: background trans-style, color trans-style
   cursor: pointer
   border: none
   display: flex
   justify-content: center
   align-items: center
   &:hover
-    background: var(--button-hover)
+    color: var(--btn-content-hover)
+    background: var(--btn-hover)
 
 $text-btn
   @extend $button
@@ -45,7 +48,7 @@ $main-title
   text-decoration: none
   font-size: 32px
   font-weight: bold
-  color: color-N90
+  color: var(--main-title)
   line-height: 40px
   transition: color 0.2s
   position: relative

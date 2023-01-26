@@ -1,53 +1,122 @@
+color-N90 = alpha(white, 0.9)
+color-N75 = alpha(white, 0.75)
+color-N50 = alpha(white, 0.5) 
+color-N30 = alpha(white, 0.3) 
+color-N10 = alpha(white, 0.1)
+
+color-B90 = alpha(black, 0.9)
+color-B75 = alpha(black, 0.75)
+color-B50 = alpha(black, 0.5)
+color-B30 = alpha(black, 0.3)
+color-B10 = alpha(black, 0.1)
+
 :root
-  --bright-L16: bright-L16
-  --bright-L20: bright-L20
-  --bright-L25: bright-L25
-  --bright-L40: bright-L40
-  --bright-L50: bright-L50
-  --bright-L75: bright-L75
+  --dark-L16: dark-L16
+  --dark-L20: dark-L20
+  --dark-L25: dark-L25
+  --dark-L40: dark-L40
+  --dark-L50: dark-L50
+  --dark-L75: dark-L75
+
+  --light-L55: light-L55
+  --light-L70: light-L70
+  --light-L95: light-L95
+  --light-L98: light-L98
 
   // Layout
-  --page-background: var(--bright-L16)
-  --card-background: var(--bright-L25)
+  --page-background: var(--dark-L16)
+  --card-background: var(--dark-L25)
 
   // Component
-  --primary: var(--bright-L75)
+  --primary: var(--dark-L75)
+  --main-title: color-N90
 
-  --button-background: var(--bright-L40)
-  --button-hover: var(--bright-L50)
+  --btn-bg: var(--dark-L40)
+  --btn-content: color-N75
+  --btn-hover: var(--dark-L50)
+  --btn-content-hover: var(--btn-content)
 
   --card-btn-bg: var(--card-background)
-  --card-btn-hover: var(--bright-L40)
-  --card-btn-active: var(--bright-L50)
-  --card-btn-icon: var(--bright-L75)
+  --card-btn-hover: var(--dark-L40)
+  --card-btn-active: var(--dark-L50)
+  --card-btn-icon: var(--dark-L75)
 
-  --btn-text-hover: var(--bright-L20)
-  --btn-text-content: var(--bright-L75)
-  --btn-text-light-text: var(--bright-L75)
+  --btn-text-hover: var(--dark-L20)
+  --btn-text-neutral-text: color-N75
+  --btn-text-content: var(--dark-L75)
+  --btn-text-light-text: var(--dark-L75)
 
-  --timeline-dim-dot: var(--bright-L50)
+  --timeline-dim-dot: var(--dark-L50)
 
-  --title-hover: var(--bright-L75)
+  --title-hover: var(--primary)
 
   --light-dot: var(--primary)
 
-  --tag-dot: var(--bright-L25)
+  --tag-dot: var(--dark-L25)
 
-  --highlight-selection: var(--bright-L40)
-  --article-code-bg: var(--bright-L40)
-  --article-block: var(--bright-L20)
+  --article-meta: color-N50
+  --article-text: color-N75
+  --highlight-selection: var(--dark-L40)
+  --article-code-bg: var(--dark-L40)
+  --article-block: var(--dark-L20)
+  --link: var(--dark-L75)
 
-  --color-picker-border: var(--bright-L50)
-  --color-picker-range: var(--bright-L40)
-  --color-picker-thumb: var(--bright-L75)
+  --color-picker-border: var(--dark-L50)
+  --color-picker-range: var(--dark-L40)
+  --color-picker-thumb: var(--dark-L75)
 
-  --badge-bg: var(--bright-L75)
-  --text-on-light: var(--bright-L25)
+  --badge-bg: var(--dark-L75)
+  --text-on-light: var(--dark-L25)
 
-  --pagenav-curr-bg: var(--bright-L75)
-  --pagenav-curr-text: var(--bright-L25)
+  --pagenav-curr-bg: var(--dark-L75)
+  --pagenav-curr-text: var(--dark-L25)
 
-  --link: var(--bright-L75)
+  --info-name: color-N90
+  --info-sub: color-N50
+
+  --widget-title: var(--main-title)
+
+  --archive-year: color-N75
+  --archive-date: color-N50
+  --archive-title: color-N75
+  --archive-tags: color-N30
+  --archive-dashline: color-N10
+
+:root[theme='light']
+  --page-background: var(--light-L98)
+  --card-background: white
+
+  // Component
+  --primary: var(--light-L70)
+  --main-title: color-B90
+
+  --btn-bg: var(--light-L95)
+  --btn-content: var(--light-L55)
+  --btn-hover: var(--light-L55)
+  --btn-content-hover: color-N90
+
+  --btn-text-hover: var(--light-L95)
+  --btn-text-neutral-text: color-B75
+  --btn-text-content: var(--light-L70)
+  --btn-text-light-text: var(--light-L70)
+
+  --tag-dot: var(--btn-content)
+
+  --info-name: color-B90
+  --info-sub: color-B50
+
+  --article-meta: color-B50
+  --article-text: color-B75
+
+  --badge-bg: var(--light-L95)
+  --text-on-light: var(--light-L55)
+
+  --archive-year: color-B75
+  --archive-date: color-B50
+  --archive-title: color-B75
+  --archive-tags: color-B30
+  --archive-dashline: color-B10
+
 
 // Config
 support-for-ie = false
@@ -68,15 +137,6 @@ color-twitter = #00aced
 color-facebook = #3b5998
 color-pinterest = #cb2027
 color-linkedin = #0077B5
-
-// Colors
-// Auto generate for now
-
-color-N90 = alpha(white, 0.9)
-color-N75 = alpha(white, 0.75)
-color-N50 = alpha(white, 0.5) 
-color-N30 = alpha(white, 0.3) 
-color-N10 = alpha(white, 0.1)
 
 // Fonts
 font-sans = "Roboto", -apple-system, BlinkMacSystemFont,

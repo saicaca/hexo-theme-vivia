@@ -1,19 +1,32 @@
 <% if (post.prev || post.next){ %>
 <nav id="article-nav">
-  <a class="article-nav-btn left <% if (!post.prev) { %> disabled <% } %>" <% if (post.prev) { %> href="<%- url_for(post.prev.path) %>" <% } %> >
+  <a class="article-nav-btn left <% if (!post.prev) { %> disabled <% } %>"
+    <% if (post.prev) { %>
+      href="<%- url_for(post.prev.path) %>"
+      title="<%- post.prev.title %>"
+    <% } %> >
     <i class="fa-solid fa-angle-left"></i>
-    <% if (post.prev && post.prev.title){ %>
-      <%= post.prev.title %>
-    <% } else if (post.prev) { %>
-      (No Title)
-    <% } %>
+    <p class="title-text">
+      <% if (post.prev && post.prev.title){ %>
+        <%= post.prev.title %>
+      <% } else if (post.prev) { %>
+        (No Title)
+      <% } %>  
+    </p>
   </a>
-  <a class="article-nav-btn right <% if (!post.next) { %> disabled <% } %>" <% if (post.next) { %> href="<%- url_for(post.next.path) %>" <% } %> >
-    <% if (post.next && post.next.title){ %>
-      <%= post.next.title %>
-    <% } else if (post.next) { %>
-      (No Title)
-    <% } %>
+  <a class="article-nav-btn right <% if (!post.next) { %> disabled <% } %>"
+    <% if (post.next) { %>
+      href="<%- url_for(post.next.path) %>"
+      title="<%- post.next.title %>"
+    <% } %> >
+
+    <p class="title-text">
+      <% if (post.next && post.next.title){ %>
+        <%= post.next.title %>
+      <% } else if (post.next) { %>
+        (No Title)
+      <% } %>  
+    </p>
     <i class="fa-solid fa-angle-right"></i>
   </a>
 </nav>

@@ -1,10 +1,10 @@
 <% if (post.categories && post.categories.length){ %>
-  <div class="article-category">
+  <div class="meta-cate-flex">
     <%- list_categories(post.categories, {
       show_count: false,
-      class: 'article-category',
+      class: 'meta-cate',
       style: 'none',
-      separator: '►'
+      separator: '>'
     }) %>
   </div>
 <% } %>

@@ -1,15 +1,19 @@
 <article id="<%= post.layout %>-<%= post.slug %>" class="h-entry article article-type-<%= post.layout %>" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <%- partial('post/category') %>
-
-  </div>
   <div class="article-inner">
     <%- partial('post/gallery') %>
     <div class="article-main">
       <% if (post.link || post.title){ %>
         <header class="article-header">
           <%- partial('post/title', {class_name: 'p-name article-title'}) %>
-          <%- partial('post/date', {class_name: 'meta-text', date_format: null}) %>
+          <div class='meta-text'>
+            <%- partial('post/date', {class_name: '', date_format: null}) %>
+            <% if (post.categories.length) { %> 
+              <div class="need-seperator">
+                <%- partial('post/category') %>  
+              </div>
+            <% } %> 
+            
+          </div>
           <%- partial('post/tag') %>
         </header>
   

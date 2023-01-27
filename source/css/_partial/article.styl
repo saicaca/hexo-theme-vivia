@@ -23,19 +23,29 @@
 
 .meta-text
   color: var(--article-meta)
-  line-height: 1em
+  font-size: 14px
   font-weight: medium
   text-decoration: none
   transition: color trans-style
-
-.article-category
-  float: left
-  line-height: 1em
-  color: #ccc
-  text-shadow: 0 1px #fff
-  margin-left: 8px
-  &:before
-    content: "\2022"
+  display: flex
+  .meta-cate-flex
+    display: flex
+    gap: 6px
+  a
+    color: var(--article-meta)
+    &:hover
+      color: var(--link)
+  .need-seperator
+    display: flex
+    align-items: center
+    &:before
+      content: ""
+      position: relative
+      background: var(--article-meta)
+      height: 4px
+      width: 4px
+      border-radius: 50%
+      margin: 0 16px
 
 .article-category-link
   @extend $block-caption
@@ -70,9 +80,15 @@
     margin: line-height-title 0
   a
     color: var(--link)
+    border-radius: 4px
     text-decoration: none
+    transition: background trans-style, color trans-style, outline trans-style
+    outline: 2px solid
+    outline-color: rgba(0,0,0,0)
+    overflow: visible
     &:hover
-      color: white
+      outline-color: var(--link-hover-bg)
+      background: var(--link-hover-bg)
   ul, ol, dl
     margin-top: line-height
     margin-bottom: line-height
@@ -239,6 +255,7 @@
     color: var(--neut-L75)
     font-weight: bold
     font-size: 16px
+    overflow: hidden
     i
       color: var(--primary)
       font-size: 20px
@@ -248,6 +265,12 @@
       justify-content: flex-end
     &.disabled
       opacity: 0
+    .title-text
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+
+
 
 
 .article-nav-link-wrap

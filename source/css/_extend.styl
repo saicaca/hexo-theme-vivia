@@ -35,6 +35,16 @@ $button
     color: var(--btn-content-hover)
     background: var(--btn-hover)
 
+$card-btn
+  @extend $card
+  display: flex
+  justify-content: center
+  align-items: center
+  &:hover
+    background: var(--card-btn-hover)
+  &:active
+    background: var(--card-btn-active)
+
 $text-btn
   @extend $button
   height: 32px

@@ -6,6 +6,7 @@
     top: 0
 
 .back-to-top-btn
+    @extend $card-btn
     width: 60px
     height: 60px
     font-family: font-icon
@@ -16,11 +17,5 @@
     position: fixed
     bottom: 160px
     opacity: 0
-    background: var(--card-btn-bg)
-    border-radius: card-radius
     transition: background trans-style, opacity trans-style
     cursor: pointer
-    &:hover
-        background: var(--card-btn-hover)
-    &:active
-        background: var(--card-btn-active)

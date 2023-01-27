@@ -60,7 +60,7 @@ body
   background: var(--page-background)
   background-size: 240px
   background-blend-mode: overlay    // TODO temporarily
-  transition: background trans-style
+  transition: background trans-style, color trans-style
   &:before
     // TODO rotate the background
     content: ''
@@ -71,6 +71,9 @@ body
     height: 100%
     width: 100%
     // rotate: 30deg
+
+body > *
+  transition: background trans-style, color trans-style
 
 #main-grid
   display: grid

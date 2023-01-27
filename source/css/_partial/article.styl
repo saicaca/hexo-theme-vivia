@@ -10,6 +10,8 @@
 .article-main
   border-radius: card-radius
   position: relative
+  background: var(--card-background)
+  transition: background trans-style
 
 .article-meta
   clearfix()
@@ -23,6 +25,7 @@
   line-height: 1em
   font-weight: medium
   text-decoration: none
+  transition: color trans-style
 
 .article-category
   float: left
@@ -55,6 +58,7 @@
   clearfix()
   color: var(--article-text)
   padding: 0 article-side-padding
+  transition: color trans-style
   p, table
     line-height: line-height
     margin: line-height 0
@@ -183,6 +187,7 @@
     border-radius: 50%
     background: var(--tag-dot)
     margin-right: 8px
+    transition: background trans-style
   &:hover
     color: var(--btn-content-hover)
     &:before

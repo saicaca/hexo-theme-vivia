@@ -1,139 +1,3 @@
-color-N90 = alpha(white, 0.9)
-color-N75 = alpha(white, 0.75)
-color-N50 = alpha(white, 0.5) 
-color-N30 = alpha(white, 0.3) 
-color-N10 = alpha(white, 0.1)
-
-color-B90 = alpha(black, 0.9)
-color-B75 = alpha(black, 0.75)
-color-B50 = alpha(black, 0.5)
-color-B30 = alpha(black, 0.3)
-color-B10 = alpha(black, 0.1)
-
-:root
-  --dark-L16: dark-L16
-  --dark-L20: dark-L20
-  --dark-L25: dark-L25
-  --dark-L40: dark-L40
-  --dark-L50: dark-L50
-  --dark-L75: dark-L75
-
-  --light-L55: light-L55
-  --light-L70: light-L70
-  --light-L95: light-L95
-  --light-L98: light-L98
-
-  --neut-L90: color-N90
-  --neut-L75: color-N75
-  --neut-L50: color-N50
-  --neut-L30: color-N30
-  --neut-L10: color-N10
-
-  // Layout
-  --page-background: var(--dark-L16)
-  --card-background: var(--dark-L25)
-
-  // Component
-  --primary: var(--dark-L75)
-  --main-title: color-N90
-
-  --btn-bg: var(--dark-L40)
-  --btn-content: color-N75
-  --btn-hover: var(--dark-L50)
-  --btn-content-hover: var(--btn-content)
-
-  --card-btn-bg: var(--card-background)
-  --card-btn-hover: var(--dark-L40)
-  --card-btn-active: var(--dark-L50)
-  --card-btn-icon: var(--primary)
-
-  --btn-text-hover: var(--dark-L20)
-  --btn-text-neutral-text: color-N75
-  --btn-text-content: var(--dark-L75)
-  --btn-text-light-text: var(--dark-L75)
-
-  --timeline-dim-dot: var(--dark-L50)
-
-  --title-hover: var(--primary)
-
-  --light-dot: var(--primary)
-
-  --tag-dot: var(--dark-L25)
-
-  --article-meta: color-N50
-  --article-text: color-N75
-  --highlight-selection: var(--dark-L40)
-  --article-code-bg: var(--dark-L40)
-  --article-block: var(--dark-L20)
-  --link: var(--primary)
-  --link-hover-bg: var(--dark-L40)
-
-  --color-picker-border: var(--dark-L50)
-  --color-picker-range: var(--dark-L40)
-  --color-picker-thumb: var(--dark-L75)
-
-  --badge-bg: var(--dark-L75)
-  --text-on-light: var(--dark-L25)
-
-  --pagenav-curr-bg: var(--dark-L75)
-  --pagenav-curr-text: var(--dark-L25)
-
-  --info-name: color-N90
-  --info-sub: color-N50
-
-  --widget-title: var(--main-title)
-
-  --archive-year: color-N75
-  --archive-date: color-N50
-  --archive-title: color-N75
-  --archive-tags: color-N30
-  --archive-dashline: color-N10
-
-:root[theme='light']
-  --page-background: var(--light-L98)
-  --card-background: white
-
-  --neut-L90: color-B90
-  --neut-L75: color-B75
-  --neut-L50: color-B50
-  --neut-L30: color-B30
-  --neut-L10: color-B10
-
-  // Component
-  --primary: var(--light-L70)
-  --main-title: color-B90
-
-  --btn-bg: var(--light-L95)
-  --btn-content: var(--light-L55)
-  --btn-hover: var(--light-L70)
-  --btn-content-hover: color-N90
-
-  --btn-text-hover: var(--light-L95)
-  --btn-text-neutral-text: color-B75
-  --btn-text-content: var(--light-L70)
-
-  --card-btn-hover: var(--light-L95)
-  --card-btn-active: var(--light-L98)
-
-  --link-hover-bg: var(--light-L95)
-
-  --tag-dot: var(--btn-content)
-
-  --info-name: color-B90
-  --info-sub: color-B50
-
-  --article-meta: color-B50
-  --article-text: color-B75
-
-  --badge-bg: var(--light-L95)
-  --text-on-light: var(--light-L55)
-
-  --archive-year: color-B75
-  --archive-date: color-B50
-  --archive-title: color-B75
-  --archive-tags: color-B30
-  --archive-dashline: color-B10
-
 
 // Config
 support-for-ie = false
@@ -213,3 +77,141 @@ left-bar-width = 280px
 mq-mobile = "screen and (max-width: 479px)"
 mq-tablet = "screen and (min-width: 480px) and (max-width: 767px)"
 mq-normal = "screen and (min-width: 768px)"
+
+// Colors
+color-N90 = alpha(white, 0.9)
+color-N75 = alpha(white, 0.75)
+color-N50 = alpha(white, 0.5) 
+color-N30 = alpha(white, 0.3) 
+color-N10 = alpha(white, 0.1)
+
+color-B90 = alpha(black, 0.9)
+color-B75 = alpha(black, 0.75)
+color-B50 = alpha(black, 0.5)
+color-B30 = alpha(black, 0.3)
+color-B10 = alpha(black, 0.1)
+
+:root
+  --dark-L16: dark-L16
+  --dark-L20: dark-L20
+  --dark-L25: dark-L25
+  --dark-L40: dark-L40
+  --dark-L50: dark-L50
+  --dark-L75: dark-L75
+
+  --light-L55: light-L55
+  --light-L70: light-L70
+  --light-L95: light-L95
+  --light-L98: light-L98
+
+  --neut-L90: color-N90
+  --neut-L75: color-N75
+  --neut-L50: color-N50
+  --neut-L30: color-N30
+  --neut-L10: color-N10
+
+  // Layout Color
+  --page-background: var(--dark-L16)
+  --card-background: var(--dark-L25)
+
+  // Component Color
+  --primary: var(--dark-L75)
+  --main-title: color-N90
+
+  --btn-bg: var(--dark-L40)
+  --btn-content: color-N75
+  --btn-hover: var(--dark-L50)
+  --btn-content-hover: var(--btn-content)
+
+  --card-btn-bg: var(--card-background)
+  --card-btn-hover: var(--dark-L40)
+  --card-btn-active: var(--dark-L50)
+  --card-btn-icon: var(--primary)
+
+  --btn-text-hover: var(--dark-L20)
+  --btn-text-neutral-text: color-N75
+  --btn-text-content: var(--dark-L75)
+  --btn-text-light-text: var(--dark-L75)
+
+  --timeline-dim-dot: var(--dark-L50)
+
+  --title-hover: var(--primary)
+
+  --light-dot: var(--primary)
+
+  --tag-dot: var(--dark-L25)
+
+  --article-meta: color-N50
+  --article-text: color-N75
+  --highlight-selection: var(--dark-L40)
+  --article-code-bg: var(--dark-L40)
+  --article-block: var(--dark-L20)
+  --link: var(--primary)
+  --link-hover-bg: var(--dark-L40)
+
+  --color-picker-border: var(--primary)
+  --color-picker-range: var(--dark-L40)
+  --color-picker-thumb: var(--dark-L75)
+
+  --badge-bg: var(--dark-L75)
+  --text-on-light: var(--dark-L25)
+
+  --pagenav-curr-bg: var(--primary)
+  --pagenav-curr-text: var(--dark-L25)
+
+  --info-name: color-N90
+  --info-sub: color-N50
+
+  --widget-title: var(--main-title)
+
+  --archive-year: var(--neut-L75)
+  --archive-date: var(--neut-L50)
+  --archive-title: var(--neut-L75)
+  --archive-tags: var(--neut-L30)
+  --archive-dashline: var(--neut-L10)
+
+  // Layout Setting
+  --left-bar-width: left-bar-width
+
+:root[theme='light']
+  --page-background: var(--light-L98)
+  --card-background: white
+
+  --neut-L90: color-B90
+  --neut-L75: color-B75
+  --neut-L50: color-B50
+  --neut-L30: color-B30
+  --neut-L10: color-B10
+
+  // Component
+  --primary: var(--light-L70)
+  --main-title: color-B90
+
+  --btn-bg: var(--light-L95)
+  --btn-content: var(--light-L55)
+  --btn-hover: var(--light-L70)
+  --btn-content-hover: color-N90
+
+  --btn-text-hover: var(--light-L95)
+  --btn-text-neutral-text: color-B75
+  --btn-text-content: var(--light-L70)
+
+  --card-btn-hover: var(--light-L95)
+  --card-btn-active: var(--light-L98)
+
+  --link-hover-bg: var(--light-L95)
+
+  --tag-dot: var(--btn-content)
+
+  --info-name: color-B90
+  --info-sub: color-B50
+
+  --article-meta: color-B50
+  --article-text: color-B75
+
+  --badge-bg: var(--light-L95)
+  --text-on-light: var(--light-L55)
+
+  --pagenav-curr-text: color-N90
+
+  --color-picker-range: var(--light-L95)

@@ -4,8 +4,8 @@
   .sticky
     position: sticky
     top: block-margin
-  @media mq-normal
-    column(sidebar-column)
+  // @media mq-normal
+  //   column(sidebar-column)
 
 .widget-wrap
   margin-bottom: block-margin
@@ -98,7 +98,8 @@
 input[type="range"] {
   -webkit-appearance: none;
   height: 6px;
-  background: var(--color-picker-range);
+  transition: background trans-style
+  background: var(--color-picker-range)
   border-radius: 3px;
 }
 

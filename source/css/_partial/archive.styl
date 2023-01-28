@@ -49,18 +49,21 @@
   margin: block-margin auto
   text-align: center
   color: color-grey
-  overflow: hidden
+  overflow: visible
   display: flex
   justify-content: center
   gap: 12px
   #num-bar
+    @extend $card
     border-radius: inner-radius
     background: var(--card-btn-bg)
+    font-weight: bold
     display: flex
     .current
       background: var(--pagenav-curr-bg)
       color: var(--pagenav-curr-text)
   .page-nav-btn
+    @extend $card
     width: 40px
     height: 40px
     background: var(--card-btn-bg)
@@ -73,10 +76,10 @@
     align-items: center
     color: var(--card-btn-icon)
     &.disabled
-      color: color-N10
+      color: var(--neut-L10)
       pointer-events: none
   a
-    color: color-N75
+    color: var(--neut-L75)
     text-decoration: none
     transition: background trans-style
     &:hover

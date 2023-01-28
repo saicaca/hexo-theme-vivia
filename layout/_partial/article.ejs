@@ -7,7 +7,7 @@
           <%- partial('post/title', {class_name: 'p-name article-title'}) %>
           <div class='meta-text'>
             <%- partial('post/date', {class_name: '', date_format: null}) %>
-            <% if (post.categories.length) { %> 
+            <% if (post.categories && post.categories.length) { %> 
               <div class="need-seperator">
                 <%- partial('post/category') %>  
               </div>

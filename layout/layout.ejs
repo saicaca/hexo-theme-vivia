@@ -7,7 +7,8 @@
 <script src="/js/light-dark-storage.js"></script>
 <%- partial('_partial/head') %>
 <body>
-  <div id="main-grid">
+  <%- partial('_widget/color') %>
+  <div id="main-grid" class="shadow">
     <div id="nav">
       <%- partial('_partial/navbar', null, {cache: !config.relative_link}) %>
     </div>
@@ -24,6 +25,6 @@
     </div>
     <%- partial('_partial/back-to-top') %>
   </div>
+  <script src="/js/light-dark-switch.js"></script>
 </body>
 </html>
-<script src="/js/light-dark-switch.js"></script>

@@ -23,17 +23,23 @@
 
 .meta-text
   color: var(--article-meta)
-  font-size: 14px
+  font-size: 16px
   font-weight: medium
   text-decoration: none
-  transition: color trans-style
   display: flex
   .meta-cate-flex
     display: flex
     gap: 6px
   a
     color: var(--article-meta)
+    outline-width: 4px
+    outline-style: solid
+    outline-color: rgba(0,0,0,0)
+    border-radius: 2px
+    transition: color trans-style, outline trans-style, background trans-style
     &:hover
+      outline-color: var(--btn-bg)
+      background: var(--btn-bg)
       color: var(--link)
   .need-seperator
     display: flex
@@ -41,6 +47,7 @@
     &:before
       content: ""
       position: relative
+      transition: color trans-style
       background: var(--article-meta)
       height: 4px
       width: 4px

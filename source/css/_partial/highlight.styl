@@ -68,16 +68,13 @@ $line-numbers
     .line.marked
       background: highlight-selection
   .gist
-    margin: 0 article-padding * -1
-    border-style: solid
-    border-color: color-border
-    border-width: 1px 0
-    background: highlight-background
-    padding: 15px article-padding 15px 0
+    border-radius: inner-radius
+    background: var(--dark-L20)
     .gist-file
       border: none
       font-family: font-mono
       margin: 0
+      padding: 12px
       .gist-data
         background: none
         border: none
@@ -93,13 +90,12 @@ $line-numbers
         padding: 0
         border: none
       .gist-meta
-        background: highlight-background
         color: highlight-comment
+        background: var(--dark-L20)
         font: 0.85em font-sans
         text-shadow: 0 0
         padding: 0
-        margin-top: 1em
-        margin-left: article-padding
+        margin-top: 8px
         a
           color: color-link
           font-weight: normal

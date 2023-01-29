@@ -64,3 +64,18 @@
 
   </section>
 <% } %>
+
+<% if (!index && theme.comment.valine.enable) { %>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <div id="comment-card" class="comment-card">
+    <div class="main-title">Comments</div>
+    <div id="vcomments"></div>
+  </div>
+  <script>
+      new Valine({
+          el: '#vcomments',
+          appId: "<%= theme.comment.valine.appId %>",
+          appKey: "<%= theme.comment.valine.appKey %>"
+      })
+  </script>
+<% } %> 

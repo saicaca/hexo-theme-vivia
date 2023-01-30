@@ -5,14 +5,16 @@
   @extend $card
   overflow: hidden
   margin-bottom: block-margin
-  .article-gallery
-    margin-bottom: -(card-radius)
+  display: flex
 
 .article-main
   border-radius: card-radius
   position: relative
   background: var(--card-background)
   transition: background trans-style
+  width: 100%
+  margin-right: -16px
+  padding-bottom: 16px
 
 .article-meta
   clearfix()
@@ -64,7 +66,69 @@
     margin-bottom: 6px
   .meta-text
     margin-bottom: 6px
-  
+
+.right-panel
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  background-size: cover
+  transition: background trans-style
+  &.non-pic
+    min-width: 76px
+    background: var(--enter-btn-bg)
+    i
+      color: var(--primary)
+      font-size: 24px
+      margin-right: 24px
+    &:hover
+      background: var(--enter-btn-hover)
+    &:active
+      background: var(--enter-btn-active)
+  &.with-pic
+    min-width: 30%
+    .overlay
+      height: 100%
+      width: 100%
+      background: var(--img-overlay)
+      transition: background trans-style
+      display: flex
+      align-items: center
+      justify-content: center
+      i
+        opacity: 0
+        transition: opacity trans-style
+        margin-right: 0
+        color: white
+        font-size: 40px
+    .non-pic
+      display: none
+    &:hover
+      .overlay
+        background: rgba(black, 0.5)
+        i
+          display: block
+          opacity: 1
+    &:active
+      .overlay
+        background: rgba(black, 0.6)
+
+
+// @css {
+//   .right-panel.with-pic {
+//     width: min(30%, 360px)
+//   }
+// }
+
+.truncate-text
+  overflow: hidden
+  text-overflow: ellipsis
+  display: -webkit-box
+  -webkit-line-clamp: 3 // number of lines to show
+  line-clamp: 3
+  -webkit-box-orient: vertical
+  margin: 16px 0
+  line-height: line-height
+
 
 .article-title
   @extend $main-title
@@ -400,8 +464,10 @@ $article-share-link
     text-shadow: 0 1px darken(color-linkedin, 20%)
 
 .article-gallery
-  background: #000
   position: relative
+  border-radius: card-radius card-radius 0 0
+  overflow: hidden
+  margin-bottom: - card-radius
 
 .article-gallery-photos
   position: relative
@@ -418,7 +484,6 @@ $article-share-link
   img
     display: block
     width: 100%
-    height: 20vh
     object-fit: cover
     margin: 0 auto
 /*

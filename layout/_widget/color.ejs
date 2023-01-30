@@ -1,17 +1,3 @@
-<script>
-  let colors;
-  fetch('/colors.json')
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      colors = data;
-      let storedHue = localStorage.getItem('hue');
-      if (storedHue) {
-        setHue(storedHue);
-      }    
-    }) 
-</script>
 <% let hueList = [0, 30, 60, 180, 240, 270, 300, 330, 345] %> 
 <div class="widget color-picker">
   <h3 class="widget-title">Color Picker</h3>
@@ -27,11 +13,19 @@
   <p>Hue: <span id="hueValue"></span></p>
 </div>
 <script>
+  let slider = document.getElementById("colorSlider");
+  let output = document.getElementById("hueValue");
+  let presetList = document.getElementById("preset-list");
+  let r = document.querySelector(':root');
+  output.innerHTML = slider.value; // Display the default slider value
+
   function getColorNode(l, c, h) {
     return new Color("oklch", [l, c, h]).to("srgb").toString({format: "hex"});
   }
   function setHue(hue) {
     localStorage.setItem('hue', hue);
+    output.innerHTML = hue;
+    slider.value = hue;
     for (let [theme, list] of Object.entries(colors)) {
       for (let color of list) {
         r.style.setProperty(`--${theme}-${color.name}`, getColorNode(color.l, color.c, hue));
@@ -39,12 +33,18 @@
     }
   }
 
-  let slider = document.getElementById("colorSlider");
-  let output = document.getElementById("hueValue");
-  let presetList = document.getElementById("preset-list");
-  
-  output.innerHTML = slider.value; // Display the default slider value
-  let r = document.querySelector(':root');
+  let colors;
+  fetch('/colors.json')
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      colors = data;
+      let storedHue = localStorage.getItem('hue');
+      if (storedHue) {
+        setHue(storedHue);
+      }    
+    }) 
 
   slider.oninput = function() {
     output.innerHTML = this.value;
@@ -55,13 +55,8 @@
   presetList.onclick = function(event) {
     let hue = event.target.dataset.hue;
     if (hue) {
-      console.log(hue);
       setHue(hue);
-      output.innerHTML = hue
-      slider.value = hue
     }
   }
-
-
 </script>
   

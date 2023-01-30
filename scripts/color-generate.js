@@ -23,3 +23,7 @@ hexo.extend.filter.register('stylus:renderer', function(style) {
 hexo.extend.helper.register('getColors', function() {
     return colors;
 })
+
+hexo.extend.helper.register('getColor', function(l, c, h) {
+    return getColorNode(l, c, h);
+})

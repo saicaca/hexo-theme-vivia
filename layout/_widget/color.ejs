@@ -1,18 +1,4 @@
-<div class="widget color-picker">
-  <h3 class="widget-title">Color Picker</h3>
-  <input type="range" min="0" max="360" value="<%- theme.hue %>" class="slider" id="colorSlider" step="5" style="width: 100%;">
-  <p>Hue: <span id="hueValue"></span></p>
-</div>
 <script>
-  var slider = document.getElementById("colorSlider");
-  var output = document.getElementById("hueValue");
-  output.innerHTML = slider.value; // Display the default slider value
-  var r = document.querySelector(':root');
-
-  function getColorNode(l, c, h) {
-      return new Color("oklch", [l, c, h]).to("srgb").toString({format: "hex"});
-  }
-
   let colors;
   fetch('/colors.json')
     .then((res) => {
@@ -20,16 +6,62 @@
     })
     .then((data) => {
       colors = data;
+      let storedHue = localStorage.getItem('hue');
+      if (storedHue) {
+        setHue(storedHue);
+      }    
     }) 
-
-  slider.oninput = function() {
-    output.innerHTML = this.value;
-    let hue = this.value;
+</script>
+<% let hueList = [0, 30, 60, 180, 240, 270, 300, 330, 345] %> 
+<div class="widget color-picker">
+  <h3 class="widget-title">Color Picker</h3>
+  <div id="preset-list">
+    <%
+      for (let hue of hueList) { 
+      let colorStr = getColor(0.75, 0.14, hue)
+    %>
+      <div class="preset-btn" style="background-color: <%- colorStr %>;" data-hue="<%- hue %>"></div>
+    <% } %> 
+  </div>
+  <input type="range" min="0" max="360" value="<%- theme.hue %>" class="slider" id="colorSlider" step="5" style="width: 100%;">
+  <p>Hue: <span id="hueValue"></span></p>
+</div>
+<script>
+  function getColorNode(l, c, h) {
+    return new Color("oklch", [l, c, h]).to("srgb").toString({format: "hex"});
+  }
+  function setHue(hue) {
+    localStorage.setItem('hue', hue);
     for (let [theme, list] of Object.entries(colors)) {
       for (let color of list) {
         r.style.setProperty(`--${theme}-${color.name}`, getColorNode(color.l, color.c, hue));
       }
     }
   }
+
+  let slider = document.getElementById("colorSlider");
+  let output = document.getElementById("hueValue");
+  let presetList = document.getElementById("preset-list");
+  
+  output.innerHTML = slider.value; // Display the default slider value
+  let r = document.querySelector(':root');
+
+  slider.oninput = function() {
+    output.innerHTML = this.value;
+    let hue = this.value;
+    setHue(hue);
+  }
+
+  presetList.onclick = function(event) {
+    let hue = event.target.dataset.hue;
+    if (hue) {
+      console.log(hue);
+      setHue(hue);
+      output.innerHTML = hue
+      slider.value = hue
+    }
+  }
+
+
 </script>
   

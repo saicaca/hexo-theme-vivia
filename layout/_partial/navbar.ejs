@@ -17,15 +17,16 @@
   </nav>
   <nav id="sub-nav">
     <a id="theme-btn" class="nav-icon">
-      <i class="fa-solid fa-circle-half-stroke"></i>
+      <span class="material-symbols-rounded light-mode-icon">wb_sunny</span>
+      <span class="material-symbols-rounded dark-mode-icon">dark_mode</span>
     </a>
     <% if (theme.rss){ %>
       <a id="nav-rss-link" class="nav-icon" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>">
-        <i class="fa-solid fa-rss"></i>
+        <span class="material-symbols-rounded rss">rss_feed</span>
       </a>
     <% } %>
-    <a id="nav-search-btn" class="nav-icon" title="<%= __('search') %>">
-      <i class="fa-solid fa-magnifying-glass"></i>
+    <a id="nav-search-btn" class="nav-icon" title="<%= __('search') %>" style="display: none;">
+      <span class="material-symbols-rounded">search</span>
     </a>
   </nav>
   <div id="search-form-wrap">

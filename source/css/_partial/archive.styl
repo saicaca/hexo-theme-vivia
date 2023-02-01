@@ -126,11 +126,15 @@ width-title = 100% - width-date - width-line - width-tags
     .year-num
       width: width-date
       text-align: right
+      @media mq-mobile
+        width: 20%
     .dot-wrapper
       width: width-line
       display: flex
       align-items: center
       justify-content: center
+      @media mq-mobile
+        width: 15%
       .dot
         width: 12px
         height: 12px
@@ -164,13 +168,17 @@ width-title = 100% - width-date - width-line - width-tags
       color: var(--archive-date)
       width: width-date
       text-align: right
+      @media mq-mobile
+        width: 20%
     .line
-      width: 10%
+      width: width-line
       height: 100%
       position: relative
       display: flex
       justify-content: center
       align-items: center
+      @media mq-mobile
+        width: 15%
       &:before
         content: ''
         width: width-line
@@ -180,6 +188,8 @@ width-title = 100% - width-date - width-line - width-tags
         left: calc(50% - 1px)
         top: -50%
         pointer-events: none
+        @media mq-mobile
+          width: 15%
     .dot
       width: 4px
       height: 4px
@@ -207,3 +217,6 @@ width-title = 100% - width-date - width-line - width-tags
       white-space: nowrap
       text-overflow: ellipsis
       overflow: hidden
+      @media mq-mobile
+        width: 0
+        display: none

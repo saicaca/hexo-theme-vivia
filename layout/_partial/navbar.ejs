@@ -21,7 +21,7 @@
       <span class="material-symbols-rounded dark-mode-icon">dark_mode</span>
     </a>
     <% if (theme.rss){ %>
-      <a id="nav-rss-link" class="nav-icon" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>">
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>">
         <span class="material-symbols-rounded rss">rss_feed</span>
       </a>
     <% } %>
@@ -40,8 +40,11 @@
   <div id="dropdown-link-list">
     <% for (var i in theme.menu){ %>
       <a class="nav-dropdown-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
-    <% } %>  
-  </div>
+    <% } %>
+    <% if (theme.rss) { %>
+      <a class="nav-dropdown-link" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>">RSS</a>
+    <% } %> 
+    </div>
 </div>
 <script>
   let dropdownBtn = document.getElementById("nav-menu-btn");

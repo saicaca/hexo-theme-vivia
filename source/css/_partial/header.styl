@@ -71,6 +71,11 @@ $nav-link
   cursor: pointer
   justify-content: center
   align-items: center
+  &.mobile-hide
+    @media mq-mobile
+      display: none
+    @media mq-tablet
+      display: none
   .rss
     font-weight: 300
   .light-mode-icon

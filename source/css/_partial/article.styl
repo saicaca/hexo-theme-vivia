@@ -23,33 +23,36 @@
   @extend $block-caption
   float: left
 
-.meta-text
+.meta-info-bar
   color: var(--article-meta)
   font-size: 16px
   font-weight: medium
   text-decoration: none
   display: flex
-  .meta-cate-flex
-    display: flex
-    gap: 6px
+  *
+    white-space: nowrap
+  .meta-info
+    transition: color trans-style, outline trans-style, background trans-style
   a
     color: var(--article-meta)
     outline-width: 4px
     outline-style: solid
     outline-color: rgba(0,0,0,0)
     border-radius: 2px
-    transition: color trans-style, outline trans-style, background trans-style
     &:hover
       outline-color: var(--btn-bg)
       background: var(--btn-bg)
       color: var(--link)
+  .meta-cate-flex
+    display: flex
+    gap: 6px
   .need-seperator
     display: flex
     align-items: center
     &:before
       content: ""
       position: relative
-      transition: color trans-style
+      transition: background trans-style
       background: var(--article-meta)
       height: 4px
       width: 4px
@@ -62,9 +65,11 @@
 
 .article-header
   padding: article-top-padding article-side-padding 0
+  @media mq-mobile
+    padding: article-top-padding mobile-article-side-padding 0
   h1
-    margin-bottom: 6px
-  .meta-text
+    margin-bottom: 0px
+  .meta-info-bar
     margin-bottom: 6px
 
 .right-panel
@@ -73,6 +78,8 @@
   align-items: center
   background-size: cover
   transition: background trans-style
+  @media mq-mobile
+    display: none
   &.non-pic
     min-width: 76px
     background: var(--enter-btn-bg)
@@ -128,7 +135,7 @@
   -webkit-box-orient: vertical
   margin: 16px 0
   line-height: line-height
-
+  word-break: break-word
 
 .article-title
   @extend $main-title
@@ -141,6 +148,8 @@
   color: var(--article-text)
   padding: 0 article-side-padding
   transition: color trans-style
+  @media mq-mobile
+    padding 0 mobile-article-side-padding
   p, table
     line-height: line-height
     margin: 1.2em 0
@@ -526,9 +535,10 @@ $article-gallery-ctrl
   padding: article-top-padding article-side-padding 0 article-side-padding
   *
     transition: none
+  .title-bar
+    margin-bottom: 24px
   .main-title
     @extend $main-title
-    margin-bottom: 24px
   .vimg
     border-radius: inner-radius !important
     border: none !important
@@ -584,7 +594,7 @@ $article-gallery-ctrl
     &:hover
       color: var(--primary) !important
   .vquote
-    border-left: 2px dashed var(--neut-L10) !important
+    border-left: none !important
   .vpower
     font-size: 14px !important
     padding: 0 !important

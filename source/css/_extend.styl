@@ -62,16 +62,8 @@ $main-title
   line-height: 40px
   transition: color trans-style
   position: relative
-  &:before
-    content: ''
-    width: 4px
-    height: 20px
-    border-radius: 2px
-    position: absolute
-    background: var(--light-dot)
-    left: -16px
-    top: 9px
-
+  @media mq-mobile
+    font-size: 28px
 
 $base-style
   h1

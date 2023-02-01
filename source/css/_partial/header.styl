@@ -1,3 +1,6 @@
+#nav
+  min-height: 72px
+
 navbar
   @extend $card
   height: 72px
@@ -40,6 +43,10 @@ navbar
   float: left
   display: flex
   gap: 8px
+  @media mq-mobile
+    display: none
+  @media mq-tablet
+    display: none
 
 $nav-link
   float: left
@@ -71,6 +78,38 @@ $nav-link
   .dark-mode-icon
     display: var(--display-dark-icon)
 
+#nav-menu-btn
+  @media mq-normal
+    display: none
+
+#nav-dropdown
+  margin-top: - card-radius
+  background: var(--nav-dropdown-bg)
+  transition: background trans-style, height trans-style
+  border-radius: 0 0 card-radius card-radius
+  overflow: hidden
+  height: fit-content
+  @media mq-normal
+    display: none
+  &.hidden
+    height: 0
+  #dropdown-link-list
+    padding-top: card-radius + 8px
+    padding-bottom: 8px
+    .nav-dropdown-link
+      display: flex
+      align-items: center
+      padding-left: 32px
+      height: 40px
+      width: 100%
+      display: flex
+      color: var(--neut-L75)
+      font-weight: bold
+      transition: color trans-style
+      &:hover
+      &:active
+        color: var(--primary)
+
 .main-nav-link
   @extend $nav-link
   font-weight: bold
@@ -78,8 +117,6 @@ $nav-link
   padding: 0px 16px
   display: flex
   align-items: center
-  @media mq-mobile
-    display: none
 
 #main-nav-toggle
   display: none

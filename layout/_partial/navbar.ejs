@@ -28,8 +28,25 @@
     <a id="nav-search-btn" class="nav-icon" title="<%= __('search') %>" style="display: none;">
       <span class="material-symbols-rounded">search</span>
     </a>
+    <div id="nav-menu-btn" class="nav-icon">
+      <span class="material-symbols-rounded">menu</span>
+    </div>
   </nav>
   <div id="search-form-wrap">
     <%- search_form({button: '&#xF002;', text: __('search')}) %>
   </div>
 </navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    <% for (var i in theme.menu){ %>
+      <a class="nav-dropdown-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+    <% } %>  
+  </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>

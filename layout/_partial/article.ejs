@@ -8,12 +8,12 @@
     <div class="article-main">
       <header class="article-header">
         <%- partial('post/title', {class_name: 'p-name article-title'}) %>
-        <div class='meta-text'>
-          <%- partial('post/date', {class_name: '', date_format: null}) %>
-          <div class="need-seperator">
+        <div class='meta-info-bar'>
+          <%- partial('post/date', {class_name: 'meta-info', date_format: null}) %>
+          <div class="need-seperator meta-info">
             <%- partial('post/category') %>  
           </div>
-          <div class="wordcount need-seperator">
+          <div class="wordcount need-seperator meta-info">
             <%- symbolsCount(post) %> words
           </div>
         </div>
@@ -81,7 +81,10 @@
 <% if (!index && theme.comment.valine.enable) { %>
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <div id="comment-card" class="comment-card">
-    <div class="main-title">Comments</div>
+    <div class="title-bar">
+      <div class="title-dot"></div>
+      <div class="main-title">Comments</div>
+    </div>
     <div id="vcomments"></div>
   </div>
   <script>

@@ -1,7 +1,4 @@
-if sidebar is bottom
-  @import "sidebar-bottom"
-else
-  @import "sidebar-aside"
+@import "sidebar-aside"
 
 .widget
   @extend $base-style
@@ -17,13 +14,6 @@ else
       list-style: disc
     ol
       list-style: decimal
-
-.category-list-count
-.tag-list-count
-.archive-list-count
-  padding-left: 5px
-  color: color-grey
-  font-size: 0.85em
 
 $widget-nav-link
   height: 40px

@@ -1,1 +1,20 @@
-<%- partial('_partial/archive', {pagination: 2, index: true}) %>
+<% page.posts.each(function(post){ %>
+  <%- partial('_partial/article', {post: post, index: true}) %>
+<% }) %>
+<% if (page.total > 1){ %>
+  <nav id="page-nav">
+    <!-- 在第二页时 page.prev_link 不知为何无法返回正确的链接 -->
+    <a id="prev-btn" class="page-nav-btn <% if (page.current == 1) { %>disabled<% } %>" href="<% if (page.current == 2) { %> / <% } else { %> /<%- page.prev_link %> <% } %> ">
+      <span class="material-symbols-rounded">navigate_before</span>
+    </a>
+    <div id="num-bar">
+      <%- paginator({
+        escape: false,
+        prev_next: false
+      }) %>  
+    </div>
+    <a id="next-btn" class="page-nav-btn <% if (page.current == page.total) { %>disabled<% } %>" href="/<%- page.next_link %>">
+      <span class="material-symbols-rounded">navigate_next</span>
+    </a>
+  </nav>
+<% } %>

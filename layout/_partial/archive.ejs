@@ -1,38 +1,41 @@
-<% if (pagination == 2){ %>
-  <% page.posts.each(function(post){ %>
-    <%- partial('article', {post: post, index: true}) %>
-  <% }) %>
-<% } else { %>
-  <% var last; %>
-  <% page.posts.each(function(post, i){ %>
-    <% var year = post.date.year(); %>
-    <% if (last != year){ %>
-      <% if (last != null){ %>
-        </div></section>
-      <% } %>
-      <% last = year; %>
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
-        </div>
-        <div class="archives">
-    <% } %>
-    <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
-  <% }) %>
-  <% if (page.posts.length){ %>
-    </div></section>
-  <% } %>
-<% } %>
-<% if (page.total > 1){ %>
-  <nav id="page-nav">
-    <a id="prev-btn" class="page-nav-btn <% if (page.current == 1) { %>disabled<% } %>" href="<%- page.prev_link %>"></a>
-    <div id="num-bar">
-      <%- paginator({
-        escape: false,
-        prev_next: false
-      }) %>  
-    </div>
-    <a id="next-btn" class="page-nav-btn <% if (page.current == page.total) { %>disabled<% } %>" href="<%- page.next_link %>"></a>
+<% 
+    function build_tags_string(tags) {
+        let str = "";
+        for(let tag of tags.data) {
+            str += "#" + tag.name + " ";
+        }
+        return str.trim();
+    }
+%> 
 
-  </nav>
-<% } %>
+<div class="archive-main-card">
+    <div class="archive-title">Archive</div>
+    <% let currYear = -1; %>
+    <% page.posts.each(function(post, i) { %>
+      <% if (post.tags.length > 0) console.log(post) %> 
+      <% let year = post.date.year(); %>
+      <% if (year != currYear) { %>
+        <% currYear = year; %>
+        <div class="year-line">
+            <div class="year-num"><%- year %></div>
+            <div class="dot-wrapper">
+                <div class="dot"></div>
+            </div>
+        </div>
+      <% } %>
+      <a class="archive-article-link" href="/<%- post.path %>" title="<%- post.title %>">
+        <div class="date"><%- post.date.format("MM[-]DD") %></div>
+        <div class="line">
+            <div class="dot"></div>
+        </div>
+        <div class="title">
+            <div class="title-inner">
+                <%- post.title %>
+            </div>
+        </div>
+        <div class="tags">
+            <%- build_tags_string(post.tags) %>
+        </div>
+      </a>
+    <% }) %>
+  </div>

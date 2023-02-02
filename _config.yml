@@ -4,11 +4,9 @@ menu:
   Archives: /archives
   About: /about
 rss: /atom.xml
-banner: "images/banner.jpg"
 
 # Content
 excerpt_link: Read More
-fancybox: true
 
 # # Footer
 # copyright: |-
@@ -45,12 +43,7 @@ show_count: false
 recent_posts_limits: 5
 
 # Miscellaneous
-google_analytics:
-gauges_analytics:
 favicon: /favicon.png
-twitter:
-fb_admins:
-fb_app_id:
 
 # valine comment system. https://valine.js.org
 valine:

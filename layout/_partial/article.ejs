@@ -65,25 +65,12 @@
   <% } %>
 </article>
 
-<% if (!index && post.comments && config.disqus_shortname){ %>
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
-<% } %>
-<% if (!index && post.comments && theme.valine.enable && theme.valine.appId && theme.valine.appKey){ %>
-  <section id="comments" class="vcomment">
-
-  </section>
-<% } %>
-
 <% if (!index && theme.comment.valine.enable) { %>
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <div id="comment-card" class="comment-card">
     <div class="title-bar">
       <div class="title-dot"></div>
-      <div class="main-title">Comments</div>
+      <div class="main-title"><%= __('comment') %> </div>
     </div>
     <div id="vcomments"></div>
   </div>

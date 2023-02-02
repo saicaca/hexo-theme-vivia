@@ -92,7 +92,7 @@
     &:active
       background: var(--enter-btn-active)
   &.with-pic
-    min-width: 30%
+    min-width: 35%
     .overlay
       height: 100%
       width: 100%
@@ -316,7 +316,6 @@
     background: var(--btn-text-hover)
     text-decoration: none
 
-
 #article-nav
   // clearfix()
   position: relative
@@ -394,83 +393,6 @@
   font-size: 0.85em
   line-height: line-height
   margin-top: 0.5em
-
-.article-share-box
-  position: absolute
-  display: none
-  background: #fff
-  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2)
-  border-radius: 3px
-  margin-left: -145px
-  overflow: hidden
-  z-index: 1
-  &.on
-    display: block
-
-.article-share-input
-  width: 100%
-  background: none
-  box-sizing: border-box
-  font: 14px font-sans
-  padding: 0 15px
-  color: color-default
-  outline: none
-  border: 1px solid color-border
-  border-radius: 3px 3px 0 0
-  height: 36px
-  line-height: 36px
-
-.article-share-links
-  clearfix()
-  background: color-background
-
-$article-share-link
-  width: 50px
-  height: 36px
-  display: block
-  float: left
-  position: relative
-  color: #999
-  text-shadow: 0 1px #fff
-  &:before
-    font-size: 20px
-    font-family: font-icon
-    absolute-center(@font-size)
-    text-align: center
-  &:hover
-    color: #fff
-
-.article-share-twitter
-  @extend $article-share-link
-  &:before
-    content: "\f099"
-  &:hover
-    background: color-twitter
-    text-shadow: 0 1px darken(color-twitter, 20%)
-
-.article-share-facebook
-  @extend $article-share-link
-  &:before
-    content: "\f09a"
-  &:hover
-    background: color-facebook
-    text-shadow: 0 1px darken(color-facebook, 20%)
-
-.article-share-pinterest
-  @extend $article-share-link
-  &:before
-    content: "\f0d2"
-  &:hover
-    background: color-pinterest
-    text-shadow: 0 1px darken(color-pinterest, 20%)
-
-.article-share-linkedin
-  @extend $article-share-link
-  &:before
-    content: "\f0e1"
-  &:hover
-    background: color-linkedin
-    text-shadow: 0 1px darken(color-linkedin, 20%)
 
 .article-gallery
   position: relative

@@ -8,8 +8,15 @@
 <%- partial('_partial/head') %>
 <body>
   <%- partial('_widget/color') %>
+  <% let showBanner = is_home() && theme.home.banner.enable && theme.home.banner.url; %> 
+  <% if (showBanner) { %>
+    <div id="banner">
+      <img src="<%- theme.home.banner.url %>" itemprop="image">
+      <div id="banner-dim"></div>
+    </div>
+  <% } %> 
   <div id="main-grid" class="shadow">
-    <div id="nav">
+    <div id="nav" <% if (showBanner) { %> class="has-banner" <% } %>>
       <%- partial('_partial/navbar', null, {cache: !config.relative_link}) %>
     </div>
     <div id="left-bar">

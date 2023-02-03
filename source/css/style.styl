@@ -45,8 +45,9 @@ a
   font-weight: 700
   src: url(fonts/Roboto-Bold.ttf) format("truetype")
 
-html, body, #container
+body, #container
   overflow-x: hidden
+  height: 100%    // make sidebar's sticky work
 
 body
   font: font-size font-sans
@@ -75,6 +76,24 @@ body
   }
 }
 
+#banner
+  height: 60vh
+  width: 100%
+  position: absolute
+  overflow: hidden
+  img
+    height: 100%
+    width: 100%
+    object-fit: cover
+    object-position: convert(hexo-config("home.banner.position"))
+  #banner-dim
+    height: 100%
+    width: 100%
+    position: absolute
+    top: 0
+    background: var(--banner-dim)
+    transition: background trans-style
+
 #main-grid
   display: grid
   max-width: page-width
@@ -87,6 +106,8 @@ body
   #nav
     grid-column-start: 1
     grid-column-end: 3
+    &.has-banner
+      height: calc(60vh - 72px)
   #left-bar
     grid-row: 2
     grid-column: 1

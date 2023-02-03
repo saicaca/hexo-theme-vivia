@@ -12,7 +12,6 @@
     <div class="archive-title">Archive</div>
     <% let currYear = -1; %>
     <% page.posts.each(function(post, i) { %>
-      <% if (post.tags.length > 0) console.log(post) %> 
       <% let year = post.date.year(); %>
       <% if (year != currYear) { %>
         <% currYear = year; %>

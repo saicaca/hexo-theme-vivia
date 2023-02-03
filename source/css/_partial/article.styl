@@ -58,6 +58,8 @@
       width: 4px
       border-radius: 50%
       margin: 0 16px
+      @media mq-mobile
+        margin: 0 12px
 
 .article-category-link
   @extend $block-caption
@@ -287,6 +289,8 @@
     background: var(--tag-dot)
     margin-right: 8px
     transition: background trans-style
+    @media mq-mobile
+      display: none
   &:hover
     color: var(--btn-content-hover)
     &:before
@@ -350,9 +354,6 @@
       white-space: nowrap
       overflow: hidden
       text-overflow: ellipsis
-
-
-
 
 .article-nav-link-wrap
   text-decoration: none

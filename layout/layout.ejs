@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html theme="dark">
+<% let showBanner = theme.banner.enable && (is_home() || theme.banner.onAllPages); %>
+<html theme="dark" <% if (showBanner) { %> banner="true" <% } %> >
 <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
 <link href="/fontawesome/css/brands.css" rel="stylesheet">
 <link href="/fontawesome/css/solid.css" rel="stylesheet">
@@ -8,15 +9,11 @@
 <%- partial('_partial/head') %>
 <body>
   <%- partial('_widget/color') %>
-  <% let showBanner = is_home() && theme.home.banner.enable && theme.home.banner.url; %> 
   <% if (showBanner) { %>
-    <div id="banner">
-      <img src="<%- theme.home.banner.url %>" itemprop="image">
-      <div id="banner-dim"></div>
-    </div>
+    <%- partial('_partial/banner') %> 
   <% } %> 
   <div id="main-grid" class="shadow">
-    <div id="nav" <% if (showBanner) { %> class="has-banner" <% } %>>
+    <div id="nav" class="<% if (is_home()) { %> is_home <% } %>"  >
       <%- partial('_partial/navbar', null, {cache: !config.relative_link}) %>
     </div>
     <div id="left-bar">

@@ -1,6 +1,12 @@
-<% let hueList = [0, 30, 60, 180, 240, 270, 300, 330, 345] %> 
+<%
+  let hueList = [0, 30, 60, 180, 240, 270, 300, 330, 345];
+%> 
 <div class="widget color-picker">
-  <h3 class="widget-title">Color Picker</h3>
+  <h3 class="widget-title">Theme Preview</h3>
+  <div id="banner-toggle-bar">
+    <label for="vehicle1">Show Banner</label><br>
+    <input type="checkbox" id="banner-checkbox" name="banner-checkbox" value="show">
+  </div>
   <div id="preset-list">
     <%
       for (let hue of hueList) { 
@@ -58,5 +64,29 @@
       setHue(hue);
     }
   }
+
+  // Banner switch
+
+  function enableBanner() {
+    r.setAttribute("banner", "true");
+    localStorage.setItem('showBanner', "true");
+  }
+  
+  function disableBanner() {
+    r.setAttribute("banner", "false");
+    localStorage.setItem('showBanner', "false");
+  }
+
+  let showBannerCheck = document.querySelector("input[name=banner-checkbox]");
+  if (r.getAttribute("banner") == "true") {
+    showBannerCheck.checked = true;
+  }
+  showBannerCheck.addEventListener('change', function() {
+    if (this.checked) {
+      enableBanner();
+    } else {
+      disableBanner();
+    }
+  });
 </script>
   

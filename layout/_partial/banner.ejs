@@ -1,0 +1,10 @@
+<% 
+  let bannerUrl = theme.banner.url;
+  // if (is_post() && page.photos && page.photos.length) {
+  //   bannerUrl = url_for(page.photos[0]);
+  // }
+%>
+<div id="banner" class="<% if (is_home()) { %> is_home <% } %>">
+  <img src="<%- bannerUrl %>" itemprop="image">
+  <div id="banner-dim"></div>
+</div>

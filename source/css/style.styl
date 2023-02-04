@@ -76,16 +76,35 @@ body
   }
 }
 
+:root
+  #nav
+    height: 72px
+  #banner
+    opacity: 0
+  &[banner="true"]
+    #nav
+      height: calc(40vh - 72px)
+      filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.15))
+      &.is_home
+        height: calc(60vh - 72px)
+    #banner
+      opacity: 1
+
 #banner
-  height: 60vh
+  height: 40vh
   width: 100%
   position: absolute
   overflow: hidden
+  transition: opacity trans-style
+  &.hide
+    opacity: 0
+  &.is_home
+    height: 60vh
   img
     height: 100%
     width: 100%
     object-fit: cover
-    object-position: convert(hexo-config("home.banner.position"))
+    object-position: convert(hexo-config("banner.position"))
   #banner-dim
     height: 100%
     width: 100%
@@ -106,8 +125,7 @@ body
   #nav
     grid-column-start: 1
     grid-column-end: 3
-    &.has-banner
-      height: calc(60vh - 72px)
+    transition: height trans-style
   #left-bar
     grid-row: 2
     grid-column: 1

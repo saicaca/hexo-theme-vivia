@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <% let showBanner = theme.banner.enable && (is_home() || theme.banner.onAllPages); %>
 <html theme="dark" <% if (showBanner) { %> banner="true" <% } %> >
-<link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
-<link href="/fontawesome/css/brands.css" rel="stylesheet">
-<link href="/fontawesome/css/solid.css" rel="stylesheet">
-<script src="/js/color.global.min.js"></script>
-<script src="/js/light-dark-storage.js"></script>
+<link href="<%- url_for("/fontawesome/css/fontawesome.css") %>" rel="stylesheet">
+<link href="<%- url_for("/fontawesome/css/brands.css") %>" rel="stylesheet">
+<link href="<%- url_for("/fontawesome/css/solid.css") %>" rel="stylesheet">
+<script src="<%- url_for("/js/color.global.min.js") %>" ></script>
+<script src="<%- url_for("/js/light-dark-storage.js") %>" ></script>
 <%- partial('_partial/head') %>
 <body>
   <%- partial('_widget/color') %>
@@ -29,6 +29,6 @@
     </div>
     <%- partial('_partial/back-to-top') %>
   </div>
-  <script src="/js/light-dark-switch.js"></script>
+  <script src="<%- url_for("/js/light-dark-switch.js") %>"></script>
 </body>
 </html>

@@ -40,7 +40,7 @@
   }
 
   let colors;
-  fetch('/colors.json')
+  fetch("<%- url_for("/colors.json") %>")
     .then((res) => {
       return res.json();
     })

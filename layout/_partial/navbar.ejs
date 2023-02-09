@@ -1,6 +1,6 @@
 <navbar id="navbar">
   <nav id="title-nav">
-    <a href="/">
+    <a href="<%- url_for("/") %>">
       <div id="vix-logo">
         <div class="dot"></div>
         <div class="dot"></div>
@@ -16,6 +16,9 @@
     <% } %>
   </nav>
   <nav id="sub-nav">
+    <a id="nav-search-btn" class="nav-icon">
+      <span class="material-symbols-rounded">palette</span>
+    </a>
     <a id="theme-btn" class="nav-icon">
       <span class="material-symbols-rounded light-mode-icon">wb_sunny</span>
       <span class="material-symbols-rounded dark-mode-icon">dark_mode</span>

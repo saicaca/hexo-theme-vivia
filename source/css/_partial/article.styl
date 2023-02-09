@@ -195,13 +195,17 @@
     border-bottom: 1px solid color-border
     padding: 10px 0
   blockquote
-    font-family: font-serif
-    margin: line-height 20px
-    text-align: center
+    background: var(--blockquote-bg)
+    padding: 0 24px
+    border-radius: inner-radius
+    display: flex
+    flex-direction: column
+    flex-wrap: nowrap
     footer
       font-size: font-size
       margin: line-height 0
       font-family: font-sans
+      text-align: right
       cite
         &:before
           content: "—"
@@ -211,11 +215,11 @@
     width: 45%
     margin: 0
     &.left
-      margin-left: 0.5em
       margin-right: 1em
+      float: left
     &.right
-      margin-right: 0.5em
       margin-left: 1em
+      float: right
   .caption
     color: color-grey
     display: block

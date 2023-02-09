@@ -89,13 +89,15 @@ body
         height: calc(60vh - 72px)
     #banner
       opacity: 1
+      top: 0
 
 #banner
   height: 40vh
   width: 100%
   position: absolute
   overflow: hidden
-  transition: opacity trans-style
+  transition: opacity trans-style, top trans-style
+  top: -40px
   &.hide
     opacity: 0
   &.is_home

@@ -5,21 +5,19 @@
 <link href="<%- url_for("/fontawesome/css/brands.css") %>" rel="stylesheet">
 <link href="<%- url_for("/fontawesome/css/solid.css") %>" rel="stylesheet">
 <script src="<%- url_for("/js/color.global.min.js") %>" ></script>
-<script src="<%- url_for("/js/light-dark-storage.js") %>" ></script>
+<script src="<%- url_for("/js/load-settings.js") %>" ></script>
 <%- partial('_partial/head') %>
 <body>
   <%- partial('_widget/color') %>
   <% if (showBanner) { %>
     <%- partial('_partial/banner') %> 
   <% } %> 
-  <div id="main-grid" class="shadow">
+  <div id="main-grid" class="shadow <% if (theme.sidebar.position == "right") { %> right-sidebar <% } %>  ">
     <div id="nav" class="<% if (is_home()) { %> is_home <% } %>"  >
       <%- partial('_partial/navbar', null, {cache: !config.relative_link}) %>
     </div>
-    <div id="left-bar">
-      <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
-        <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
-      <% } %>
+    <div id="sidebar-wrapper">
+      <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
     </div>
     <div id="content-body">
       <%- body %>

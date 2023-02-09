@@ -1,8 +1,10 @@
-<aside id="sidebar"<% if (theme.sidebar === 'bottom'){ %> class="outer"<% } %>>
-  <%- partial('_widget/info-card') %> 
+<sidebar id="sidebar">
+  <% theme.sidebar.widgets.normal.forEach(function(widget){ %>
+    <%- partial('_widget/' + widget) %>
+  <% }) %>
   <div class="sticky">
-    <% theme.widgets.forEach(function(widget){ %>
+    <% theme.sidebar.widgets.sticky.forEach(function(widget){ %>
       <%- partial('_widget/' + widget) %>
     <% }) %>
   </div>
-</aside>
+</sidebar>

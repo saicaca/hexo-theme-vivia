@@ -24,18 +24,15 @@ copyright:
 #   All website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></br>
 
 # Sidebar
-sidebar: right
-widgets:
-- category
-- tag
-- archive
-- recent_posts
-
-# display widgets at the bottom of index pages (pagination == 2)
-index_widgets:
-# - category
-# - tagcloud
-# - archive
+sidebar:
+  widgets:
+    normal:
+      - profile
+    sticky: 
+      - category
+      - tag
+      - archive
+      - recent_posts
 
 # Widget behavior
 archive_type: 'monthly'

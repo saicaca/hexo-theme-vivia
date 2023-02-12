@@ -22,7 +22,7 @@
             </div>
         </div>
       <% } %>
-      <a class="archive-article-link" href="/<%- post.path %>" title="<%- post.title %>">
+      <a class="archive-article-link" href="<%- url_for(post.path) %>" title="<%- post.title %>">
         <div class="date"><%- post.date.format("MM[-]DD") %></div>
         <div class="line">
             <div class="dot"></div>

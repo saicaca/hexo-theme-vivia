@@ -1,8 +1,10 @@
+const url_for = hexo.extend.helper.get('url_for').bind(hexo);
+
 function build_tag_tree(tree) {
     let ret = '<div class="category-box">';
     for(let item of tree) {
         ret += `
-            <a class="category-link" href="/${(item.path)}">
+            <a class="category-link" href="${(url_for(item.path))}">
                 ${item.name}
                 <div class="category-count">${item.length}</div>
             </a>

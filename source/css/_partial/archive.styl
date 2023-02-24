@@ -82,9 +82,12 @@
     color: var(--neut-L75)
     text-decoration: none
     transition: background trans-style
-    &:hover
-      &:not(.disabled)
+    &:not(.disabled)
+      &:hover
         background: var(--card-btn-hover)
+      &:active
+        background: var(--card-btn-active)
+
   .page-number
     width: 40px
     height: 40px
@@ -163,6 +166,11 @@ width-title = 100% - width-date - width-line - width-tags
         height: 20px
         background: var(--light-dot)
         outline-color: var(--btn-text-hover)
+    &:active
+      background: var(--btn-text-active)
+      .dot
+        outline-color: var(--btn-text-active)
+
     .date
       font-size: 14px
       color: var(--archive-date)

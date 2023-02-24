@@ -4,7 +4,7 @@
 <% if (page.total > 1){ %>
   <nav id="page-nav">
     <!-- 在第二页时 page.prev_link 不知为何无法返回正确的链接 -->
-    <a id="prev-btn" class="page-nav-btn <% if (page.current == 1) { %>disabled<% } %>" href="<% if (page.current == 2) { %> / <% } else { %> /<%- page.prev_link %> <% } %> ">
+    <a id="prev-btn" class="page-nav-btn <% if (page.current == 1) { %>disabled<% } %>" href="<% if (page.current == 2) { %> <%- url_for('/') %> <% } else { %> <%- url_for(page.prev_link) %> <% } %> ">
       <span class="material-symbols-rounded">navigate_before</span>
     </a>
     <div id="num-bar">
@@ -13,7 +13,7 @@
         prev_next: false
       }) %>  
     </div>
-    <a id="next-btn" class="page-nav-btn <% if (page.current == page.total) { %>disabled<% } %>" href="/<%- page.next_link %>">
+    <a id="next-btn" class="page-nav-btn <% if (page.current == page.total) { %>disabled<% } %>" href="<%- url_for(page.next_link) %>">
       <span class="material-symbols-rounded">navigate_next</span>
     </a>
   </nav>

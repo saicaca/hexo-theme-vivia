@@ -94,6 +94,69 @@ color-B30 = alpha(black, 0.3)
 color-B10 = alpha(black, 0.1)
 
 :root
+  --color-V05: default-V05
+  --color-V10: default-V10
+  --color-V15: default-V15
+  --color-V20: default-V20
+  --color-V25: default-V25
+  --color-V30: default-V30
+  --color-V35: default-V35
+  --color-V40: default-V40
+  --color-V45: default-V45
+  --color-V50: default-V50
+  --color-V55: default-V55
+  --color-V60: default-V60
+  --color-V65: default-V65
+  --color-V70: default-V70
+  --color-V75: default-V75
+  --color-V80: default-V80
+  --color-V85: default-V85
+  --color-V90: default-V90
+  --color-V95: default-V95
+  --color-V98: default-V98
+  
+  --color-M05: default-M05
+  --color-M10: default-M10
+  --color-M15: default-M15
+  --color-M20: default-M20
+  --color-M25: default-M25
+  --color-M30: default-M30
+  --color-M35: default-M35
+  --color-M40: default-M40
+  --color-M45: default-M45
+  --color-M50: default-M50
+  --color-M55: default-M55
+  --color-M60: default-M60
+  --color-M65: default-M65
+  --color-M70: default-M70
+  --color-M75: default-M75
+  --color-M80: default-M80
+  --color-M85: default-M85
+  --color-M90: default-M90
+  --color-M95: default-M95
+  --color-M98: default-M98
+
+  --color-G05: default-G05
+  --color-G10: default-G10
+  --color-G15: default-G15
+  --color-G20: default-G20
+  --color-G25: default-G25
+  --color-G30: default-G30
+  --color-G35: default-G35
+  --color-G40: default-G40
+  --color-G45: default-G45
+  --color-G50: default-G50
+  --color-G55: default-G55
+  --color-G60: default-G60
+  --color-G65: default-G65
+  --color-G70: default-G70
+  --color-G75: default-G75
+  --color-G80: default-G80
+  --color-G85: default-G85
+  --color-G90: default-G90
+  --color-G95: default-G95
+  --color-G98: default-G98
+
   --dark-L16: dark-L16
   --dark-L20: dark-L20
   --dark-L25: dark-L25
@@ -120,22 +183,24 @@ color-B10 = alpha(black, 0.1)
   --banner-dim: alpha(#000, 0.2)
 
   // Component Color
-  --primary: var(--dark-L75)
+  --primary: var(--V75)
   --main-title: color-N90
 
   --nav-dropdown-bg: var(--dark-L20)
 
-  --btn-bg: var(--dark-L40)
+  --btn-bg: var(--M40)
   --btn-content: color-N75
-  --btn-hover: var(--dark-L50)
+  --btn-hover: var(--M45)
+  --btn-active: var(--M50)
   --btn-content-hover: var(--btn-content)
 
   --card-btn-bg: var(--card-background)
-  --card-btn-hover: var(--dark-L40)
-  --card-btn-active: var(--dark-L50)
+  --card-btn-hover: var(--M30)
+  --card-btn-active: var(--M35)
   --card-btn-icon: var(--primary)
 
-  --btn-text-hover: var(--dark-L20)
+  --btn-text-hover: var(--M20)
+  --btn-text-active: var(--M15)
   --btn-text-neutral-text: var(--neut-L75)
   --btn-text-content: var(--primary)
   --btn-text-light-text: var(--primary)
@@ -183,9 +248,9 @@ color-B10 = alpha(black, 0.1)
   --primary-btn-bg: var(--primary)
   --primary-btn-text: var(--dark-L25)
 
-  --enter-btn-bg: var(--dark-L20)
-  --enter-btn-hover: var(--card-btn-hover)
-  --enter-btn-active: var(--card-btn-active)
+  --enter-btn-bg: var(--M20)
+  --enter-btn-hover: var(--M30)
+  --enter-btn-active: var(--M35)
   --img-overlay: rgba(black, 0.1)
 
   // Layout Setting
@@ -194,6 +259,8 @@ color-B10 = alpha(black, 0.1)
   // light/dark mode icon
   --display-light-icon: none
   --display-dark-icon: inline-block
+
+  --selection-bg: var(--V40);
 
 :root[theme='light']
   --page-background: var(--light-L95G)
@@ -208,22 +275,24 @@ color-B10 = alpha(black, 0.1)
   --neut-L10: color-B10
 
   // Component
-  --primary: var(--light-L70)
+  --primary: var(--V70)
   --main-title: color-B90
 
   --nav-dropdown-bg: var(--light-L98)
 
-  --btn-bg: var(--light-L95)
+  --btn-bg: var(--V95)
   --btn-content: var(--light-L55)
-  --btn-hover: var(--light-L70)
-  --btn-content-hover: color-N90
+  --btn-hover: var(--V90)
+  --btn-active: var(--V85)
+  // --btn-content-hover: color-N90
 
-  --btn-text-hover: var(--light-L95)
+  --btn-text-hover: var(--V95)
+  --btn-text-active: var(--V98)
   --btn-text-neutral-text: color-B75
   --btn-text-content: var(--light-L70)
 
-  --card-btn-hover: var(--light-L95)
-  --card-btn-active: var(--light-L95G)
+  --card-btn-hover: var(--M98)
+  --card-btn-active: var(--M90)
 
   --link-hover-bg: var(--light-L95)
 
@@ -235,7 +304,7 @@ color-B10 = alpha(black, 0.1)
   --article-code-bg: var(--light-L95)
   --article-meta: color-B50
   --article-text: color-B75
-  --blockquote-bg: var(--light-L95G)
+  --blockquote-bg: var(--M98)
 
   --badge-bg: var(--light-L95)
   --text-on-light: var(--light-L55)
@@ -247,9 +316,12 @@ color-B10 = alpha(black, 0.1)
   --input-field: var(--light-L98)
   --primary-btn-text: color-N90
 
-  --enter-btn-bg: var(--light-L98)
+  --enter-btn-bg: var(--M98)
+  --enter-btn-hover: var(--M95)
+  --enter-btn-active: var(--M90)
   --img-overlay: rgba(black, 0)
 
   --display-light-icon: inline-block
   --display-dark-icon: none  
 
+  --selection-bg: var(--V90);

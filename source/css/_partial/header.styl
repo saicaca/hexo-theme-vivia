@@ -23,6 +23,8 @@ navbar
     transition: background trans-style
     &:hover
       background: var(--btn-text-hover)
+    &:active
+      background: var(--btn-text-active)
     #vix-logo
       display: flex
       flex-wrap: wrap
@@ -56,6 +58,8 @@ $nav-link
   &:hover
     background: var(--btn-text-hover)
     color: var(--btn-text-light-text)
+  &:active
+    background: var(--btn-text-active)
 
 .nav-icon
   @extend $nav-link

@@ -13,7 +13,20 @@ function getColorNode(l, c, h) {
 
 hexo.extend.filter.register('stylus:renderer', function(style) {
     let hue = config.hue;
+    let colorType = {
+        'V': 1,
+        'M': 0.5,
+        'G': 0.25
+    }
+    for (let color of colors.default) {
+        for (let [name, mul] of Object.entries(colorType)) {
+            style.define(`default-${name}${color.name}`, getColorNode(color.l, color.c * mul, hue));
+        }
+    }
+
     for (let [theme, list] of Object.entries(colors)) {
+        if (theme == 'default')
+            continue;
         for (let color of list) {
             style.define(`${theme}-${color.name}`, getColorNode(color.l, color.c, hue));
         }

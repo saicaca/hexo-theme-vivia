@@ -56,7 +56,7 @@ valine:
   guest_info: nick,mail,link #valine comment header info
 
 # Appearence
-hue: 260
+hue: 270
 
 # Personal info
 avatar: /assets/avatar.png

@@ -24,7 +24,7 @@
           <%- post.excerpt %>
         <% } else if (is_home() && !post.excerpt) { %>
           <div class="truncate-text">
-            <%- strip_html(post.content) %>  
+            <%- truncate(strip_html(post.content), {length: 500}) %>  
           </div>
         <% } else { %>
           <%- post.content %>

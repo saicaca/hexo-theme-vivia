@@ -37,7 +37,6 @@
       &:hover
         color: var(--btn-content-hover)
 
-
 .info-card
   @extend .widget
   padding: 0 0 20px
@@ -48,6 +47,7 @@
     width: 100%
     border-radius: card-radius
     margin-bottom: 8px
+    user-select: none
   .username
     font-size: 20px
     font-weight: bold
@@ -80,69 +80,3 @@
       width: 40px
       height: 40px
       font-size: 24px
-
-.color-picker
-  position: fixed
-  bottom: 12px
-  right: 12px
-  width: 240px
-  z-index 10
-  border: var(--color-picker-border) solid 3px
-  user-select: none
-  @media mq-mobile
-    display: none
-  @media mq-tablet
-    display: none
-  p
-    font-size: 16px
-    font-weight: medium
-    color: var(--neut-L75)
-  input
-    margin-bottom: 12px
-  #preset-list
-    display: flex
-    gap: 6px
-    margin-bottom: 12px
-    .preset-btn
-      width: 24px
-      height: 24px
-      border-radius: 4px
-      cursor: pointer
-  #banner-toggle-bar
-    display: flex
-
-input[type="range"] {
-  -webkit-appearance: none;
-  height: 6px;
-  transition: background trans-style
-  background: var(--color-picker-range)
-  border-radius: 3px;
-}
-
-/* Input Thumb */
-::-webkit-slider-thumb
-  -webkit-appearance: none;
-  height: 20px;
-  width: 6px;
-  border-radius: 3px;
-  background: var(--color-picker-thumb);
-  box-shadow: none;
-  transition: background trans-style;
-
-::-moz-range-thumb
-  -webkit-appearance: none;
-  height: 20px;
-  width: 6px;
-  border-radius: 3px;
-  background: var(--color-picker-thumb);
-  box-shadow: none;
-  transition: background trans-style;
-
-&::-ms-thumb
-  -webkit-appearance: none;
-  height: 20px;
-  width: 6px;
-  border-radius: 3px;
-  background: var(--color-picker-thumb);
-  box-shadow: none;
-  transition: background trans-style;

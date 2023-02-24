@@ -29,7 +29,11 @@
         </div>
         <div class="title">
             <div class="title-inner">
-                <%- post.title %>
+                <% if (post.title) { %>
+                    <%- post.title %>
+                <% } else { %>
+                    <%= __('untitled') %>
+                <% } %>
             </div>
         </div>
         <div class="tags">

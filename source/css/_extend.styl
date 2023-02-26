@@ -67,6 +67,17 @@ $main-title
   @media mq-mobile
     font-size: 28px
 
+$text-link
+  color: var(--link)
+  border-radius: 6px
+  transition: background trans-style, color trans-style, outline trans-style
+  padding: 3px
+  margin: -3px
+  &:hover
+    background: var(--link-hover-bg)
+  &:active
+    background: var(--link-active-bg)
+
 $base-style
   h1
     font-size: 2em

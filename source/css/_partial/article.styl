@@ -165,16 +165,7 @@
     line-height: line-height-title
     margin: line-height-title 0
   a
-    color: var(--link)
-    border-radius: 4px
-    text-decoration: none
-    transition: background trans-style, color trans-style, outline trans-style
-    outline: 2px solid
-    outline-color: rgba(0,0,0,0)
-    overflow: visible
-    &:hover
-      outline-color: var(--link-hover-bg)
-      background: var(--link-hover-bg)
+    @extend $text-link
   ul, ol, dl
     margin-top: line-height
     margin-bottom: line-height

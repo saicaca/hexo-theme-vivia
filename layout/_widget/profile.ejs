@@ -1,6 +1,9 @@
 <div class="widget-wrap">
   <div class="info-card">
-    <image src=<%- url_for(theme.avatar) %> class="avatar" ></image>
+    <div class="avatar">
+      <image src=<%- url_for(theme.avatar) %>></image>
+      <div class="img-dim"></div>
+    </div>
     <div class="info">
       <div class="username"><%- config.author %> </div>
       <div class="dot"></div>

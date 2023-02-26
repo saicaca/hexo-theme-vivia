@@ -9,15 +9,26 @@
       min-height: 72px
   #banner
     opacity: 0
-  &[banner="true"]
-    #nav
-      height: calc(40vh - 72px)
-      filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.15))
-      &.is_home
-        height: calc(60vh - 72px)
-    #banner
-      opacity: 1
-      top: 0
+  &[showBanner="true"]
+    &[hasBanner="true"]
+      #nav
+        height: calc(40vh - 72px)
+        filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.15))
+        &.is_home
+          height: calc(60vh - 72px)
+      #banner
+        opacity: 1
+        top: 0
+    &[hasBanner="desktop"]      // hide banner for mobile view if the post has cover image
+      @media mq-normal          // duplicated code because @extend doesn't work inside @media
+        #nav
+          height: calc(40vh - 72px)
+          filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.15))
+          &.is_home
+            height: calc(60vh - 72px)
+        #banner
+          opacity: 1
+          top: 0
 
 #banner
   height: 40vh

@@ -84,17 +84,17 @@
   // Banner switch
 
   function enableBanner() {
-    r.setAttribute("banner", "true");
+    r.setAttribute("showBanner", "true");
     localStorage.setItem('showBanner', "true");
   }
   
   function disableBanner() {
-    r.setAttribute("banner", "false");
+    r.setAttribute("showBanner", "false");
     localStorage.setItem('showBanner', "false");
   }
 
   let showBannerCheck = document.querySelector("input[name=banner-checkbox]");
-  if (r.getAttribute("banner") == "true") {
+  if (r.getAttribute("showBanner") == "true") {
     showBannerCheck.checked = true;
   }
   showBannerCheck.addEventListener('change', function() {

@@ -6,9 +6,9 @@ function loadSettings() {
 
     let showBanner = localStorage.getItem("showBanner");
     if (showBanner == null || showBanner == undefined || showBanner == "true") {
-        document.documentElement.setAttribute('banner', true)
+        document.documentElement.setAttribute('showBanner', true)
     } else {
-        document.documentElement.setAttribute('banner', false)
+        document.documentElement.setAttribute('showBanner', false)
     }
 };
 loadSettings();

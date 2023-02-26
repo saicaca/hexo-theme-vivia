@@ -1,6 +1,20 @@
 <!DOCTYPE html>
-<% let showBanner = theme.banner.enable && (is_home() || theme.banner.onAllPages); %>
-<html theme="dark" <% if (showBanner) { %> banner="true" <% } %> >
+<% 
+  // hasBanner: if there is banner to display
+  // showBanner: if the site vistor choose to display banner
+
+  let hasBanner;
+  if (theme.banner.enable && (is_home() || theme.banner.onAllPages)) {
+    if (is_post() && page.photos.length)
+      hasBanner = "desktop";      // hide banner for mobile view if the post has cover image
+    else
+      hasBanner = "true"
+  } else {
+    hasBanner = "false";
+  }
+%>
+<%  %>
+<html theme="dark" showBanner="true" hasBanner="<%- hasBanner %>" > 
 <link href="<%- url_for("/fontawesome/css/fontawesome.css") %>" rel="stylesheet">
 <link href="<%- url_for("/fontawesome/css/brands.css") %>" rel="stylesheet">
 <link href="<%- url_for("/fontawesome/css/solid.css") %>" rel="stylesheet">
@@ -9,7 +23,7 @@
 <%- partial('_partial/head') %>
 <body>
   <%- partial('_widget/color') %>
-  <% if (showBanner) { %>
+  <% if (hasBanner != "false") { %>
     <%- partial('_partial/banner') %> 
   <% } %> 
   <div id="main-grid" class="shadow <% if (theme.sidebar.position == "right") { %> right-sidebar <% } %>  ">

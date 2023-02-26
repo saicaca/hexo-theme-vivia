@@ -48,7 +48,7 @@
     <% if (theme.home.style == 'default' && is_home()) { %> 
     <a class="right-panel <% if (cover) { %> with-pic <% } else { %> non-pic <% } %> "
       <% if (cover) { %> style="background-image: url(<%- url_for(post.photos[0]) %>)" <% } %>
-      href="<%- url_for(post.path) %>#more" 
+      href="<%- url_for(post.path) %>" 
     >
       <% if (cover) { %> 
       <div class="overlay">

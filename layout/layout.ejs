@@ -22,7 +22,9 @@
 <script src="<%- url_for("/js/load-settings.js") %>" ></script>
 <%- partial('_partial/head') %>
 <body>
-  <%- partial('_widget/color') %>
+  <% if (theme.previewMode) { %>
+    <%- partial('_widget/color') %>
+  <% } %>
   <% if (hasBanner != "false") { %>
     <%- partial('_partial/banner') %> 
   <% } %> 

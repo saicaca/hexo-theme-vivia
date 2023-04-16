@@ -9,6 +9,7 @@
 
 .article-main
   border-radius: card-radius
+  z-index: 50
   position: relative
   background: var(--card-background)
   transition: background trans-style
@@ -79,7 +80,7 @@
   justify-content: flex-end
   align-items: center
   background-size: cover
-  transition: background trans-style
+  transition: all trans-style;
   @media mq-mobile
     display: none
   &.non-pic
@@ -94,7 +95,10 @@
     &:active
       background: var(--enter-btn-active)
   &.with-pic
+    transition: 0.3s all ease-out
     min-width: 35%
+    &:hover
+      transform: scale(1.05)
     .overlay
       height: 100%
       width: 100%

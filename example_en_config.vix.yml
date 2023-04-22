@@ -1,0 +1,60 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+  About: /about
+rss: /atom.xml
+
+# Content
+excerpt_link: Read More
+
+# Sidebar
+sidebar:
+  widgets:
+    normal:
+      - profile
+    sticky: 
+      - category
+      - tag
+      - archive
+      - recent_posts
+
+# Widget behavior
+archive_type: 'monthly'
+show_count: false
+recent_posts_limits: 5
+
+# Miscellaneous
+favicon: /favicon.png
+
+comment:
+  valine:
+    enable: false
+    appId:
+    appKey:
+
+home:
+  style: default   # default, detail
+  
+banner:
+  enable: true
+  url: /assets/banner.png
+  position: top
+  onAllPages: true    # display banner on all pages
+
+previewMode: true
+# Appearence
+hue: 270
+
+# Personal info
+avatar: /assets/avatar.png
+links:
+  - name: Twitter
+    icon: fa-brands fa-twitter
+    url: https://twitter.com
+  - name: Steam
+    icon: fa-brands fa-steam
+    url: https://store.steampowered.com
+  - name: GitHub
+    icon: fa-brands fa-github
+    url: https://github.com

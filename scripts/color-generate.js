@@ -2,7 +2,7 @@ const yaml = require('js-yaml');
 const fs   = require('fs');
 const Color = require("colorjs.io").default;
 
-const config = yaml.load(fs.readFileSync('./themes/vix/_config.yml'));
+const config = yaml.load(fs.readFileSync('./themes/vivia/_config.yml'));
 const colors = require("../source/colors.json")
 const stylus = require('stylus');
 

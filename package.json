@@ -1,12 +1,12 @@
 {
-  "name": "hexo-theme-vix",
+  "name": "hexo-theme-vivia",
   "version": "0.0.1",
-  "description": "Hexo Theme Vix",
-  "repository": "saicaca/hexo-theme-vix",
+  "description": "Hexo Theme Vivia",
+  "repository": "saicaca/hexo-theme-vivia",
   "keywords": [
     "hexo",
     "theme",
-    "vix"
+    "vivia"
   ],
   "license": "MIT",
   "dependencies": {

@@ -16,8 +16,8 @@ A theme for [Hexo](https://hexo.io/), modified from [Landscape](https://github.c
 
    ```bash
    npm install hexo-theme-vivia
-
-
+   ```
+   
 2. Copy the configuration file `node_modules/hexo-theme-vivia/example_config.vivia.yml` to the root directory of the Hexo blog and rename it as `_config.vivia.yml`.
 
 3. Edit Hexo config file `_config.yml` and set `vivia` as the theme.
@@ -25,7 +25,6 @@ A theme for [Hexo](https://hexo.io/), modified from [Landscape](https://github.c
    ```yaml
    theme: vivia
    ```
-
 
 4. Create the `about` page
 

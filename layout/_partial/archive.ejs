@@ -9,7 +9,12 @@
 %> 
 
 <div class="archive-main-card">
-    <div class="archive-title">Archive</div>
+    <div class="archive-top">
+      <div class="main-title-bar">
+        <div class="main-title-dot"></div>
+        <h1 class="article-title">Archive</h1>
+      </div>    
+    </div>
     <% let currYear = -1; %>
     <% page.posts.each(function(post, i) { %>
       <% let year = post.date.year(); %>

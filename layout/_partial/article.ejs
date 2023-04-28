@@ -22,7 +22,7 @@
       <div class="e-content article-entry" itemprop="articleBody">
         <% if (post.excerpt && index){ %>
           <%- post.excerpt %>
-        <% } else if (is_home() && !post.excerpt) { %>
+        <% } else if (is_home() && !post.excerpt && theme.home.style != 'detail') { %>
           <div class="truncate-text">
             <%- truncate(strip_html(post.content), {length: 500}) %>  
           </div>
@@ -35,7 +35,7 @@
         <footer class="article-footer">
           <% if(post.excerpt && index && theme.excerpt_link) { %> 
             <a href="<%- url_for(post.path) %>#more" class="article-more-link">
-              <%= theme.excerpt_link %><i class="fa-solid fa-angle-right"></i>
+              <%= __('read_more') %><i class="fa-solid fa-angle-right"></i>
             </a>
           <% } %> 
           <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" data-title="<%= post.title %>" class="article-share-link">
@@ -45,7 +45,7 @@
       <% } %>   
     </div>
     
-    <% if (theme.home.style == 'default' && is_home()) { %> 
+    <% if (theme.home.style != 'detail' && is_home()) { %> 
     <a class="right-panel <% if (cover) { %> with-pic <% } else { %> non-pic <% } %> "
       <% if (cover) { %> style="background-image: url(<%- url_for(post.photos[0]) %>)" <% } %>
       href="<%- url_for(post.path) %>" 

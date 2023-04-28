@@ -6,7 +6,7 @@
     <% if (theme.copyright){ %>
       <%- render(theme.copyright, 'pug'); %>
     <% } %>
-    &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+    &copy; <%= date(new Date(), 'YYYY') %> <%= theme.author || config.author || config.title %><br>
     <%= __('powered_by') %> <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
   </div>
 </footer>

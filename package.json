@@ -1,17 +1,25 @@
 {
   "name": "hexo-theme-vivia",
-  "version": "0.0.1",
-  "description": "Hexo Theme Vivia",
-  "repository": "saicaca/hexo-theme-vivia",
+  "version": "0.1.3",
+  "description": "A theme for Hexo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saicaca/hexo-theme-vivia.git"
+  },
   "keywords": [
     "hexo",
     "theme",
     "vivia"
   ],
+  "author": "saicaca",
   "license": "MIT",
   "dependencies": {
     "colorjs.io": "^0.4.2",
     "hexo-word-counter": "^0.1.0",
     "js-yaml": "^4.1.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/saicaca/hexo-theme-vivia/issues"
+  },
+  "homepage": "https://github.com/saicaca/hexo-theme-vivia#readme"
 }

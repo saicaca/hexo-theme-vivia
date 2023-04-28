@@ -2,7 +2,6 @@ const yaml = require('js-yaml');
 const fs   = require('fs');
 const Color = require("colorjs.io").default;
 
-const config = yaml.load(fs.readFileSync('./themes/vivia/_config.yml'));
 const colors = require("../source/colors.json")
 const stylus = require('stylus');
 
@@ -12,7 +11,7 @@ function getColorNode(l, c, h) {
 }
 
 hexo.extend.filter.register('stylus:renderer', function(style) {
-    let hue = config.hue;
+    let hue = hexo.config.theme_config.hue;
     let colorType = {
         'V': 1,
         'M': 0.5,

@@ -1,12 +1,3 @@
-# Header
-menu:
-  Home: /
-  Archives: /archives
-  About: /about
-rss: /atom.xml
-
-# Content
-excerpt_link: Read More
 
 # # Footer
 # copyright: |-
@@ -14,7 +5,7 @@ excerpt_link: Read More
 #   All website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></br>
 
 # Footer
-copyright:
+# copyright:
 # Need help choosing? Please see...
 # https://creativecommons.org/choose/
 # https://choosealicense.com/
@@ -23,50 +14,20 @@ copyright:
 #   <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a></br>
 #   All website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></br>
 
-# Sidebar
-sidebar:
-  widgets:
-    normal:
-      - profile
-    sticky: 
-      - category
-      - tag
-      - archive
-      - recent_posts
-
-# Widget behavior
-archive_type: 'monthly'
-show_count: false
-recent_posts_limits: 5
-
 # Miscellaneous
-favicon: /favicon.png
+# favicon: /favicon.png
 
 # valine comment system. https://valine.js.org
-valine:
-  enable: false # if you want use valine,please set this value is true
-  appId:  # leancloud application app id
-  appKey:  # leancloud application app key
-  notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
-  verify: false # valine verify code (true/false)
-  pageSize: 10 # comment list page size
-  avatar: mm # gravatar style https://valine.js.org/#/avatar
-  lang: zh-cn # i18n: zh-cn/en
-  placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
-  guest_info: nick,mail,link #valine comment header info
+# valine:
+#   enable: false # if you want use valine,please set this value is true
+#   appId:  # leancloud application app id
+#   appKey:  # leancloud application app key
+#   notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
+#   verify: false # valine verify code (true/false)
+#   pageSize: 10 # comment list page size
+#   avatar: mm # gravatar style https://valine.js.org/#/avatar
+#   lang: zh-cn # i18n: zh-cn/en
+#   placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
+#   guest_info: nick,mail,link #valine comment header info
 
-# Appearence
-hue: 270
 
-# Personal info
-avatar: /assets/avatar.png
-links:
-  - name: Twitter
-    icon: fa-brands fa-twitter
-    url: https://twitter.com
-  - name: Steam
-    icon: fa-brands fa-steam
-    url: https://store.steampowered.com
-  - name: GitHub
-    icon: fa-brands fa-github
-    url: https://github.com

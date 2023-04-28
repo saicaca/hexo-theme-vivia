@@ -1,0 +1,55 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+  About: /about
+rss: /atom.xml
+
+home:
+  style: default           # default, detail
+
+# Banner
+banner:
+  enable: false            # Display banner
+  url: /assets/banner.png
+  position: center         # Specifies the alignment of the image, see the "object-position" property in CSS
+  onAllPages: true         # Display banner on all pages
+
+# Appearence
+hue: 270                   # The hue of the theme color (e.g. red: 0, orange: 60, blue: 260, purple: 300, pink: 345)
+
+# Sidebar
+sidebar:
+  widgets:                 # Plugins to be enabled (profile, category, tag, archive, recent_posts)
+    normal:                # Scroll along with the page
+      - profile
+    sticky:                # Stick to the top of the page
+      - category
+      - tag
+      - archive
+      - recent_posts
+
+# Widget behavior
+archive_type: 'monthly'
+recent_posts_limits: 5
+
+# Personal info
+avatar: 
+author: Your Name
+subtitle: This is the subtitle
+links:
+  - name: Twitter
+    icon: fa-brands fa-twitter      # Find icon codes at https://fontawesome.com/search
+    url: https://twitter.com
+  - name: Steam
+    icon: fa-brands fa-steam
+    url: https://store.steampowered.com
+  - name: GitHub
+    icon: fa-brands fa-github
+    url: https://github.com
+
+comment:
+  valine:
+    enable: false
+    appId: 
+    appKey: 

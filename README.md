@@ -1,5 +1,7 @@
 # hexo-theme-vivia
 
+<img src="https://img.shields.io/npm/v/hexo-theme-vivia"/> <img src="https://img.shields.io/github/license/saicaca/hexo-theme-vivia"/>
+
 A theme for [Hexo](https://hexo.io/), modified from [Landscape](https://github.com/hexojs/hexo-theme-landscape). (Work in progress)
 
 [Live Demo](https://saicaca.github.io/vivia-preview/)

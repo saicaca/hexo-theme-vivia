@@ -33,14 +33,11 @@
 
       <% if (theme.home.style == 'detail') { %> 
         <footer class="article-footer">
-          <% if(post.excerpt && index && theme.excerpt_link) { %> 
+          <% if(post.excerpt && index) { %> 
             <a href="<%- url_for(post.path) %>#more" class="article-more-link">
               <%= __('read_more') %><i class="fa-solid fa-angle-right"></i>
             </a>
           <% } %> 
-          <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" data-title="<%= post.title %>" class="article-share-link">
-            <i class="fa-solid fa-share"></i><%= __('share') %>
-          </a>
         </footer>
       <% } %>   
     </div>

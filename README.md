@@ -46,3 +46,8 @@ A theme for [Hexo](https://hexo.io/), modified from [Landscape](https://github.c
 - [ ] Search
 - [ ] TOC widget
 - [ ] Improve the styles of post contents
+
+## Thanks
+<a href="https://jb.gg/OpenSourceSupport">
+   <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo." width="200px" height="200px">
+</a>

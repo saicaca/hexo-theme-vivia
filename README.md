@@ -4,9 +4,11 @@
 
 A theme for [Hexo](https://hexo.io/), modified from [Landscape](https://github.com/hexojs/hexo-theme-landscape). (Work in progress)
 
-[Live Demo](https://saicaca.github.io/vivia-preview/)
+[中文文档](https://github.com/saicaca/hexo-theme-vivia/edit/main/README.zh-CN.md)
 
 ## Preview
+
+**[Live Demo](https://saicaca.github.io/vivia-preview/)**
 
 ![home](preview/home.png)
 

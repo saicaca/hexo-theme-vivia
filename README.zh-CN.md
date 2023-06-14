@@ -1,12 +1,17 @@
 # hexo-theme-vivia
 
-<img src="https://img.shields.io/npm/v/hexo-theme-vivia"/> <img src="https://img.shields.io/github/license/saicaca/hexo-theme-vivia"/>
+<a href="https://www.npmjs.com/package/hexo-theme-vivia">
+   <img src="https://img.shields.io/npm/v/hexo-theme-vivia"/>
+</a>
+<a href="https://github.com/saicaca/hexo-theme-vivia/blob/main/LICENSE">
+   <img src="https://img.shields.io/github/license/saicaca/hexo-theme-vivia"/>
+</a>
 
 一款为 [Hexo](https://hexo.io/) 开发的主题，基于 [Landscape](https://github.com/hexojs/hexo-theme-landscape) 修改。 (开发中)
 
 ## 预览
 
-**[在线预览](https://saicaca.github.io/vivia-preview/)**
+**[💻在线预览](https://saicaca.github.io/vivia-preview/)**
 
 ![home](preview/home.png)
 

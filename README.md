@@ -1,6 +1,11 @@
 # hexo-theme-vivia
 
-<img src="https://img.shields.io/npm/v/hexo-theme-vivia"/> <img src="https://img.shields.io/github/license/saicaca/hexo-theme-vivia"/>
+<a href="https://www.npmjs.com/package/hexo-theme-vivia">
+   <img src="https://img.shields.io/npm/v/hexo-theme-vivia"/>
+</a>
+<a href="https://github.com/saicaca/hexo-theme-vivia/blob/main/LICENSE">
+   <img src="https://img.shields.io/github/license/saicaca/hexo-theme-vivia"/>
+</a>
 
 A theme for [Hexo](https://hexo.io/), modified from [Landscape](https://github.com/hexojs/hexo-theme-landscape). (Work in progress)
 
@@ -8,7 +13,7 @@ A theme for [Hexo](https://hexo.io/), modified from [Landscape](https://github.c
 
 ## Preview
 
-**[Live Demo](https://saicaca.github.io/vivia-preview/)**
+**[💻Live Demo](https://saicaca.github.io/vivia-preview/)**
 
 ![home](preview/home.png)
 

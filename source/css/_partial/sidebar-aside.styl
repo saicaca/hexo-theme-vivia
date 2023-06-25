@@ -17,6 +17,17 @@
   font-weight: bold
   margin-bottom: 12px
   transition: color trans-style
+  display: flex
+  &:before
+    content: ''
+    display: block
+    height: 14px
+    width: 4px
+    border-radius: 2px
+    background-color: var(--primary)
+    margin-right: 10px
+    margin-top: 4px
+    margin-left: -4px
 
 .widget
   @extend $card
@@ -32,6 +43,7 @@
       margin-left: 15px
       list-style: disc
   .article-tag-list
+  .widget-tag-list
     a
       color: var(--btn-content)
       &:hover

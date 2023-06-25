@@ -270,20 +270,28 @@
   // border-top: 1px solid color-border
   margin: 0 0 0 (article-side-padding - 16px)
 
+.widget-tag-list
 .article-tag-list
   margin-top: 12px
   display: flex
   flex-wrap: wrap
   row-gap: 10px
-  column-gap: 10px
+  column-gap: 8px
 
 .article-tag-list-link
+.widget-tag-list-link
   @extend $text-btn
   color: var(--btn-content)
   font-size: 14px
   font-weight: medium  
   display: flex
   align-items: center
+  &:hover
+    color: var(--btn-content-hover)
+    &:before
+      background: var(--btn-content-hover)
+
+.article-tag-list-link
   &:before
     content: ""
     display: block
@@ -295,10 +303,6 @@
     transition: background trans-style
     @media mq-mobile
       display: none
-  &:hover
-    color: var(--btn-content-hover)
-    &:before
-      background: var(--btn-content-hover)
 
 .article-comment-link
   float: right

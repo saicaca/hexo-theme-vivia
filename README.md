@@ -9,7 +9,7 @@
 
 A theme for [Hexo](https://hexo.io/), modified from [Landscape](https://github.com/hexojs/hexo-theme-landscape). (Work in progress)
 
-[中文文档](https://github.com/saicaca/hexo-theme-vivia/edit/main/README.zh-CN.md)
+[中文文档](README.zh-CN.md)
 
 ## Preview
 

@@ -38,11 +38,5 @@
     <link rel="icon" media="(prefers-color-scheme: dark)" href="<%- url_for("/images/favicon-dark-180.png") %>" sizes="180x180">
     <link rel="icon" media="(prefers-color-scheme: dark)" href="<%- url_for("/images/favicon-dark-192.png") %>" sizes="192x192">
   <% } %>
-  <% if (config.highlight.enable){ %>
-    <%- css('https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css') %>
-  <% } %>
   <%- css('css/style') %>
-  <% if (theme.fancybox){ %>
-    <%- css('fancybox/jquery.fancybox.min.css') %>
-  <% } %>
 </head>

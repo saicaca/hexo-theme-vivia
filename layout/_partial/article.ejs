@@ -63,6 +63,10 @@
 </article>
 
 <% if (!index && theme.comment.valine.enable) { %>
+  <% 
+    let valineConfig = theme.comment.valine;
+    valineConfig.el = '#vcomments';
+  %>
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <div id="comment-card" class="comment-card">
     <div class="main-title-bar">
@@ -72,10 +76,6 @@
     <div id="vcomments"></div>
   </div>
   <script>
-      new Valine({
-          el: '#vcomments',
-          appId: "<%= theme.comment.valine.appId %>",
-          appKey: "<%= theme.comment.valine.appKey %>"
-      })
+      new Valine(<%- JSON.stringify(valineConfig) %>);
   </script>
 <% } %> 

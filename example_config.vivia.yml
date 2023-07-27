@@ -55,3 +55,9 @@ comment:
     enable: false
     appId: 
     appKey: 
+    placeholder: Just go go
+    pageSize: 10
+    highlight: true
+    serverURLs: 
+    # Other supported parameters can be added here if needed
+    # Visit https://valine.js.org/configuration.html for more details

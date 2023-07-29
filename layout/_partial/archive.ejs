@@ -6,6 +6,20 @@
         }
         return str.trim();
     }
+
+    let countByYear = {};
+    page.posts.each(function(post, i) {
+        let year = post.date.year();
+        countByYear[year] = countByYear[year] ? countByYear[year] + 1 : 1;
+    })
+
+    function getCountText(year) {
+        let count = countByYear[year];
+        if (count == 1)
+            return "1 " + __('article_count');
+        else
+            return count + " " + __('article_count_plural');
+    }
 %> 
 
 <div class="archive-main-card">
@@ -25,6 +39,7 @@
             <div class="dot-wrapper">
                 <div class="dot"></div>
             </div>
+            <div class="article-count"><%- getCountText(year) %></div>
         </div>
       <% } %>
       <a class="archive-article-link" href="<%- url_for(post.path) %>" title="<%- post.title %>">

@@ -4,7 +4,7 @@
       <h3 class="widget-title"><%= __('recent_posts') %></h3>
       <ul>
         <% site.posts.sort('date', -1).limit(theme.recent_posts_limits).each(function(post){ %>
-          <a class="recent-link" href="<%- url_for(post.path) %>">
+          <a class="recent-link" href="<%- url_for(post.path) %>" title="<%- post.title %>" >
             <div class="recent-link-text">
               <%= post.title || '(no title)' %>
             </div>

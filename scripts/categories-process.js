@@ -38,7 +38,7 @@ function list_to_tree(list) {
     return roots;
 }
 
-hexo.on('generateBefore', function(post){
+hexo.on('generateAfter', function(post){
     let tree = list_to_tree(hexo.locals.get("categories").data);
     let cate_tree = build_tag_tree(tree);
     hexo.extend.helper.register('categories_tree', function() {
@@ -46,4 +46,3 @@ hexo.on('generateBefore', function(post){
     })
 });
   
-

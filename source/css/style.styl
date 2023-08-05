@@ -2,6 +2,7 @@
 @import "_variables"
 @import "_util/mixin"
 @import "_util/grid"
+@import "_util/color"
 
 global-reset()
 
@@ -146,7 +147,7 @@ body
   transition: background trans-style
 
 ::selection
-  background-color: var(--selection-bg);
+  background-color: var(--selection-bg)
 
 @import "_extend"
 @import "_partial/header"

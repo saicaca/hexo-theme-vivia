@@ -1,5 +1,5 @@
 <%
-  let hueList = [0, 30, 60, 180, 240, 270, 300, 330, 345];
+  let hueList = [0, 30, 60, 180, 250, 270, 300, 330, 345];
 %> 
 <div class="widget color-picker">
   <h3 class="widget-title">Theme Preview</h3>
@@ -17,7 +17,8 @@
     <% } %> 
   </div>
   <input type="range" min="0" max="360" value="<%- theme.hue %>" class="slider" id="colorSlider" step="5" style="width: 100%;">
-  <p>Hue: <span id="hueValue"></span></p>
+  <p class="hue-text">Hue: <span id="hueValue"></span></p>
+  <p class="oklch-tip">You are using an outdated browser that does not support OKLCH colors. The color setting will not take effect.</p>
 </div>
 
 <script>
@@ -34,38 +35,14 @@
     localStorage.setItem('hue', hue);
     output.innerHTML = hue;
     slider.value = hue;
-    let colorType = {
-        'V': 1,
-        'M': 0.5,
-        'G': 0.25
-    }
-    for (let color of colors.default) {
-        for (let [name, mul] of Object.entries(colorType)) {
-          r.style.setProperty(`--${name}${color.name}`, getColorNode(color.l, color.c * mul, hue));
-        }
-    }
 
-    for (let [theme, list] of Object.entries(colors)) {
-      if (theme == 'default')
-        continue;
-      for (let color of list) {
-        r.style.setProperty(`--${theme}-${color.name}`, getColorNode(color.l, color.c, hue));
-      }
-    }
+    r.style.setProperty(`--primary-hue`, hue);
   }
 
-  let colors;
-  fetch("<%- url_for('/colors.json') %>")
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      colors = data;
-      let storedHue = localStorage.getItem('hue');
-      if (storedHue) {
-        setHue(storedHue);
-      }    
-    }) 
+  let storedHue = localStorage.getItem('hue');
+  if (storedHue) {
+    setHue(storedHue);
+  }
 
   slider.oninput = function() {
     output.innerHTML = this.value;
@@ -93,7 +70,7 @@
   }
 
   let showBannerCheck = document.querySelector("input[name=banner-checkbox]");
-  if (r.getAttribute("showBanner") == "true") {
+  if (r.getAttribute("showBanner") === "true") {
     showBannerCheck.checked = true;
   }
   showBannerCheck.addEventListener('change', function() {

@@ -28,6 +28,13 @@
       cursor: pointer
   #banner-toggle-bar
     display: flex
+  .hue-text
+    @supports not (color: oklch(0 0 0))
+      display: none
+  .oklch-tip
+    font-size: 14px
+    @supports (color: oklch(0 0 0))
+      display: none
 
 input[type="range"] {
   -webkit-appearance: none;

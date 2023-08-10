@@ -61,3 +61,12 @@ comment:
     serverURLs: 
     # Other supported parameters can be added here if needed
     # Visit https://valine.js.org/configuration.html for more details
+
+
+#Analytics
+gauges_analytics: false
+google_analytics: false #UA-xxxxxx
+baidu_analytics: false # ddxxxxxxxxxxxxxxxxx In the https://hm.baidu.com/hm.js? Afterwards
+
+#Copyright
+copyright: #<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris"></a>

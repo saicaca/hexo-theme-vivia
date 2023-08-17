@@ -20,8 +20,12 @@
     border: none
     position: fixed
     bottom: 240px
-    opacity: 0
-    transition: background trans-style, opacity trans-style
+    opacity: 1
+    transition: background trans-style, opacity trans-style, transform trans-style
     cursor: pointer
     span
         font-size: 40px
+    &.hide
+        transform: scale(0.9)
+        opacity: 0
+        pointer-events: none

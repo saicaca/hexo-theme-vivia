@@ -89,8 +89,6 @@ body
   position: relative
   // grid-auto-rows: minmax(0, auto)
   grid-gap: 16px
-  @media mq-mobile
-    grid-template-columns: auto auto
   #nav
     grid-column-start: 1
     grid-column-end: 3
@@ -98,20 +96,10 @@ body
   #sidebar-wrapper
     grid-row: 2
     grid-column: 1
-    @media mq-mobile
-      display: none
-    @media mq-tablet
-      display: none
   #content-body
     grid-column: 2
     grid-row: 2
     overflow: auto
-    @media mq-mobile
-      grid-column-start: 1
-      grid-column-end: 3
-    @media mq-tablet
-      grid-column-start: 1
-      grid-column-end: 3
   #footer-wrapper
     grid-row: 3
     grid-column-start: 1
@@ -121,6 +109,30 @@ body
       grid-column: 2
     #content-body
       grid-column: 1
+  @media mq-mobile
+    grid-template-columns: auto auto
+    #sidebar-wrapper
+      grid-row: 3
+      grid-column-start: 1
+      grid-column-end: 3
+      margin-top: 48px
+    #content-body
+      grid-column-start: 1
+      grid-column-end: 3
+    #footer-wrapper
+      grid-row: 4
+  @media mq-tablet
+    grid-template-columns: auto auto
+    #sidebar-wrapper
+      grid-row: 3
+      grid-column-start: 1
+      grid-column-end: 3
+      margin-top: 48px
+    #content-body
+      grid-column-start: 1
+      grid-column-end: 3
+    #footer-wrapper
+      grid-row: 4
 
 #main
   position: relative

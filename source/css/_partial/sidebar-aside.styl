@@ -6,6 +6,10 @@
     top: block-margin
   // @media mq-normal
   //   column(sidebar-column)
+  @media mq-tablet
+    display: grid
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px
 
 .widget-wrap
   margin-bottom: block-margin
@@ -65,6 +69,13 @@
     position: relative
     img
       width: 100%
+    @media mq-tablet and (min-width: 360px)
+      width 240px
+      margin: 24px auto 16px auto
+    @media mq-mobile and (min-width: 360px)
+      width 240px
+      margin: 24px auto 16px auto
+
   .username
     font-size: 20px
     font-weight: bold

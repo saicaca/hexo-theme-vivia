@@ -1,13 +1,25 @@
-# hexo-theme-vivia
-
+<br>
+<div align="center">
+<img alt="Vivia Logo" src="./preview/logo.png" width="280px">
+<br>
+<br>
+<strong>
+<a href="https://saicaca.github.io/vivia-preview/">在线预览</a>
+|
+<a href="https://github.com/saicaca/hexo-theme-vivia/blob/main/README.md">English</a>
+</strong>
+<br>
+<br>
+一款 <a href="https://hexo.io/">Hexo</a> 博客主题，基于 <a href="https://github.com/hexojs/hexo-theme-landscape">Landscape</a> 修改（开发中）
+<br>
+<br>
 <a href="https://www.npmjs.com/package/hexo-theme-vivia">
    <img src="https://img.shields.io/npm/v/hexo-theme-vivia"/>
 </a>
 <a href="https://github.com/saicaca/hexo-theme-vivia/blob/main/LICENSE">
    <img src="https://img.shields.io/github/license/saicaca/hexo-theme-vivia"/>
 </a>
-
-一款为 [Hexo](https://hexo.io/) 开发的主题，基于 [Landscape](https://github.com/hexojs/hexo-theme-landscape) 修改。 (开发中)
+</div>
 
 ## 预览
 

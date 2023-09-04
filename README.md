@@ -1,15 +1,25 @@
-# hexo-theme-vivia
-
+<br>
+<div align="center">
+<img alt="Vivia Logo" src="./preview/logo.png" width="280px">
+<br>
+<br>
+<strong>
+<a href="https://saicaca.github.io/vivia-preview/">Live Demo</a>
+|
+<a href="https://github.com/saicaca/hexo-theme-vivia/blob/main/README.zh-CN.md">中文文档</a>
+</strong>
+<br>
+<br>
+A theme for <a href="https://hexo.io/">Hexo</a>, modified from <a href="https://github.com/hexojs/hexo-theme-landscape">Landscape</a>. (Work in progress)
+<br>
+<br>
 <a href="https://www.npmjs.com/package/hexo-theme-vivia">
    <img src="https://img.shields.io/npm/v/hexo-theme-vivia"/>
 </a>
 <a href="https://github.com/saicaca/hexo-theme-vivia/blob/main/LICENSE">
    <img src="https://img.shields.io/github/license/saicaca/hexo-theme-vivia"/>
 </a>
-
-A theme for [Hexo](https://hexo.io/), modified from [Landscape](https://github.com/hexojs/hexo-theme-landscape). (Work in progress)
-
-[中文文档](README.zh-CN.md)
+</div>
 
 ## Preview
 

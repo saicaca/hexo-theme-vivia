@@ -1,6 +1,6 @@
 const url_for = hexo.extend.helper.get('url_for').bind(hexo);
 
-function build_tag_tree(tree) {
+function build_tag_tree(tree, currDepth, maxDepth) {
     let ret = '<div class="category-box">';
     for(let item of tree) {
         ret += `
@@ -9,9 +9,9 @@ function build_tag_tree(tree) {
                 <div class="category-count">${item.length}</div>
             </a>
         `;
-        if ('children' in item && item.children.length>0) {
+        if ('children' in item && item.children.length>0 && currDepth < maxDepth) {
             ret += '<div class="children">'
-            ret += build_tag_tree(item.children);
+            ret += build_tag_tree(item.children, currDepth+1, maxDepth);
             ret += '</div>'
         }
     }
@@ -39,8 +39,14 @@ function list_to_tree(list) {
 }
 
 hexo.on('generateAfter', function(post){
+    let depth = Infinity;
+    if (hexo.config.theme_config.categories && hexo.config.theme_config.categories.max_depth
+            && hexo.config.theme_config.categories.max_depth > 0) {
+        depth = hexo.config.theme_config.categories.max_depth;
+        console.log("depth: " + depth);
+    }
     let tree = list_to_tree(hexo.locals.get("categories").data);
-    let cate_tree = build_tag_tree(tree);
+    let cate_tree = build_tag_tree(tree, 1, depth);
     hexo.extend.helper.register('categories_tree', function() {
         return cate_tree;
     })

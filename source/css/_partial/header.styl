@@ -107,6 +107,7 @@ navbar
 $nav-link
   float: left
   color: var(--btn-text-neutral-text)
+  fill: var(--btn-text-neutral-text)    // for svg icons
   text-decoration: none
   display: block
   border-radius: inner-radius
@@ -114,6 +115,7 @@ $nav-link
   &:hover
     background: var(--btn-text-hover)
     color: var(--btn-text-light-text)
+    fill: var(--btn-text-light-text)
   &:active
     background: var(--btn-text-active)
 
@@ -138,10 +140,12 @@ $nav-link
     font-weight: 300
   .light-mode-icon
     position: absolute
+    height: 20px
     opacity: var(--display-light-icon)
     transition: opacity trans-style
   .dark-mode-icon
     position: absolute
+    height: 20px
     opacity: var(--display-dark-icon)
     transition: opacity trans-style
 

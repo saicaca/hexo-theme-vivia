@@ -17,19 +17,16 @@
   </nav>
   <nav id="sub-nav">
     <a id="theme-btn" class="nav-icon">
-      <span class="material-symbols-rounded light-mode-icon">wb_sunny</span>
-      <span class="material-symbols-rounded dark-mode-icon">dark_mode</span>
+      <span class="light-mode-icon"><%- partial('_icon/wb_sunny') %></span>
+      <span class="dark-mode-icon"><%- partial('_icon/dark_mode') %></span>
     </a>
     <% if (theme.rss){ %>
       <a id="nav-rss-link" class="nav-icon mobile-hide" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>">
-        <span class="material-symbols-rounded rss">rss_feed</span>
+        <%- partial('_icon/rss_feed') %>
       </a>
     <% } %>
-    <a id="nav-search-btn" class="nav-icon" title="<%= __('search') %>" style="display: none;">
-      <span class="material-symbols-rounded">search</span>
-    </a>
     <div id="nav-menu-btn" class="nav-icon">
-      <span class="material-symbols-rounded">menu</span>
+      <%- partial('_icon/menu') %>
     </div>
   </nav>
 </navbar>

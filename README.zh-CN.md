@@ -68,6 +68,8 @@
    theme: hexo-theme-vivia
    ```
 
+   如果代码高亮出现问题，请设置 `prismjs: enable: true`
+   
 3. 创建 `about` 页面
 
    ```bash

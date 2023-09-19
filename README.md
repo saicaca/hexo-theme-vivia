@@ -60,10 +60,10 @@ A theme for <a href="https://hexo.io/">Hexo</a>, modified from <a href="https://
    git clone <url-for-this-repo>
    ```
 
-2. Edit the config file `_config.yml` under the root path of your hexo project folder. Change a key-value pair to `theme: vivia`
+2. Edit the config file `_config.yml` under the root path of your hexo project folder. Change a key-value pair
 
    ```yaml
-   theme: vivia
+   theme: hexo-theme-vivia
    ```
 
 3. Create the `about` page

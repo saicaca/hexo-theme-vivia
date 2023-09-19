@@ -65,7 +65,7 @@
 2. 编辑 Hexo 根目录的配置文件 `_config.yml`，设置 `vivia` 为主题。
 
    ```yaml
-   theme: vivia
+   theme: hexo-theme-vivia
    ```
 
 3. 创建 `about` 页面

@@ -10,7 +10,7 @@ home:
 
 favicon:                   # 填写网站图标的路径，根路径为本项目的 source/ 文件夹。Path to the custom favicon (e.g. "/favicon.png" if your favicon file is located at /source/favicon.png)
 previewMode: true          # 调色板，默认开启。配置完毕可以手动关闭。color setting palatte, you can turn it off after you have chosen a favoriable color hue
-hue: 270                     # 调色的值[0, 360]，手动调到合适的值可以在这里设置为默认颜色。The hue of the theme color (e.g. red: 0, orange: 60, blue: 260, purple: 300, pink: 345)
+hue: 270                   # 调色的值[1, 360]，手动调到合适的值可以在这里设置为默认颜色。请不要设置为0，不然会出现奇怪的bug。The hue of the theme color (e.g. red: 0, orange: 60, blue: 260, purple: 300, pink: 345)
 
 # Banner
 banner:

@@ -40,9 +40,10 @@ function list_to_tree(list) {
 
 hexo.on('generateAfter', function(post){
     let depth = Infinity;
-    if (hexo.config.theme_config.categories && hexo.config.theme_config.categories.max_depth
-            && hexo.config.theme_config.categories.max_depth > 0) {
-        depth = hexo.config.theme_config.categories.max_depth;
+    // hexo.config.theme_config 更改为 hexo.theme，不然会报错 theme_config 不存在
+    if (hexo.theme.categories && hexo.theme.categories.max_depth
+            && hexo.theme.categories.max_depth > 0) {
+        depth = hexo.theme.categories.max_depth;
         console.log("depth: " + depth);
     }
     let tree = list_to_tree(hexo.locals.get("categories").data);

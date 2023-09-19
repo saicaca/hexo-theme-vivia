@@ -29,14 +29,16 @@
 
 ![home_dark](preview/home-dark.png)
 
-## 安装
+# 安装方式
 
-1. 通过 npm 安装主题。
+## 方式一：通过 npm install 安装
+
+1. 在 hexo 博客根目录执行以下命令
 
    ```bash
    npm install hexo-theme-vivia
    ```
-   
+
 2. 将配置文件 `node_modules/hexo-theme-vivia/example_config.vivia.yml` 复制至 Hexo 根目录并重命名为 `_config.vivia.yml`。
 
 3. 编辑 Hexo 配置文件 `_config.yml`，设置 `vivia` 为主题。
@@ -51,7 +53,35 @@
    hexo new page about
    ```
 
-## To-do
+## 方式二：直接将项目复制到 hexo 博客的 themes 目录
+
+1. 在 hexo 博客的 `theme` 目录下执行以下命令
+
+   ```bash
+   cd themes
+   git clone <本项目的 git 链接>
+   ```
+
+2. 编辑 Hexo 根目录的配置文件 `_config.yml`，设置 `vivia` 为主题。
+
+   ```yaml
+   theme: vivia
+   ```
+
+3. 创建 `about` 页面
+
+   ```bash
+   hexo new page about
+   ```
+
+4. 编译博客并查看效果
+   ```bash
+   hexo clean    # 清除旧的缓存文件
+   hexo server   # 临时本地服务，便于调试
+   hexo generate # 编译 markdown 文件并生成静态 html 网站
+   ```
+
+# To-do
 
 - [x] 亮 / 暗模式
 - [x] 自定义主题色
@@ -64,7 +94,7 @@
 - [ ] 文内目录插件
 - [ ] 优化内文样式
 
-## 致谢
+# 致谢
 <a href="https://jb.gg/OpenSourceSupport">
    <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo." width="200px" height="200px">
 </a>

@@ -66,6 +66,9 @@ A theme for <a href="https://hexo.io/">Hexo</a>, modified from <a href="https://
    theme: hexo-theme-vivia
    ```
 
+   set prismjs: enable: true if your code highlight is not active
+  
+   
 3. Create the `about` page
 
    ```bash

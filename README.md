@@ -74,8 +74,14 @@ A theme for <a href="https://hexo.io/">Hexo</a>, modified from <a href="https://
    ```bash
    hexo new page about
    ```
+4. Install required node modules
 
-4. Try compilation
+   ```bash
+   npm install colorjs.io
+   # or use `yarn add colorjs.io`
+   ```
+
+5. Try compilation
    ```bash
    hexo clean    # clean previous cache
    hexo server   # allow temperory local server, convinent for debugging

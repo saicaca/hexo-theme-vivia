@@ -75,8 +75,14 @@
    ```bash
    hexo new page about
    ```
+4. 安装必要的 nodejs 模块
 
-4. 编译博客并查看效果
+   ```bash
+   npm install colorjs.io
+   # 或者 `yarn add colorjs.io`
+   ```
+
+5. 编译博客并查看效果
    ```bash
    hexo clean    # 清除旧的缓存文件
    hexo server   # 临时本地服务，便于调试

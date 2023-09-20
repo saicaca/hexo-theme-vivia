@@ -1,88 +1,3 @@
-# Header
-menu:
-  Home: /
-  Archives: /archives
-  About: /about
-rss: /atom.xml
-
-home:
-  style: default           # default, detail
-
-favicon:                   # 填写网站图标的路径，根路径为本项目的 source/ 文件夹。Path to the custom favicon (e.g. "/favicon.png" if your favicon file is located at /source/favicon.png)
-previewMode: true          # 调色板，默认开启。配置完毕可以手动关闭。color setting palatte, you can turn it off after you have chosen a favoriable color hue
-hue: 270                   # 调色的值[1, 360]，手动调到合适的值可以在这里设置为默认颜色。请不要设置为0，不然会出现奇怪的bug。The hue of the theme color (e.g. red: 0, orange: 60, blue: 260, purple: 300, pink: 345)
-
-# Banner
-banner:
-  enable: true             # Display banner
-  url: /images/banner.jpg  # 背景图，根目录是本项目的 source/ 文件夹
-  position: center         # Specifies the alignment of the image, see the "object-position" property in CSS
-  onAllPages: true         # Display banner on all pages
-
-# Personal info
-avatar: /images/avatar.jpg
-author: Your Name
-subtitle: This is the subtitle
-links:
-  - name: Twitter
-    icon: fa-brands fa-twitter      # Find icon codes at https://fontawesome.com/search
-    url: https://twitter.com
-  - name: Steam
-    icon: fa-brands fa-steam
-    url: https://store.steampowered.com
-  - name: GitHub
-    icon: fa-brands fa-github
-    url: https://github.com
-
-# Sidebar
-sidebar:
-  widgets:                 # Plugins to be enabled (profile, category, tag, archive, recent_posts)
-    normal:                # Scroll along with the page
-      - profile
-    sticky:                # Stick to the top of the page
-      - category
-      - tag
-      - archive
-      - recent_posts
-
-# Widget behavior
-archive_type: 'monthly'
-recent_posts_limits: 5
-categories:
-  max_depth: 3             # Maximum depth of categories displayed in the widget (null for unlimited)
-
-comment:
-  valine:
-    enable: false
-    appId: 
-    appKey: 
-    placeholder: Just go go
-    pageSize: 10
-    highlight: true
-    serverURLs: 
-    # Other supported parameters can be added here if needed
-    # Visit https://valine.js.org/configuration.html for more details
-# valine comment system. https://valine.js.org
-# valine:
-#   enable: false # if you want use valine,please set this value is true
-#   appId:  # leancloud application app id
-#   appKey:  # leancloud application app key
-#   notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
-#   verify: false # valine verify code (true/false)
-#   pageSize: 10 # comment list page size
-#   avatar: mm # gravatar style https://valine.js.org/#/avatar
-#   lang: zh-cn # i18n: zh-cn/en
-#   placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
-#   guest_info: nick,mail,link #valine comment header info
-
-#Analytics
-gauges_analytics: false
-google_analytics: false #UA-xxxxxx
-baidu_analytics: false # ddxxxxxxxxxxxxxxxxx In the https://hm.baidu.com/hm.js? Afterwards
-
-#Copyright
-copyright: #<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris"></a>
-
 # # Footer
 # copyright: |-
 #   <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a></br>
@@ -97,3 +12,20 @@ copyright: #<a target="_blank" rel="noopener" href="http://creativecommons.org/l
 # copyright: |-
 #   <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a></br>
 #   All website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></br>
+
+# Miscellaneous
+# favicon: /favicon.png
+
+# valine comment system. https://valine.js.org
+# valine:
+#   enable: false # if you want use valine,please set this value is true
+#   appId:  # leancloud application app id
+#   appKey:  # leancloud application app key
+#   notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
+#   verify: false # valine verify code (true/false)
+#   pageSize: 10 # comment list page size
+#   avatar: mm # gravatar style https://valine.js.org/#/avatar
+#   lang: zh-cn # i18n: zh-cn/en
+#   placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
+#   guest_info: nick,mail,link #valine comment header info
+

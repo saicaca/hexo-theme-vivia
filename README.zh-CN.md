@@ -70,6 +70,12 @@
 
    如果代码高亮出现问题，请设置 `prismjs: enable: true`
    
+   然后把本项目下的 `example_config.vivia.yml` 的内容添加到本项目`theme`下的 `_config.yml` 中。
+   
+   >或者在博客根目录创建 `_config.hexo-theme-vivia.yml` 并写入example配置里的内容。如果你觉得命名太长，可以把配置文件标识和对应theme文件夹的名字都修改成`vivia`。
+
+   >为什么不直接把配置写进_config.yml，让我们下载就直接用呢？主要是照顾到npm的安装方法，防止 node_modules 模块更新的时候覆盖掉一部分用户的 _config.yml 配置文件）。
+
 3. 创建 `about` 页面
 
    ```bash

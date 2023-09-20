@@ -25,9 +25,9 @@ A theme for <a href="https://hexo.io/">Hexo</a>, modified from <a href="https://
 
 **[💻Live Demo](https://saicaca.github.io/vivia-preview/)**
 
-![home](preview/home.png)
+![home](preview/home.jpg)
 
-![home_dark](preview/home-dark.png)
+![home_dark](preview/home-dark.jpg)
 
 # Install
 

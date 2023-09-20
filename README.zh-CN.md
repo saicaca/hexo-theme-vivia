@@ -25,9 +25,9 @@
 
 **[💻在线预览](https://saicaca.github.io/vivia-preview/)**
 
-![home](preview/home.png)
+![home](preview/home.jpg)
 
-![home_dark](preview/home-dark.png)
+![home_dark](preview/home-dark.jpg)
 
 # 安装方式
 

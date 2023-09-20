@@ -59,20 +59,21 @@
 
    ```bash
    cd themes
-   git clone <本项目的 git 链接>
+   git clone <本项目的 git 链接> vivia
+   # 仓库名为 hexo-theme-vivia, 本地另存为 vivia 方便配置
    ```
 
 2. 编辑 Hexo 根目录的配置文件 `_config.yml`，设置 `vivia` 为主题。
 
    ```yaml
-   theme: hexo-theme-vivia
+   theme: vivia
    ```
 
    如果代码高亮出现问题，请设置 `prismjs: enable: true`
    
    然后把本项目下的 `example_config.vivia.yml` 的内容添加到本项目`theme`下的 `_config.yml` 中。
    
-   >或者在博客根目录创建 `_config.hexo-theme-vivia.yml` 并写入example配置里的内容。如果你觉得命名太长，可以把配置文件标识和对应theme文件夹的名字都修改成`vivia`。
+   >或者在`博客根目录`创建 `_config.vivia.yml` 并写入example配置里的内容。如果报错 WARN No layout，请检查仓库 clone 到本地之后是否叫做 vivia 。
 
    >为什么不直接把配置写进_config.yml，让我们下载就直接用呢？主要是照顾到npm的安装方法，防止 node_modules 模块更新的时候覆盖掉一部分用户的 _config.yml 配置文件）。
 

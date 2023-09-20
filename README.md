@@ -57,13 +57,14 @@ A theme for <a href="https://hexo.io/">Hexo</a>, modified from <a href="https://
 
    ```bash
    cd themes
-   git clone <url-for-this-repo>
+   git clone <url-for-this-repo> vivia
+   # since this repo name is hexo-theme-vivia, you have to save it as name vivia to make it short.
    ```
 
 2. Edit the config file `_config.yml` under the root path of your hexo project folder. Change a key-value pair
 
    ```yaml
-   theme: hexo-theme-vivia
+   theme: vivia
    ```
 
    set prismjs: enable: true if your code highlight is not active

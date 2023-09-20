@@ -70,7 +70,7 @@ A theme for <a href="https://hexo.io/">Hexo</a>, modified from <a href="https://
   
    - Append the content of `example_config.vivia.yml` to `_config.yml` under this theme.
 
-   > Why not just write everything to _config.yml so that we can get a ready-to-go theme config? That's because we have npm install approach to install this theme. To prevent overwriting ./node_modules/hexo-theme-vivia/_config.yml and those user lose their customized configurations.
+   > Why not just write everything to _config.yml so that we can get a ready-to-go theme config? That's because we have npm install approach to install this theme. To prevent overwriting the config file under ./node_modules and make those user lose their customized configurations, we choose to leave the theme _config.yml file empty.
 
 3. Create the `about` page
 

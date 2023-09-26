@@ -1,3 +1,10 @@
+# 为避免更新时覆盖用户配置，本文件默认不包含配置
+# 你可以手动把 example_config.vivia.yml 的内容复制到本文件
+# 也可以在 hexo 博客的根目录下创建 _config.vivia.yml 文件，再把example的内容复制过去
+
+# To avoid rewriting user customized configurations during node_modules update, we don't put default settings here
+# You can manually copy the content of example_config.vivia.yml to this file
+# Or you can create _config.vivia.yml under hexo root path, and copy the content of example_config.vivia.yml to it
 
 # # Footer
 # copyright: |-
@@ -29,5 +36,4 @@
 #   lang: zh-cn # i18n: zh-cn/en
 #   placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
 #   guest_info: nick,mail,link #valine comment header info
-
 

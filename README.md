@@ -21,7 +21,7 @@ A theme for <a href="https://hexo.io/">Hexo</a>, modified from <a href="https://
 </a>
 </div>
 
-## Preview
+# Preview
 
 **[💻Live Demo](https://saicaca.github.io/vivia-preview/)**
 
@@ -31,68 +31,51 @@ A theme for <a href="https://hexo.io/">Hexo</a>, modified from <a href="https://
 
 # Install
 
-## Method One: npm install
-1. Install the theme via npm.
+> [!NOTE]
+> All the following commands should be executed in the root directory of your Hexo blog
+
+1. **Install the Theme**
+
+   - Via npm (Recommended)
+
+     ```bash
+     npm install hexo-theme-vivia
+     ```
+
+   - Via Git
+
+     ```bash
+     # Clone the theme into the /themes/vivia directory
+     git clone https://github.com/saicaca/hexo-theme-vivia.git themes/vivia
+      
+     # Install the required dependencies
+     npm install colorjs.io stylus hexo-word-counter
+     ```
+
+2. **Create the Theme Configuration File**
+
+   Copy the example configuration file to your Hexo blog's root directory:
+
+   - If you installed the theme via npm, the file is located at `node_modules/hexo-theme-vivia/example_config.vivia.yml`.
+   - If you installed via Git, the file is in `themes/vivia/example_config.vivia.yml`.
+
+   After copying, rename this file to `_config.vivia.yml`.
+
+3. **Customize the Theme**
+
+   Edit `_config.vivia.yml` and make any desired customizations.
+
+4. **Set `vivia` as the Theme**.
 
    ```bash
-   npm install hexo-theme-vivia
-   ```
-   
-2. Copy the configuration file `node_modules/hexo-theme-vivia/example_config.vivia.yml` to the root directory of the Hexo blog and rename it as `_config.vivia.yml`.
-
-3. Edit Hexo config file `_config.yml` and set `vivia` as the theme.
-
-   ```yaml
-   theme: vivia
+   hexo config theme vivia
    ```
 
-4. Create the `about` page
-
-   ```bash
-   hexo new page about
-   ```
-## Method Two: Copy this repo to the themes folder
-
-1. Run the following commands under the root directory of your hexo project.
-
-   ```bash
-   cd themes
-   git clone <url-for-this-repo> vivia
-   # since this repo name is hexo-theme-vivia, you have to save it as name vivia to make it short.
-   ```
-
-2. Edit the config file `_config.yml` under the root path of your hexo project folder. Change a key-value pair
-
-   ```yaml
-   theme: vivia
-   ```
-
-   set prismjs: enable: true if your code highlight is not active
-  
-   - Append the content of `example_config.vivia.yml` to `_config.yml` under this theme.
-
-   > Why not just write everything to _config.yml so that we can get a ready-to-go theme config? That's because we have npm install approach to install this theme. To prevent overwriting the config file under ./node_modules and make those user lose their customized configurations, we choose to leave the theme _config.yml file empty.
-
-3. Create the `about` page
+5. **Create the `about` Page**
 
    ```bash
    hexo new page about
    ```
-4. Install required node modules
-
-   ```bash
-   npm install colorjs.io
-   # or use `yarn add colorjs.io`
-   ```
-
-5. Try compilation
-   ```bash
-   hexo clean    # clean previous cache
-   hexo server   # allow temperory local server, convinent for debugging
-   hexo generate # compile md files to static html website
-   ```
-
-5. Report bugs in issue if possible.
 
 # To-do list
 
@@ -108,6 +91,14 @@ A theme for <a href="https://hexo.io/">Hexo</a>, modified from <a href="https://
 - [ ] Improve the styles of post contents
 
 # Thanks
+
 <a href="https://jb.gg/OpenSourceSupport">
    <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo." width="200px" height="200px">
 </a>
+
+- [Hexo](https://hexo.io/zh-cn/index.html)
+- [Landscape](https://github.com/hexojs/hexo-theme-landscape)
+- [Color.js](https://colorjs.io/)
+- [Font Awesome](https://github.com/FortAwesome/Font-Awesome)
+- [Material Icons / Material Symbols](https://github.com/google/material-design-icons)
+

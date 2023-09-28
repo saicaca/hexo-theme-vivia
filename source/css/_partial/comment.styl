@@ -84,3 +84,45 @@
     margin-top: 12px !important
   .vempty
     color: var(--neut-L30) !important
+//Twikoo
+//修复文字颜色
+.el-input-group__prepend
+.tk-comments-count
+.tk-nick.tk-nick-link
+.tk-time
+.tk-content
+.el-input__count
+.el-button.tk-preview.el-button--default.el-button--small
+.el-button.tk-cancel.el-button--default.el-button--small
+.el-input__inner
+.tk-input.el-textarea
+.tk-preview-container
+.tk-actions
+  color: var(--neut-L90) !important
+//修复排版问题
+.tk-admin-comment-filter-type
+  text-align: center
+.tk-footer
+  padding-bottom: 2em
+// 修复图片出框
+.tk-content img
+  max-width: 100% !important
+// 修复过长文本出框
+.tk-content pre
+  white-space: pre-wrap
+  word-wrap: break-word
+// 优化超链接配色
+.tk-footer
+  a
+    color: var(--link) !important
+// 头像宽度调整 rem 单位与全局字体大小挂钩
+.tk-replies .tk-avatar
+  width: 2.5rem !important
+  height: 2.5rem !important
+.tk-replies .tk-avatar img
+  width: 2.5rem !important
+  height: 2.5rem !important
+// 回复框左移，避免窄屏时出框
+.tk-comments-container .tk-submit
+  position: relative
+  left: -70px

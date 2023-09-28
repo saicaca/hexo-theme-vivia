@@ -62,6 +62,13 @@ comment:
     serverURLs: 
     # Other supported parameters can be added here if needed
     # Visit https://valine.js.org/configuration.html for more details
+  twikoo:
+    enable: true
+    envID:
+    region:
+    path: location.pathname
+    lang:
+    # See also: https://github.com/imaegoo/twikoo
 
 #Analytics
 gauges_analytics: false

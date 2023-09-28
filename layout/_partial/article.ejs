@@ -79,3 +79,23 @@
       new Valine(<%- JSON.stringify(valineConfig) %>);
   </script>
 <% } %> 
+
+<% if (!index && theme.comment.twikoo.enable) { %>
+  <script src="https://cdn.staticfile.org/twikoo/1.6.21/twikoo.all.min.js"></script>
+  <div id="comment-card" class="comment-card">
+    <div class="main-title-bar">
+      <div class="main-title-dot"></div>
+      <div class="main-title"><%= __('comment') %> </div>
+    </div>
+    <div id="tcomment"></div>
+  </div>
+  <script>
+      twikoo.init({
+          envId: '<%- theme.comment.twikoo.envID %>',
+          el: '#tcomment',
+          region: '<%- theme.comment.twikoo.region %>',
+          path: <%- theme.comment.twikoo.path %>,
+          lang: '<%- theme.comment.twikoo.lang %>',
+      })
+  </script>
+  <% } %>

@@ -1,4 +1,5 @@
 <% let cover = post.photos && post.photos.length %> 
+<% let description = post.description && post.description.length %> 
 
 <article id="<%= post.layout %>-<%= post.slug %>" class="h-entry article article-type-<%= post.layout %>" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <% if (is_post() || theme.home.style == 'detail') { %>
@@ -24,7 +25,11 @@
           <%- post.excerpt %>
         <% } else if (is_home() && !post.excerpt && theme.home.style != 'detail') { %>
           <div class="truncate-text">
-            <%- truncate(strip_html(post.content), {length: 500}) %>  
+            <% if(description){ %>
+              <%- strip_html(post.description) %>
+            <% } else{ %>  
+              <%- truncate(strip_html(post.content), {length: 500}) %>
+            <% } %>
           </div>
         <% } else { %>
           <%- post.content %>

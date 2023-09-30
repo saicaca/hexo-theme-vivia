@@ -51,6 +51,16 @@ recent_posts_limits: 5
 categories:
   max_depth: 3             # Maximum depth of categories displayed in the widget (null for unlimited)
 
+# Math
+math:                        # 应该没有人想要同时启用两种渲染方式吧？
+  katex:
+    enable: true             # KaTex 性能优秀，建议使用 Katex
+    copytex: true            # 启用后复制 Katex 元素会复制 Tex 代码而非显示的文本
+    mhchem: false            # 启用后可以不受 LaTeX 的语法束缚，用最简明的代码写出规范的化学方程式
+  mathjax:
+    enable: false            # MathJax 性能较差，不建议启用
+
+# Comment system
 comment:
   valine:
     enable: false

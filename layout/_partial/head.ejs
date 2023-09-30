@@ -26,6 +26,42 @@
   <link rel="preload" href="<%- url_for("/css/fonts/Roboto-Regular.ttf") %>" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="<%- url_for("/css/fonts/Roboto-Bold.ttf") %>" as="font" type="font/ttf" crossorigin="anonymous">
 
+  <% if (theme.math.katex.enable) { %>
+    <script src="https://cdn.staticfile.org/KaTeX/0.16.8/katex.min.js"></script>
+    <script src="https://cdn.staticfile.org/KaTeX/0.16.8/contrib/auto-render.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.8/katex.min.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "$", right: "$", display: false}
+          ]
+        });
+      });
+    </script>
+    <% if (theme.math.katex.copytex) { %>
+      <script src="https://cdn.staticfile.org/KaTeX/0.16.8/contrib/copy-tex.min.js" crossorigin="anonymous"></script>
+    <% } %>
+    <% if (theme.math.katex.mhchem) { %>
+      <script src="https://cdn.staticfile.org/KaTeX/0.16.8/contrib/mhchem.min.js" crossorigin="anonymous"></script>
+    <% } %>
+  <% } %>
+
+  <% if (theme.math.mathjax.enable){ %>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script async src="https://cdn.staticfile.org/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
+  <% } %>
+
   <%- open_graph({twitter_id: theme.twitter, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
   <% if (config.feed) { %>
     <%- feed_tag() %>

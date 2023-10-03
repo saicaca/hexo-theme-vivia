@@ -29,72 +29,64 @@
 
 ![home_dark](preview/home-dark.jpg)
 
-# 安装方式
+# 安装说明
 
-## 方式一：通过 npm install 安装
+> [!NOTE]
+> 下列指令均在 Hexo 博客根目录下执行
 
-1. 在 hexo 博客根目录执行以下命令
+### 1. 安装主题
 
-   ```bash
-   npm install hexo-theme-vivia
-   ```
+通过 npm 安装（推荐）
 
-2. 将配置文件 `node_modules/hexo-theme-vivia/example_config.vivia.yml` 复制至 Hexo 根目录并重命名为 `_config.vivia.yml`。
+```bash
+npm install hexo-theme-vivia
+```
 
-3. 编辑 Hexo 配置文件 `_config.yml`，设置 `vivia` 为主题。
+通过 Git 安装
 
-   ```yaml
-   theme: vivia
-   ```
+```bash
+# 将主题下载至 /themes/vivia 目录
+git clone https://github.com/saicaca/hexo-theme-vivia.git themes/vivia
+  
+# 安装主题的依赖
+npm install colorjs.io stylus hexo-word-counter
+```
 
-4. 创建 `about` 页面
+### 2. 创建主题配置文件
 
-   ```bash
-   hexo new page about
-   ```
+将主题的示例配置文件复制至 Hexo 根目录:
 
-## 方式二：直接将项目复制到 hexo 博客的 themes 目录
+- 若通过 npm 安装，文件位于 `node_modules/hexo-theme-vivia/example_config.vivia.yml`
+- 若通过 Git 安装，文件位于 `themes/vivia/example_config.vivia.yml`
 
-1. 在 hexo 博客的 `theme` 目录下执行以下命令
+复制后，将文件重命名为 `_config.vivia.yml`。
 
-   ```bash
-   cd themes
-   git clone <本项目的 git 链接> vivia
-   # 仓库名为 hexo-theme-vivia, 本地另存为 vivia 方便配置
-   ```
+### 3. 自定义主题
 
-2. 编辑 Hexo 根目录的配置文件 `_config.yml`，设置 `vivia` 为主题。
+修改 `_config.vivia.yml` 填写自定义配置。
 
-   ```yaml
-   theme: vivia
-   ```
+### 4. 将 `vivia` 设置为主题
 
-   如果代码高亮出现问题，请设置 `prismjs: enable: true`
-   
-   然后把本项目下的 `example_config.vivia.yml` 的内容添加到本项目`theme`下的 `_config.yml` 中。
-   
-   >或者在`博客根目录`创建 `_config.vivia.yml` 并写入example配置里的内容。如果报错 WARN No layout，请检查仓库 clone 到本地之后是否叫做 vivia 。
+```bash
+hexo config theme vivia
+```
 
-   >为什么不直接把配置写进_config.yml，让我们下载就直接用呢？主要是照顾到npm的安装方法，防止 node_modules 模块更新的时候覆盖掉一部分用户的 _config.yml 配置文件）。
+### 5. 创建 `about` 页面
 
-3. 创建 `about` 页面
+```bash
+hexo new page about
+```
 
-   ```bash
-   hexo new page about
-   ```
-4. 安装必要的 nodejs 模块
+### 6. 禁用归档页面的分页
 
-   ```bash
-   npm install colorjs.io
-   # 或者 `yarn add colorjs.io`
-   ```
+修改 `_config.yml` 填写下列配置：
 
-5. 编译博客并查看效果
-   ```bash
-   hexo clean    # 清除旧的缓存文件
-   hexo server   # 临时本地服务，便于调试
-   hexo generate # 编译 markdown 文件并生成静态 html 网站
-   ```
+```yaml
+archive_generator:
+  per_page: 0
+```
+
+若不添加此配置归档页最多只能显示 10 篇文章。
 
 # To-do
 
@@ -104,12 +96,19 @@
 - [x] 响应式设计
 - [x] 评论
   - [x] Valine
+  - [x] Twikoo
   - [ ] 其他
 - [ ] 搜索
 - [ ] 文内目录插件
-- [ ] 优化内文样式
 
 # 致谢
+
 <a href="https://jb.gg/OpenSourceSupport">
    <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo (Main) logo." width="200px" height="200px">
 </a>
+
+- [Hexo](https://hexo.io/zh-cn/index.html)
+- [Landscape](https://github.com/hexojs/hexo-theme-landscape)
+- [Color.js](https://colorjs.io/)
+- [Font Awesome](https://github.com/FortAwesome/Font-Awesome)
+- [Material Icons / Material Symbols](https://github.com/google/material-design-icons)

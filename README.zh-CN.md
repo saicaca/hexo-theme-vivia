@@ -25,9 +25,9 @@
 
 **[💻在线预览](https://saicaca.github.io/vivia-preview/)**
 
-![home](preview/home.jpg)
+![home](preview/home.png)
 
-![home_dark](preview/home-dark.jpg)
+![home_dark](preview/home-dark.png)
 
 # 安装说明
 
@@ -49,15 +49,15 @@ npm install hexo-theme-vivia
 git clone https://github.com/saicaca/hexo-theme-vivia.git themes/vivia
   
 # 安装主题的依赖
-npm install colorjs.io stylus hexo-word-counter
+npm install colorjs.io stylus hexo-symbols-count-time
 ```
 
 ### 2. 创建主题配置文件
 
 将主题的示例配置文件复制至 Hexo 根目录:
 
-- 若通过 npm 安装，文件位于 `node_modules/hexo-theme-vivia/example_config.vivia.yml`
-- 若通过 Git 安装，文件位于 `themes/vivia/example_config.vivia.yml`
+- 若通过 npm 安装，文件位于 `node_modules/hexo-theme-vivia/example_zh_CN_config.vivia.yml`
+- 若通过 Git 安装，文件位于 `themes/vivia/example_zh_CN_config.vivia.yml`
 
 复制后，将文件重命名为 `_config.vivia.yml`。
 

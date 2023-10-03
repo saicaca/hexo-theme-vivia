@@ -25,9 +25,9 @@ A theme for <a href="https://hexo.io/">Hexo</a>, modified from <a href="https://
 
 **[💻Live Demo](https://saicaca.github.io/vivia-preview/)**
 
-![home](preview/home.jpg)
+![home](preview/home.png)
 
-![home_dark](preview/home-dark.jpg)
+![home_dark](preview/home-dark.png)
 
 # Install
 
@@ -49,7 +49,7 @@ Via Git
 git clone https://github.com/saicaca/hexo-theme-vivia.git themes/vivia
   
 # Install the required dependencies
-npm install colorjs.io stylus hexo-word-counter
+npm install colorjs.io stylus hexo-symbols-count-time
 ```
 
 ### 2. Create the Theme Configuration File

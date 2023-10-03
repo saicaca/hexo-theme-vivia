@@ -34,48 +34,59 @@ A theme for <a href="https://hexo.io/">Hexo</a>, modified from <a href="https://
 > [!NOTE]
 > All the following commands should be executed in the root directory of your Hexo blog
 
-1. **Install the Theme**
+### 1. Install the Theme
 
-   - Via npm (Recommended)
+Via npm (Recommended)
 
-     ```bash
-     npm install hexo-theme-vivia
-     ```
+```bash
+npm install hexo-theme-vivia
+```
 
-   - Via Git
+Via Git
 
-     ```bash
-     # Clone the theme into the /themes/vivia directory
-     git clone https://github.com/saicaca/hexo-theme-vivia.git themes/vivia
-      
-     # Install the required dependencies
-     npm install colorjs.io stylus hexo-word-counter
-     ```
+```bash
+# Clone the theme into the /themes/vivia directory
+git clone https://github.com/saicaca/hexo-theme-vivia.git themes/vivia
+  
+# Install the required dependencies
+npm install colorjs.io stylus hexo-word-counter
+```
 
-2. **Create the Theme Configuration File**
+### 2. Create the Theme Configuration File
 
-   Copy the example configuration file to your Hexo blog's root directory:
+Copy the example configuration file to your Hexo blog's root directory:
 
-   - If you installed the theme via npm, the file is located at `node_modules/hexo-theme-vivia/example_config.vivia.yml`.
-   - If you installed via Git, the file is in `themes/vivia/example_config.vivia.yml`.
+- If you installed the theme via npm, the file is located at `node_modules/hexo-theme-vivia/example_config.vivia.yml`.
+- If you installed via Git, the file is in `themes/vivia/example_config.vivia.yml`.
 
-   After copying, rename this file to `_config.vivia.yml`.
+After copying, rename this file to `_config.vivia.yml`.
 
-3. **Customize the Theme**
+### 3. Customize the Theme
 
-   Edit `_config.vivia.yml` and make any desired customizations.
+Edit `_config.vivia.yml` and make any desired customizations.
 
-4. **Set `vivia` as the Theme**.
+### 4. Set `vivia` as the Theme
 
-   ```bash
-   hexo config theme vivia
-   ```
+```bash
+hexo config theme vivia
+```
 
-5. **Create the `about` Page**
+### 5. Create the `about` Page
 
-   ```bash
-   hexo new page about
-   ```
+```bash
+hexo new page about
+```
+
+### 6. Disable the Pagination of Archive Page
+
+Edit `_config.yml` and add the following lines:
+
+```yaml
+archive_generator:
+  per_page: 0
+```
+
+Without this configuration, the archive page will only show up to ten articles at most.
 
 # To-do list
 
@@ -85,10 +96,10 @@ A theme for <a href="https://hexo.io/">Hexo</a>, modified from <a href="https://
 - [x] Responsive design
 - [x] Comments
   - [x] Valine
+  - [x] Twikoo
   - [ ] Others
 - [ ] Search
 - [ ] TOC widget
-- [ ] Improve the styles of post contents
 
 # Thanks
 
@@ -101,4 +112,3 @@ A theme for <a href="https://hexo.io/">Hexo</a>, modified from <a href="https://
 - [Color.js](https://colorjs.io/)
 - [Font Awesome](https://github.com/FortAwesome/Font-Awesome)
 - [Material Icons / Material Symbols](https://github.com/google/material-design-icons)
-

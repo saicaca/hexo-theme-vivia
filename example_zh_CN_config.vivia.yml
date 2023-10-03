@@ -1,0 +1,79 @@
+# 导航栏
+menu:                      # 导航栏上的链接
+  Home: /
+  Archives: /archives
+  About: /about
+rss: /atom.xml
+
+home:
+  style: default           # default, detail
+
+favicon:                   # Favicon 文件路径，相对于 /source 目录（若你的 Favicon 文件位于 /source/favicon.png 则填写 "/favicon.png"）
+
+# 横幅图片
+banner:
+  enable: false                  # 是否显示横幅图片
+  url:                           # 横幅图片文件路径，相对于 /source 目录，也可填写网络图片 URL
+  position: center               # 决定图片将如何被裁剪，对应 CSS 中的 "object-position" 属性
+  onAllPages: true               # 在所有页面上显示横幅，而不是只在首页显示
+
+# 外观
+hue: 250                         # 主题色调 (例如：红: 0，橙: 60，蓝：260，紫：300，粉：345)
+                                 # 可访问 `saicaca.github.io/vivia-preview` 预览颜色设置
+
+# 个人信息
+avatar:                          # 头像图片文件路径，相对于 /source 目录
+author: Your Name
+subtitle: This is the subtitle
+links:
+  - name: Twitter
+    icon: fa-brands fa-twitter      # 访问 https://fontawesome.com/search 获取图标代码
+    url: https://twitter.com
+  - name: Steam
+    icon: fa-brands fa-steam
+    url: https://store.steampowered.com
+  - name: GitHub
+    icon: fa-brands fa-github
+    url: https://github.com
+
+# 侧边栏
+sidebar:
+  widgets:                 # 需要启用的组件 (profile, category, tag, archive, recent_posts)
+    normal:                # 随页面滚动的组件
+      - profile
+    sticky:                # 固定在页面顶部的组件
+      - category
+      - tag
+#      - archive
+#      - recent_posts
+
+# 侧边栏组件设置
+archive_type: 'monthly'
+recent_posts_limits: 5
+categories:
+  max_depth: 2             # 分类组件中显示的最大目录深度 (留空为不限制)
+
+# 第三方评论系统
+comment:
+  valine:
+    enable: false          # 是否启用 Valine 评论系统
+    appId: 
+    appKey: 
+    placeholder: Just go go
+    pageSize: 10
+    highlight: true
+    serverURLs: 
+    # 可在此添加其他 Valine 支持的配置项
+    # 详见 https://valine.js.org/configuration.html
+  twikoo:
+    enable: false           # 是否启用 Twikoo 评论系统
+    envID:
+    region:
+    path: location.pathname
+    lang:
+    # 详见 https://github.com/imaegoo/twikoo
+
+#Analytics
+gauges_analytics: false
+google_analytics: false #UA-xxxxxx
+baidu_analytics: false # ddxxxxxxxxxxxxxxxxx In the https://hm.baidu.com/hm.js? Afterwards

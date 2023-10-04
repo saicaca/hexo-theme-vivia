@@ -1,5 +1,5 @@
 <% let cover = post.photos && post.photos.length %> 
-<% let description = post.description && post.description.length %> 
+<% let description = post.description && post.description.length %>
 
 <article id="<%= post.layout %>-<%= post.slug %>" class="h-entry article article-type-<%= post.layout %>" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <% if (is_post() || theme.home.style == 'detail') { %>
@@ -27,7 +27,7 @@
           <div class="truncate-text">
             <% if(description){ %>
               <%- strip_html(post.description) %>
-            <% } else{ %>  
+            <% } else{ %>
               <%- truncate(strip_html(post.content), {length: 500}) %>
             <% } %>
           </div>
@@ -67,7 +67,7 @@
   <% } %>
 </article>
 
-<% if (!index && theme.comment.valine.enable) { %>
+<% if (!index && theme.comment.valine && theme.comment.valine.enable) { %>
   <% 
     let valineConfig = theme.comment.valine;
     valineConfig.el = '#vcomments';
@@ -83,9 +83,9 @@
   <script>
       new Valine(<%- JSON.stringify(valineConfig) %>);
   </script>
-<% } %> 
+<% } %>
 
-<% if (!index && theme.comment.twikoo.enable) { %>
+<% if (!index && theme.comment.twikoo && theme.comment.twikoo.enable) { %>
   <script src="https://cdn.staticfile.org/twikoo/1.6.21/twikoo.all.min.js"></script>
   <div id="comment-card" class="comment-card">
     <div class="main-title-bar">
@@ -99,7 +99,7 @@
           envId: '<%- theme.comment.twikoo.envID %>',
           el: '#tcomment',
           region: '<%- theme.comment.twikoo.region %>',
-          path: <%- theme.comment.twikoo.path %>,
+          path: '<%- theme.comment.twikoo.path %>',
           lang: '<%- theme.comment.twikoo.lang %>',
       })
   </script>

@@ -1,6 +1,6 @@
 <br>
 <div align="center">
-<img alt="Vivia Logo" src="./preview/logo.png" width="280px">
+<img alt="Vivia Logo" src="https://raw.githubusercontent.com/saicaca/resource/main/vivia-img/logo.png" width="280px">
 <br>
 <br>
 <strong>
@@ -25,9 +25,9 @@ A theme for <a href="https://hexo.io/">Hexo</a>, modified from <a href="https://
 
 **[💻Live Demo](https://saicaca.github.io/vivia-preview/)**
 
-![home](preview/home.png)
+![home](https://raw.githubusercontent.com/saicaca/resource/main/vivia-img/home.png)
 
-![home_dark](preview/home-dark.png)
+![home_dark](https://raw.githubusercontent.com/saicaca/resource/main/vivia-img/home-dark.png)
 
 # Install
 

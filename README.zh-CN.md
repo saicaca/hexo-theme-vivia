@@ -1,6 +1,6 @@
 <br>
 <div align="center">
-<img alt="Vivia Logo" src="./preview/logo.png" width="280px">
+<img alt="Vivia Logo" src="https://raw.githubusercontent.com/saicaca/resource/main/vivia-img/logo.png" width="280px">
 <br>
 <br>
 <strong>
@@ -25,9 +25,9 @@
 
 **[💻在线预览](https://saicaca.github.io/vivia-preview/)**
 
-![home](preview/home.png)
+![home](https://raw.githubusercontent.com/saicaca/resource/main/vivia-img/home.png)
 
-![home_dark](preview/home-dark.png)
+![home_dark](https://raw.githubusercontent.com/saicaca/resource/main/vivia-img/home-dark.png)
 
 # 安装说明
 

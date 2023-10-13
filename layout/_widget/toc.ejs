@@ -1,0 +1,8 @@
+<% if (is_post()){ %>
+<div class="widget-wrap">
+  <div class="widget">
+    <h3 class="widget-title"><%= __('toc') %></h3>
+    <%- toc(page.content) %>
+  </div>
+</div>
+<% } %>

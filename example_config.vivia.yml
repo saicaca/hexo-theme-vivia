@@ -42,6 +42,7 @@ sidebar:
     normal:                # Scroll along with the page
       - profile
     sticky:                # Stick to the top of the page
+      - toc
       - category
       - tag
 #      - archive

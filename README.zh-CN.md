@@ -4,9 +4,11 @@
 <br>
 <br>
 <strong>
-<a href="https://saicaca.github.io/vivia-preview/">在线预览</a>
+<a href="https://saicaca.github.io/vivia-preview/">💻在线预览</a>
 |
-<a href="https://github.com/saicaca/hexo-theme-vivia/blob/main/README.md">English</a>
+<a href="https://github.com/saicaca/hexo-theme-vivia/blob/main/README.zh-CN.md">🌏English</a>
+|
+<a href="https://github.com/saicaca/fuwari">✨Astro 版本 (NEW)</a>
 </strong>
 <br>
 <br>

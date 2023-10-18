@@ -42,6 +42,7 @@ sidebar:
     normal:                # 随页面滚动的组件
       - profile
     sticky:                # 固定在页面顶部的组件
+      - toc
       - category
       - tag
 #      - archive

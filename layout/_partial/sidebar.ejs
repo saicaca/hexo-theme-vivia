@@ -1,10 +1,10 @@
 <sidebar id="sidebar">
   <% theme.sidebar.widgets.normal.forEach(function(widget){ %>
-    <%- partial('_widget/' + widget) %>
+    <%- partial('_widget/' + widget, null, {cache: !config.relative_link && widget!='toc'}) %>
   <% }) %>
   <div class="sticky">
     <% theme.sidebar.widgets.sticky.forEach(function(widget){ %>
-      <%- partial('_widget/' + widget) %>
+      <%- partial('_widget/' + widget, null, {cache: !config.relative_link && widget!='toc'}) %>
     <% }) %>
   </div>
 </sidebar>

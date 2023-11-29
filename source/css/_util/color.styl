@@ -1,5 +1,7 @@
+@import "config"
+
 _color_set(colors)
-  default-hue = hexo-config("hue")
+  default-hue = get-config-or-default("hue", 0)
   for key, value in colors
     if type(value) == 'ident'
       {key}: var(value)

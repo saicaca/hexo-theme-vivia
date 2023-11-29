@@ -1,0 +1,5 @@
+get-config-or-default(name, default_value)
+  if hexo-config(name)
+    return hexo-config(name)
+  else
+    return default_value

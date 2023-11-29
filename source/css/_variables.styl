@@ -1,4 +1,5 @@
 @import "_util/color"
+@import "_util/config"
 
 // Config
 support-for-ie = false
@@ -104,7 +105,7 @@ color-B10 = alpha(black, 0.1)
 
   --banner-dim: alpha(#000, 0.2)
 
-  --primary-hue: hexo-config("hue")
+  --primary-hue: get-config-or-default("hue", 0)
 
   // Component Color
   _color_set({

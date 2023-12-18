@@ -1,5 +1,5 @@
 hexo.extend.helper.register('get_archive_list', function(config) {
-    let posts = hexo.locals.get('posts').data;
+    let posts = hexo.locals.get('posts').find({}).data;
     let map = {}, list = [];
     let curr = 0;
     for (let item of posts) {

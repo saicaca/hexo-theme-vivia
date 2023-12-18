@@ -28,7 +28,7 @@
   <% if (hasBanner != "false") { %>
     <%- partial('_partial/banner') %> 
   <% } %> 
-  <div id="main-grid" class="shadow <% if (theme.sidebar.position == "right") { %> right-sidebar <% } %>  ">
+  <div id="main-grid" class="<% if (theme.sidebar.position == "right") { %> right-sidebar <% } %>  ">
     <div id="nav" class="<% if (is_home()) { %> is_home <% } %>"  >
       <%- partial('_partial/navbar', null, {cache: !config.relative_link}) %>
     </div>

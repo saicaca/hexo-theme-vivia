@@ -30,16 +30,16 @@
   font-weight: medium
   text-decoration: none
   display: flex
+  align-items: center
   *
     white-space: nowrap
   .meta-info
     transition: color trans-style, outline trans-style, background trans-style
   a
     color: var(--article-meta)
-    outline-width: 4px
-    outline-style: solid
-    outline-color: rgba(0,0,0,0)
-    border-radius: 2px
+    border-radius: 6px
+    margin: -4px
+    padding: 4px
     &:hover
       outline-color: var(--btn-bg)
       background: var(--btn-bg)
@@ -48,7 +48,7 @@
     display: flex
     gap: 6px
     *
-      transition: color trans-style
+      transition: background trans-style, color trans-style
   .need-seperator
     display: flex
     align-items: center

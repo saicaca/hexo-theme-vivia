@@ -104,3 +104,22 @@
       })
   </script>
   <% } %>
+
+<% if (!index && theme.comment.waline && theme.comment.waline.enable) { %>
+  <div id="wl-comment-card" class="wl-comment-card">
+    <div class="main-title-bar">
+      <div class="main-title-dot"></div>
+      <div class="main-title"><%= __('comment') %> </div>
+    </div>
+    <div id="waline"></div>
+  </div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+    init({
+      el: '#waline',
+      serverURL: '<%- theme.comment.waline.serverURL %>',
+      dark: 'html[theme="dark"]',
+    });
+  </script>
+<% } %>

@@ -72,6 +72,9 @@ comment:
     path: location.pathname
     lang:
     # 详见 https://github.com/imaegoo/twikoo
+  waline:
+    enable: false          # 是否启用 Waline 评论系统
+    serverURL: 
 
 #Analytics
 gauges_analytics: false

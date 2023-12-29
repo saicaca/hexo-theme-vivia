@@ -127,3 +127,21 @@
 .tk-comments-container .tk-submit
   position: relative
   left: -70px
+
+// Waline
+.wl-comment-card
+  @extend $card
+  padding: article-top-padding article-side-padding 0 article-side-padding
+  *
+    transition: none
+  .title-bar
+    margin-bottom: 24px
+  .main-title
+    @extend $main-title
+.wl-count
+  color: var(--article-text)
+.wl-panel
+  background: var(--input-field)
+:root
+  --waline-theme-color: var(--primary-btn-bg)
+  --waline-active-color: var(--primary-btn-bg)

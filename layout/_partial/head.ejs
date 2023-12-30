@@ -44,5 +44,11 @@
     <link rel="icon" media="(prefers-color-scheme: dark)" href="<%- url_for("/images/favicon-dark-180.png") %>" sizes="180x180">
     <link rel="icon" media="(prefers-color-scheme: dark)" href="<%- url_for("/images/favicon-dark-192.png") %>" sizes="192x192">
   <% } %>
+  <% if (theme.comment.waline && theme.comment.waline.enable) { %>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+    />
+  <% } %>
   <%- css('css/style') %>
 </head>

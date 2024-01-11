@@ -27,13 +27,13 @@ author: Your Name
 subtitle: This is the subtitle
 links:
   - name: Twitter
-    icon: fa-brands fa-twitter      # Find icon codes at https://fontawesome.com/search
+    icon: ri-twitter-fill      # Find icon codes at https://remixicon.com/
     url: https://twitter.com
   - name: Steam
-    icon: fa-brands fa-steam
+    icon: ri-steam-fill
     url: https://store.steampowered.com
   - name: GitHub
-    icon: fa-brands fa-github
+    icon: ri-github-fill
     url: https://github.com
 
 # Sidebar

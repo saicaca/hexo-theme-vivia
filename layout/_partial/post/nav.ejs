@@ -5,7 +5,7 @@
       href="<%- url_for(post.prev.path) %>"
       title="<%- post.prev.title %>"
     <% } %> >
-    <i class="fa-solid fa-angle-left"></i>
+    <i class="ri-arrow-left-s-line"></i>
     <p class="title-text">
       <% if (post.prev && post.prev.title){ %>
         <%= post.prev.title %>
@@ -27,7 +27,7 @@
         (No Title)
       <% } %>  
     </p>
-    <i class="fa-solid fa-angle-right"></i>
+    <i class="ri-arrow-right-s-line"></i>
   </a>
 </nav>
 <% } %>

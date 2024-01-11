@@ -40,7 +40,7 @@
         <footer class="article-footer">
           <% if(post.excerpt && index) { %> 
             <a href="<%- url_for(post.path) %>#more" class="article-more-link">
-              <%= __('read_more') %><i class="fa-solid fa-angle-right"></i>
+              <%= __('read_more') %><i class="ri-arrow-right-s-line"></i>
             </a>
           <% } %> 
         </footer>
@@ -54,10 +54,10 @@
     >
       <% if (cover) { %> 
       <div class="overlay">
-        <i class="fa-solid fa-angle-right with-pic"></i>
+        <i class="ri-arrow-right-s-line with-pic"></i>
       </div>
       <% } else { %> 
-      <i class="fa-solid fa-angle-right non-pic"></i>
+      <i class="ri-arrow-right-s-line non-pic"></i>
       <% } %> 
     </a>
     <% } %> 

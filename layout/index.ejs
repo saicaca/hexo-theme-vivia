@@ -5,7 +5,7 @@
   <nav id="page-nav">
     <!-- 在第二页时 page.prev_link 不知为何无法返回正确的链接 -->
     <a id="prev-btn" class="page-nav-btn <% if (page.current == 1) { %>disabled<% } %>" href="<% if (page.current == 2) { %> <%- url_for('/') %> <% } else { %> <%- url_for(page.prev_link) %> <% } %> ">
-      <i class="fa-solid fa-angle-left"></i>
+      <i class="ri-arrow-left-s-line"></i>
     </a>
     <div id="num-bar">
       <%- paginator({
@@ -14,7 +14,7 @@
       }) %>  
     </div>
     <a id="next-btn" class="page-nav-btn <% if (page.current == page.total) { %>disabled<% } %>" href="<%- url_for(page.next_link) %>">
-      <i class="fa-solid fa-angle-right"></i>
+      <i class="ri-arrow-right-s-line"></i>
     </a>
   </nav>
 <% } %>

@@ -27,13 +27,13 @@ author: Your Name
 subtitle: This is the subtitle
 links:
   - name: Twitter
-    icon:  fa-twitter      # 访问 https://fontawesome.com/search 获取图标代码
+    icon: ri-twitter-fill      # 访问 https://fontawesome.com/search 获取图标代码
     url: https://twitter.com
   - name: Steam
-    icon:  fa-steam
+    icon: ri-steam-fill
     url: https://store.steampowered.com
   - name: GitHub
-    icon:  fa-github
+    icon: ri-github-fill
     url: https://github.com
 
 # 侧边栏

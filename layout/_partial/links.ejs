@@ -1,0 +1,177 @@
+<style>
+    .links *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .links{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+        width: 100%;
+        margin: 2rem 0;
+    }
+    .links > a{
+        display: flex;
+        height: 7rem;
+        width: calc(50% - .75rem);
+        text-decoration: none;
+        border-radius: 12px;
+        background-color: aliceblue;
+        transition: all 0.4s;
+        justify-content: space-around;
+        column-gap: 1.5rem;
+        box-shadow: 0 2px 16px hsla(230, 75%, 32%, .15);
+    }
+    .links > a > img{
+        height: 100%;
+        width: 7rem;
+    }
+    .links .text{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-right: .5rem;
+    }
+    .links .text > h2{
+        margin: .5rem 0;
+        font-size: 1.3rem;
+    }
+    .links .text > span{
+        margin: .5rem 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-height: 4rem;
+        font-size: .8rem;
+        color: #777;
+    }
+
+    @media screen and (max-width: 650px) {
+        .links > a{
+            width: 100%;
+        }
+    }
+</style>
+
+<% let cover = false %> 
+<% let description = post.description && post.description.length %>
+
+<article id="<%= post.layout %>-<%= post.slug %>" class="h-entry article article-type-<%= post.layout %>" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <% if (is_post() || theme.home.style == 'detail') { %>
+    <%- partial('post/gallery') %>
+  <% } %> 
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        <%- partial('post/title', {class_name: 'p-name article-title'}) %>
+        <div class='meta-info-bar'>
+          <%- partial('post/date', {class_name: 'meta-info', date_format: null}) %>
+          <div class="need-seperator meta-info">
+            <%- partial('post/category') %>  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            <%- symbolsCount(post) %> <%- __('words') %> 
+          </div>
+        </div>
+        <%- partial('post/tag') %>
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        <div class="links">
+            <% post.links.forEach((li) => { %>
+                <% li = li.link %>
+                <a href="<%= li.url %>" target="_blank">
+                    <img src="<%= li.img_url %>" alt="">
+                    <div class="text">
+                        <h2><%= li.title %></h2>
+                        <span><%= li.text %></span>
+                    </div>
+                </a>
+            <% }) %>
+        </div>
+      </div>
+    </div>
+    
+    <% if (theme.home.style != 'detail' && is_home()) { %> 
+    <a class="right-panel <% if (cover) { %> with-pic <% } else { %> non-pic <% } %> "
+      <% if (cover) { %> style="background-image: url(<%- cover_url %>)" <% } %>
+      href="<%- url_for(post.path) %>" 
+    >
+      <% if (cover) { %> 
+      <div class="overlay">
+        <i class="ri-arrow-right-s-line with-pic"></i>
+      </div>
+      <% } else { %> 
+      <i class="ri-arrow-right-s-line non-pic"></i>
+      <% } %> 
+    </a>
+    <% } %> 
+  </div>
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
+</article>
+
+<% if (!index && theme.comment.valine && theme.comment.valine.enable) { %>
+  <% 
+    let valineConfig = theme.comment.valine;
+    valineConfig.el = '#vcomments';
+  %>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <div id="comment-card" class="comment-card">
+    <div class="main-title-bar">
+      <div class="main-title-dot"></div>
+      <div class="main-title"><%= __('comment') %> </div>
+    </div>
+    <div id="vcomments"></div>
+  </div>
+  <script>
+      new Valine(<%- JSON.stringify(valineConfig) %>);
+  </script>
+<% } %>
+
+<% if (!index && theme.comment.twikoo && theme.comment.twikoo.enable) { %>
+  <script src="https://cdn.staticfile.org/twikoo/1.6.26/twikoo.all.min.js"></script>
+  <div id="comment-card" class="comment-card">
+    <div class="main-title-bar">
+      <div class="main-title-dot"></div>
+      <div class="main-title"><%= __('comment') %> </div>
+    </div>
+    <div id="tcomment"></div>
+  </div>
+  <script>
+      twikoo.init({
+          envId: '<%- theme.comment.twikoo.envID %>',
+          el: '#tcomment',
+          region: '<%- theme.comment.twikoo.region %>',
+          path: '<%- theme.comment.twikoo.path %>',
+          lang: '<%- theme.comment.twikoo.lang %>',
+      })
+  </script>
+  <% } %>
+
+<% if (!index && theme.comment.waline && theme.comment.waline.enable) { %>
+  <div id="wl-comment-card" class="wl-comment-card">
+    <div class="main-title-bar">
+      <div class="main-title-dot"></div>
+      <div class="main-title"><%= __('comment') %> </div>
+    </div>
+    <div id="waline"></div>
+  </div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+    init({
+      el: '#waline',
+      serverURL: '<%- theme.comment.waline.serverURL %>',
+      dark: 'html[theme="dark"]',
+    });
+  </script>
+<% } %>

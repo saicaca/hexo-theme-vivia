@@ -1,4 +1,12 @@
-<% let cover = post.photos && post.photos.length %> 
+<% let cover = false %> 
+<% if (cover = post.cover && post.cover.length) {
+  cover = true;
+  cover_url = post.cover;
+}
+  else if (post.photos && post.photos.length) {
+  cover = true;
+  cover_url = url_for(post.photos[0]);
+} %>
 <% let description = post.description && post.description.length %>
 
 <article id="<%= post.layout %>-<%= post.slug %>" class="h-entry article article-type-<%= post.layout %>" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
@@ -49,7 +57,7 @@
     
     <% if (theme.home.style != 'detail' && is_home()) { %> 
     <a class="right-panel <% if (cover) { %> with-pic <% } else { %> non-pic <% } %> "
-      <% if (cover) { %> style="background-image: url(<%- url_for(post.photos[0]) %>)" <% } %>
+      <% if (cover) { %> style="background-image: url(<%- cover_url %>)" <% } %>
       href="<%- url_for(post.path) %>" 
     >
       <% if (cover) { %> 

@@ -47,7 +47,7 @@
   <% if (theme.comment.waline && theme.comment.waline.enable) { %>
     <link
       rel="stylesheet"
-      href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+      href="<%- theme.comment.waline.cdnCSSURL %>"
     />
   <% } %>
   <%- css('css/style') %>

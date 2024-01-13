@@ -75,6 +75,13 @@ comment:
   waline:
     enable: false          # Enable Waline comment system
     serverURL: 
+    cdnJsURL: https://unpkg.com/@waline/client@2/dist/waline.mjs
+    cdnCSSURL: https://unpkg.com/@waline/client@2/dist/waline.css
+    # If you find that unpkg.com is inaccessible, you can try to use local files. 
+    # Download the above two linked files to <hexo path>/source/waline, 
+    # then comment the above two lines and uncomment the following two lines.
+    # localJSURL: /waline/waline.mjs
+    # localCSSURL: /waline/waline.css
 
 #Analytics
 gauges_analytics: false

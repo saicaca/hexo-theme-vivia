@@ -75,12 +75,6 @@ comment:
   waline:
     enable: false          # 是否启用 Waline 评论系统
     serverURL: 
-    cdnJsURL: https://unpkg.com/@waline/client@2/dist/waline.mjs
-    cdnCSSURL: https://unpkg.com/@waline/client@2/dist/waline.css
-    # 如果发现 unpkg.com 访问缓慢，可尝试使用本地文件
-    # 将上面两个链接的文件下载到 <hexo path>/source/waline 下，然后将上面两行注释，取消下面两行的注释
-    # localJSURL: /waline/waline.mjs
-    # localCSSURL: /waline/waline.css
 
 #Analytics
 gauges_analytics: false

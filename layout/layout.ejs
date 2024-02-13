@@ -13,8 +13,18 @@
     hasBanner = "false";
   }
 %>
+<%
+  // targetTheme: set theme to dark if not being configured to light
+  let targetTheme;
+  if (theme.theme === "light") {
+    targetTheme = "light";
+  } else {
+    targetTheme = "dark";
+  }
+%>
+
 <%  %>
-<html theme="dark" showBanner="true" hasBanner="<%- hasBanner %>" > 
+<html theme="<%- targetTheme %>" showBanner="true" hasBanner="<%- hasBanner %>" > 
 <link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
 <link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
 <link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">

@@ -14,10 +14,12 @@
   }
 %>
 <%
-  // targetTheme: set theme to dark if not being configured to light
+  // targetTheme: set theme to dark if not being configured to light or auto
   let targetTheme;
   if (theme.color_scheme === "light") {
     targetTheme = "light";
+  } else if (theme.color_scheme === "auto") {
+    targetTheme = "auto";
   } else {
     targetTheme = "dark";
   }
@@ -34,6 +36,9 @@
 <body>
   <% if (theme.previewMode) { %>
     <%- partial('_widget/color') %>
+  <% } %>
+  <% if (targetTheme === "auto") { %>
+    <script src="<%- url_for("/js/auto-theme-switch.js") %>"></script>
   <% } %>
   <% if (hasBanner != "false") { %>
     <%- partial('_partial/banner') %> 

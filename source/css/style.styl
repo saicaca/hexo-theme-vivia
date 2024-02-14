@@ -33,7 +33,6 @@ body
   background-size: 240px
   background-blend-mode: overlay    // TODO temporarily
   transition: background trans-style, color trans-style
-  overflow-y: hidden;
   &:before
     // TODO rotate the background
     // content: ''
@@ -45,6 +44,9 @@ body
     // width: 100%
     // background-color: none
     // rotate: 30deg
+
+body::-webkit-scrollbar
+  width: 0px
 
 @css {
   #main-grid {

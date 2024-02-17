@@ -13,13 +13,28 @@
     hasBanner = "false";
   }
 %>
+<%
+  // targetTheme: set theme to dark if not being configured to light or auto
+  let targetTheme;
+  if (theme.color_scheme === "light") {
+    targetTheme = "light";
+  } else if (theme.color_scheme === "auto") {
+    targetTheme = "auto";
+  } else {
+    targetTheme = "dark";
+  }
+%>
+
 <%  %>
-<html theme="dark" showBanner="true" hasBanner="<%- hasBanner %>" > 
+<html theme="<%- targetTheme %>" showBanner="true" hasBanner="<%- hasBanner %>" > 
 <link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
 <link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
 <link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
 <script src="<%- url_for("/js/color.global.min.js") %>" ></script>
 <script src="<%- url_for("/js/load-settings.js") %>" ></script>
+<% if (targetTheme === "auto") { %>
+  <script src="<%- url_for("/js/auto-theme-switch.js") %>"></script>
+<% } %>
 <%- partial('_partial/head') %>
 <body>
   <% if (theme.previewMode) { %>

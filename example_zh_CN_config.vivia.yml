@@ -18,6 +18,7 @@ banner:
   onAllPages: true               # 在所有页面上显示横幅，而不是只在首页显示
 
 # 外观
+color_scheme: dark               # dark, light, auto
 hue: 250                         # 主题色调 (例如：红: 0，橙: 60，蓝：260，紫：300，粉：345)
                                  # 可访问 `saicaca.github.io/vivia-preview` 预览颜色设置
 

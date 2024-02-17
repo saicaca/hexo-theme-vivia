@@ -18,6 +18,7 @@ banner:
   onAllPages: true               # Display banner on all pages instead of only the home page
 
 # Appearance
+color_scheme: dark               # dark, light, auto
 hue: 250                         # The hue of the theme color (e.g. red: 0, orange: 60, blue: 260, purple: 300, pink: 345)
                                  # Visit `saicaca.github.io/vivia-preview` to preview the theme color
 
